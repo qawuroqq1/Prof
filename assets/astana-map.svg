@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" fill="none">
+  <rect width="1200" height="760" fill="#E8F0E9"/>
+  <path d="M0 0h1200v760H0z" fill="#EDF2E8"/>
+  <path d="M770-45c-18 83-70 109-50 178 16 54 89 59 92 126 2 50-58 81-43 133 20 69 117 61 134 122 13 48-30 91-14 145 12 38 55 65 93 101h218V-45H770Z" fill="#C5E5EC"/>
+  <path d="m-40 565 241-102 183 32 148-105 191 6 129-104 182 18 201-82" stroke="#D3DCD6" stroke-width="42"/>
+  <path d="m-40 565 241-102 183 32 148-105 191 6 129-104 182 18 201-82" stroke="#FFFDF6" stroke-width="30"/>
+  <path d="m-40 202 203 48 123-92 173 24 131-79 166 32 112-88 227 24" stroke="#D1DAD4" stroke-width="34"/>
+  <path d="m-40 202 203 48 123-92 173 24 131-79 166 32 112-88 227 24" stroke="#FFFDF6" stroke-width="24"/>
+  <path d="M306-40 286 148l45 133-33 113 68 123-33 119 23 164M602-40l-34 138 43 112-22 135 54 116-31 125 23 174M896-40l-25 145 38 114-24 112 46 141-13 147 42 122" stroke="#D9E1D9" stroke-width="22"/>
+  <path d="M306-40 286 148l45 133-33 113 68 123-33 119 23 164M602-40l-34 138 43 112-22 135 54 116-31 125 23 174M896-40l-25 145 38 114-24 112 46 141-13 147 42 122" stroke="#FFFDF6" stroke-width="14"/>
+  <path d="m75 361 103-45 82 22-18 76-108 27-66-25 7-55Zm337-234 73-25 58 34-13 73-95 11-42-38 19-55Zm189 378 78-29 92 37-6 69-99 21-70-33 5-65Zm-178 61 64-29 57 29-19 64-81 19-36-38 15-45Zm441-419 76-29 74 37-19 64-86 15-55-39 10-48Z" fill="#D6E8D0"/>
+  <g opacity=".8" fill="#9BAEA4" font-family="Arial,sans-serif" font-size="21" font-weight="600">
+    <text x="95" y="115">АСТАНА</text>
+    <text x="95" y="142" font-size="14" font-weight="400">схема района</text>
+    <text x="420" y="332" font-size="16">проспект Абая</text>
+    <text x="735" y="225" font-size="15">БАЙҚОҢЫР</text>
+    <text x="133" y="671" font-size="15">АЛМАТЫ</text>
+  </g>
+  <g transform="translate(590 370)">
+    <circle r="42" fill="#20A85A" fill-opacity=".16"/>
+    <circle r="25" fill="#20A85A" stroke="white" stroke-width="8"/>
+    <path d="M0-12c-7 0-12 5-12 12 0 9 12 22 12 22S12 9 12 0C12-7 7-12 0-12Zm0 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10Z" fill="white"/>
+  </g>
+  <rect x="790" y="592" width="274" height="90" rx="18" fill="white" fill-opacity=".94"/>
+  <rect x="812" y="612" width="55" height="34" rx="9" fill="#20A85A"/>
+  <text x="839.5" y="635" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="16" font-weight="800">2GIS</text>
+  <text x="882" y="626" fill="#16304A" font-family="Arial,sans-serif" font-size="15" font-weight="700">Найдите нас в 2GIS</text>
+  <text x="882" y="650" fill="#687B8B" font-family="Arial,sans-serif" font-size="13">Абая, 38 · Астана</text>
+</svg>
