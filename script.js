@@ -3,12 +3,15 @@ const translations = {
     "topbar.note": "Защита. Поддержка. Развитие.",
     "brand.line1": "Профсоюз работников", "brand.line2": "образования города Астаны",
     "nav.about": "О профсоюзе", "nav.legal": "Правовая база", "nav.laws": "Законы",
+    "nav.unionHistory": "История профсоюза", "nav.leadership": "Руководящие органы",
+    "nav.council": "Совет", "nav.executive": "Исполнительный комитет",
+    "nav.audit": "Контрольно-ревизионная комиссия", "nav.staff": "Аппарат профсоюза",
     "nav.activities": "Деятельность", "nav.training": "Обучение", "nav.news": "Новости",
     "nav.faq": "Вопросы и ответы", "nav.ask": "Задать вопрос",
     "legal.labor": "Трудовой кодекс", "legal.laws": "Законы РК", "legal.npa": "НПА РК", "legal.acts": "Акты профсоюза",
     "activity.partnership": "Социальное партнерство", "activity.legal": "Правовая служба",
-    "activity.internationalPolicy": "Международная политика", "activity.youth": "Молодежная политика",
-    "activity.cooperation": "Международное сотрудничество", "activity.safety": "Охрана труда",
+    "activity.internationalWork": "Международная работа", "activity.internationalText": "Международные связи и обмен опытом.",
+    "activity.youth": "Молодежная политика", "activity.safety": "Охрана труда",
     "training.concept": "Концепция обучения", "training.courses": "Курсы повышения квалификации",
     "training.activists": "Обучение профсоюзного актива",
     "hero.eyebrow": "Город Астана", "hero.title": "Защита прав, поддержка и развитие работников образования.",
@@ -18,7 +21,8 @@ const translations = {
     "hero.priority": "Наш приоритет", "hero.panelTitle": "Достойный труд — сильное образование",
     "hero.panelText": "Поддерживаем работников, развиваем диалог и помогаем находить решения.",
     "contact.phone": "Телефон", "contact.email": "Электронная почта", "contact.address": "Адрес и маршрут",
-    "contact.telegramNote": "Скоро здесь появится чат-бот — ваш профсоюзный помощник!",
+    "telegram.kicker": "Telegram", "telegram.title": "Наш Telegram-канал появится здесь",
+    "telegram.text": "Пока канал не создан — добавим ссылку, когда он появится.", "telegram.soon": "Скоро",
     "stat.rights": "Защита", "stat.rightsSub": "прав и интересов", "stat.support": "Поддержка",
     "stat.supportSub": "работников образования", "stat.learning": "Обучение", "stat.learningSub": "профессиональный рост",
     "stat.dialogue": "Диалог", "stat.dialogueSub": "социальное партнерство",
@@ -32,10 +36,9 @@ const translations = {
     "activity.youthText": "Инициативы и развитие молодых профсоюзных лидеров.",
     "activity.safetyText": "Безопасные условия труда и профилактика рисков.",
     "activity.all": "Все направления деятельности →",
-    "news.kicker": "Новости", "news.title": "Новости и события", "news.filter": "Год",
-    "news.allYears": "Все годы", "news.schedule": "Дни размещения информации: даты публикаций указаны в карточках новостей.",
-    "news.empty": "За выбранный год публикаций пока нет.", "news.read": "Читать на сайте ФПРК →",
-    "news.federation": "Федерация профсоюзов РК",
+    "news.kicker": "Новости", "news.title": "Новости", "news.read": "Подробнее",
+    "news.close": "Закрыть новость",
+    "news.facebookEmpty": "Новости появятся здесь.",
     "legal.kicker": "Документы и нормы", "legal.title": "Правовая база", "legal.all": "Открыть раздел →",
     "legal.laborMeta": "Трудовые права и гарантии", "legal.lawsMeta": "Законы о профсоюзах и образовании",
     "legal.npaMeta": "Официальная база нормативных актов", "legal.actsMeta": "Уставы, соглашения и документы",
@@ -65,6 +68,12 @@ const translations = {
     "faq.q4": "Как записаться на обучение?", "faq.a4": "Откройте раздел «Обучение», выберите программу и заполните форму записи. Заявка будет подготовлена в почтовой программе.",
     "faq.q5": "Где найти нормы трудового законодательства?", "faq.a5": "В правовой базе сайта собраны ссылки на Трудовой кодекс и основные законы. Официальные тексты размещены в информационно-правовой системе «Әділет».",
     "page.about.title": "О профсоюзе", "page.about.lead": "Солидарность работников, достойный труд и защита прав — основа профсоюзной работы.",
+    "page.unionHistory.title": "История профсоюза", "page.unionHistory.lead": "История и основные этапы развития профсоюза работников образования города Астаны.",
+    "page.leadership.title": "Руководящие органы", "page.leadership.lead": "Выберите орган профсоюза.",
+    "page.leadershipCouncil.title": "Совет", "page.leadershipCouncil.lead": "Состав и работа Совета профсоюза.",
+    "page.leadershipExecutive.title": "Исполнительный комитет", "page.leadershipExecutive.lead": "Состав и решения исполнительного комитета профсоюза.",
+    "page.leadershipAudit.title": "Контрольно-ревизионная комиссия", "page.leadershipAudit.lead": "Контроль за финансовой и уставной деятельностью профсоюза.",
+    "page.unionStaff.title": "Аппарат профсоюза", "page.unionStaff.lead": "Контактная информация сотрудников аппарата профсоюза.",
     "page.about.body": "Профсоюз работников образования представляет интересы работников отрасли, содействует защите трудовых и социально-экономических прав и развивает социальное партнерство. В работе важны правовая помощь, охрана труда, обучение и участие работников в принятии решений. Это описание опирается на опубликованные Федерацией профсоюзов РК приоритеты: защита, развитие и справедливый труд.",
     "page.legalBase.title": "Правовая база", "page.legalBase.lead": "Выберите раздел, чтобы открыть тематическую страницу и официальные источники.",
     "page.laws.title": "Законы", "page.laws.lead": "Официальные тексты нормативных документов доступны в системе «Әділет».",
@@ -77,9 +86,10 @@ const translations = {
     "page.legalActs.title": "Акты профсоюза", "page.legalActs.lead": "Уставные и организационные документы, коллективные соглашения и решения профсоюзных органов.",
     "page.partnership.title": "Социальное партнерство", "page.partnership.lead": "Переговоры и взаимодействие работников, работодателей и государственных органов.",
     "page.legalService.title": "Правовая служба", "page.legalService.lead": "Разъяснение трудовых прав, профилактика нарушений и поддержка работников.",
-    "page.internationalPolicy.title": "Международная политика", "page.internationalPolicy.lead": "Профсоюзное движение участвует в международном диалоге о достойном труде и трудовых правах.",
+    "page.legalService.body": "В этом разделе размещаются разъяснения по трудовым вопросам и материалы правовой службы профсоюза.",
+    "page.internationalWork.title": "Международная работа", "page.internationalWork.lead": "Международные связи, меморандумы и обмен опытом.",
+    "page.internationalWork.body": "Профсоюз развивает международные связи и обмен опытом с организациями работников образования.",
     "page.youth.title": "Молодежная политика", "page.youth.lead": "Поддержка молодых работников, развитие инициатив и подготовка профсоюзных лидеров.",
-    "page.cooperation.title": "Международное сотрудничество", "page.cooperation.lead": "Обмен опытом и взаимодействие с профсоюзными организациями и партнерами.",
     "page.safety.title": "Охрана труда", "page.safety.lead": "Безопасная рабочая среда, предупреждение рисков и информирование работников.",
     "page.trainingConcept.title": "Концепция обучения", "page.trainingConcept.lead": "Системное обучение помогает работникам защищать свои права и участвовать в профсоюзной работе.",
     "page.trainingCourses.title": "Курсы повышения квалификации", "page.trainingCourses.lead": "Оставьте контактные данные, чтобы направить заявку на курс.",
@@ -88,7 +98,10 @@ const translations = {
     "page.ask.title": "Задать вопрос", "page.ask.lead": "Опишите ситуацию — сообщение будет подготовлено для отправки на адрес профсоюза.",
     "link.labor": "Трудовой кодекс РК № 414-V", "link.unions": "Закон РК «О профессиональных союзах»",
     "link.education": "Закон РК «Об образовании»", "link.adilet": "Поиск нормативных актов в Әділет",
-    "link.federation": "Федерация профсоюзов Республики Казахстан", "link.source": "Источник: kasipodaq.kz",
+    "link.kazakhstanLaw": "Закон Республики Казахстан", "link.read": "Читать на сайте",
+    "document.close": "Закрыть документ",
+    "link.federation": "Федерация профсоюзов Республики Казахстан", "link.source": "Страница-источник",
+    "staff.position": "Должность", "staff.phone": "Телефон",
     "link.laborArticle": "Кодекс: ключевые статьи и темы", "link.article22": "Статья 22 — права и обязанности работника",
     "link.article23": "Статья 23 — права и обязанности работодателя", "link.article52": "Статья 52 — основания расторжения договора",
     "link.article68": "Статья 68 — нормальная продолжительность рабочего времени", "link.article87": "Статья 87 — ежегодный оплачиваемый отпуск",
@@ -96,23 +109,20 @@ const translations = {
     "link.socialAgreement": "Социальное партнерство: соглашения и диалог",
     "activity.body": "Направление включает представительство интересов работников, консультации, обучение и сотрудничество с партнерами. Актуальные программы и новости публикуются Федерацией профсоюзов РК.",
     "training.body": "Обучение строится вокруг практических трудовых прав, социального партнерства, охраны труда и навыков профсоюзной работы. Содержание и расписание конкретных занятий уточняются организатором.",
-    "news.1.title": "Профсоюзы помогли вернуть долг по заработной плате 25 работникам",
-    "news.1.text": "Юридическая клиника Профсоюзного центра Астаны помогла работникам добиться выплаты задолженности.",
-    "news.2.title": "Школа профсоюзного лидера: от переговоров к социальным гарантиям",
-    "news.2.text": "Федерация профсоюзов РК провела обучающий семинар для профсоюзного актива.",
-    "news.3.title": "Международный диалог о достойном труде",
-    "news.3.text": "Представители профсоюзов обсудили вопросы защиты труда и международного сотрудничества."
   },
   kz: {
     "topbar.note": "Қорғау. Қолдау. Даму.",
     "brand.line1": "Білім қызметкерлерінің", "brand.line2": "Астана қалалық кәсіподағы",
     "nav.about": "Кәсіподақ туралы", "nav.legal": "Құқықтық база", "nav.laws": "Заңдар",
+    "nav.unionHistory": "Кәсіподақ тарихы", "nav.leadership": "Басқарушы органдар",
+    "nav.council": "Кеңес", "nav.executive": "Атқару комитеті",
+    "nav.audit": "Бақылау-тексеру комиссиясы", "nav.staff": "Кәсіподақ аппараты",
     "nav.activities": "Қызметі", "nav.training": "Оқыту", "nav.news": "Жаңалықтар",
     "nav.faq": "Сұрақ-жауап", "nav.ask": "Сұрақ қою",
     "legal.labor": "Еңбек кодексі", "legal.laws": "ҚР заңдары", "legal.npa": "ҚР НҚА", "legal.acts": "Кәсіподақ актілері",
     "activity.partnership": "Әлеуметтік әріптестік", "activity.legal": "Құқықтық қызмет",
-    "activity.internationalPolicy": "Халықаралық саясат", "activity.youth": "Жастар саясаты",
-    "activity.cooperation": "Халықаралық ынтымақтастық", "activity.safety": "Еңбекті қорғау",
+    "activity.internationalWork": "Халықаралық жұмыс", "activity.internationalText": "Халықаралық байланыстар және тәжірибе алмасу.",
+    "activity.youth": "Жастар саясаты", "activity.safety": "Еңбекті қорғау",
     "training.concept": "Оқыту тұжырымдамасы", "training.courses": "Біліктілікті арттыру курстары",
     "training.activists": "Кәсіподақ активін оқыту",
     "hero.eyebrow": "Астана қаласы", "hero.title": "Білім қызметкерлерінің құқықтарын қорғау, қолдау және дамыту.",
@@ -122,7 +132,8 @@ const translations = {
     "hero.priority": "Басым бағытымыз", "hero.panelTitle": "Лайықты еңбек — сапалы білім",
     "hero.panelText": "Қызметкерлерді қолдап, диалогты дамытып, ортақ шешім табуға көмектесеміз.",
     "contact.phone": "Телефон", "contact.email": "Электрондық пошта", "contact.address": "Мекенжай және бағыт",
-    "contact.telegramNote": "Жақында мұнда кәсіподақ көмекшісі — чат-бот іске қосылады!",
+    "telegram.kicker": "Telegram", "telegram.title": "Telegram арнасының сілтемесі осында болады",
+    "telegram.text": "Әзірге арна ашылған жоқ — ашылғанда сілтемесін қосамыз.", "telegram.soon": "Жақында",
     "stat.rights": "Қорғау", "stat.rightsSub": "құқықтар мен мүдделер", "stat.support": "Қолдау",
     "stat.supportSub": "білім қызметкерлері", "stat.learning": "Оқыту", "stat.learningSub": "кәсіби даму",
     "stat.dialogue": "Диалог", "stat.dialogueSub": "әлеуметтік әріптестік",
@@ -136,10 +147,9 @@ const translations = {
     "activity.youthText": "Бастамалар мен жас кәсіподақ көшбасшыларын дамыту.",
     "activity.safetyText": "Қауіпсіз еңбек жағдайлары және тәуекелдердің алдын алу.",
     "activity.all": "Қызметтің барлық бағыттары →",
-    "news.kicker": "Жаңалықтар", "news.title": "Жаңалықтар мен оқиғалар", "news.filter": "Жыл",
-    "news.allYears": "Барлық жыл", "news.schedule": "Ақпарат орналастыру күндері: жарияланым күндері жаңалық карточкаларында көрсетіледі.",
-    "news.empty": "Таңдалған жылға әзірше жарияланым жоқ.", "news.read": "ҚРКФ сайтында оқу →",
-    "news.federation": "ҚР Кәсіподақтар федерациясы",
+    "news.kicker": "Жаңалықтар", "news.title": "Жаңалықтар", "news.read": "Толығырақ",
+    "news.close": "Жаңалықты жабу",
+    "news.facebookEmpty": "Жаңалықтар осында жарияланады.",
     "legal.kicker": "Құжаттар мен нормалар", "legal.title": "Құқықтық база", "legal.all": "Бөлімді ашу →",
     "legal.laborMeta": "Еңбек құқықтары мен кепілдіктер", "legal.lawsMeta": "Кәсіподақтар мен білім туралы заңдар",
     "legal.npaMeta": "Нормативтік актілердің ресми базасы", "legal.actsMeta": "Жарғылар, келісімдер және құжаттар",
@@ -169,6 +179,12 @@ const translations = {
     "faq.q4": "Оқуға қалай тіркелуге болады?", "faq.a4": "«Оқыту» бөлімін ашып, бағдарламаны таңдап, тіркеу нысанын толтырыңыз. Өтінім пошта бағдарламасында дайындалады.",
     "faq.q5": "Еңбек заңнамасының нормаларын қайдан табуға болады?", "faq.a5": "Құқықтық базада Еңбек кодексі мен негізгі заңдарға сілтемелер берілген. Ресми мәтіндер «Әділет» ақпараттық-құқықтық жүйесінде жарияланады.",
     "page.about.title": "Кәсіподақ туралы", "page.about.lead": "Қызметкерлер ынтымақтастығы, лайықты еңбек және құқықтарды қорғау — кәсіподақ жұмысының негізі.",
+    "page.unionHistory.title": "Кәсіподақ тарихы", "page.unionHistory.lead": "Астана қаласы білім қызметкерлері кәсіподағының тарихы мен даму кезеңдері.",
+    "page.leadership.title": "Басқарушы органдар", "page.leadership.lead": "Кәсіподақ органын таңдаңыз.",
+    "page.leadershipCouncil.title": "Кеңес", "page.leadershipCouncil.lead": "Кәсіподақ Кеңесінің құрамы мен жұмысы.",
+    "page.leadershipExecutive.title": "Атқару комитеті", "page.leadershipExecutive.lead": "Кәсіподақ атқару комитетінің құрамы мен шешімдері.",
+    "page.leadershipAudit.title": "Бақылау-тексеру комиссиясы", "page.leadershipAudit.lead": "Кәсіподақтың қаржылық және жарғылық қызметін бақылау.",
+    "page.unionStaff.title": "Кәсіподақ аппараты", "page.unionStaff.lead": "Кәсіподақ аппараты қызметкерлерінің байланыс деректері.",
     "page.about.body": "Білім қызметкерлері кәсіподағы сала қызметкерлерінің мүдделерін білдіреді, еңбек және әлеуметтік-экономикалық құқықтарын қорғауға көмектеседі әрі әлеуметтік әріптестікті дамытады. Құқықтық көмек, еңбекті қорғау, оқыту және шешім қабылдауға қатысу маңызды. Бұл сипаттама ҚР Кәсіподақтар федерациясы жариялаған қорғау, даму және әділ еңбек басымдықтарына негізделген.",
     "page.legalBase.title": "Құқықтық база", "page.legalBase.lead": "Тақырыптық бет пен ресми дереккөздерді ашу үшін бөлімді таңдаңыз.",
     "page.laws.title": "Заңдар", "page.laws.lead": "Нормативтік құжаттардың ресми мәтіндері «Әділет» жүйесінде қолжетімді.",
@@ -181,9 +197,10 @@ const translations = {
     "page.legalActs.title": "Кәсіподақ актілері", "page.legalActs.lead": "Жарғылық және ұйымдастырушылық құжаттар, ұжымдық келісімдер мен кәсіподақ органдарының шешімдері.",
     "page.partnership.title": "Әлеуметтік әріптестік", "page.partnership.lead": "Қызметкерлер, жұмыс берушілер және мемлекеттік органдардың келіссөздері мен өзара іс-қимылы.",
     "page.legalService.title": "Құқықтық қызмет", "page.legalService.lead": "Еңбек құқықтарын түсіндіру, бұзушылықтардың алдын алу және қызметкерлерді қолдау.",
-    "page.internationalPolicy.title": "Халықаралық саясат", "page.internationalPolicy.lead": "Кәсіподақ қозғалысы лайықты еңбек пен еңбек құқықтары туралы халықаралық диалогқа қатысады.",
+    "page.legalService.body": "Бұл бөлімде еңбек мәселелері бойынша түсіндірмелер мен кәсіподақтың құқықтық қызмет материалдары жарияланады.",
+    "page.internationalWork.title": "Халықаралық жұмыс", "page.internationalWork.lead": "Халықаралық байланыстар, меморандумдар және тәжірибе алмасу.",
+    "page.internationalWork.body": "Кәсіподақ білім қызметкерлері ұйымдарымен халықаралық байланыстар мен тәжірибе алмасуды дамытады.",
     "page.youth.title": "Жастар саясаты", "page.youth.lead": "Жас қызметкерлерді қолдау, бастамаларды дамыту және кәсіподақ көшбасшыларын даярлау.",
-    "page.cooperation.title": "Халықаралық ынтымақтастық", "page.cooperation.lead": "Кәсіподақ ұйымдары және серіктестермен тәжірибе алмасу және өзара іс-қимыл.",
     "page.safety.title": "Еңбекті қорғау", "page.safety.lead": "Қауіпсіз жұмыс ортасы, тәуекелдердің алдын алу және қызметкерлерді ақпараттандыру.",
     "page.trainingConcept.title": "Оқыту тұжырымдамасы", "page.trainingConcept.lead": "Жүйелі оқыту қызметкерлерге құқықтарын қорғауға және кәсіподақ жұмысына қатысуға көмектеседі.",
     "page.trainingCourses.title": "Біліктілікті арттыру курстары", "page.trainingCourses.lead": "Курсқа өтінім беру үшін байланыс деректерін қалдырыңыз.",
@@ -192,7 +209,10 @@ const translations = {
     "page.ask.title": "Сұрақ қою", "page.ask.lead": "Жағдайды сипаттаңыз — хабарлама кәсіподақ поштасына жіберуге дайындалады.",
     "link.labor": "ҚР Еңбек кодексі № 414-V", "link.unions": "«Кәсіптік одақтар туралы» ҚР Заңы",
     "link.education": "«Білім туралы» ҚР Заңы", "link.adilet": "Әділеттен нормативтік актілерді іздеу",
-    "link.federation": "Қазақстан Республикасы Кәсіподақтар федерациясы", "link.source": "Дереккөз: kasipodaq.kz",
+    "link.kazakhstanLaw": "Қазақстан Республикасының Заңы", "link.read": "Сайттан оқу",
+    "document.close": "Құжатты жабу",
+    "link.federation": "Қазақстан Республикасы Кәсіподақтар федерациясы", "link.source": "Бастапқы бет",
+    "staff.position": "Лауазымы", "staff.phone": "Телефон",
     "link.laborArticle": "Кодекс: негізгі баптар мен тақырыптар", "link.article22": "22-бап — қызметкердің құқықтары мен міндеттері",
     "link.article23": "23-бап — жұмыс берушінің құқықтары мен міндеттері", "link.article52": "52-бап — шартты бұзу негіздері",
     "link.article68": "68-бап — жұмыс уақытының қалыпты ұзақтығы", "link.article87": "87-бап — жыл сайынғы ақы төленетін демалыс",
@@ -200,23 +220,20 @@ const translations = {
     "link.socialAgreement": "Әлеуметтік әріптестік: келісімдер мен диалог",
     "activity.body": "Бағыт қызметкерлер мүддесін білдіруді, кеңес беруді, оқытуды және серіктестермен ынтымақтастықты қамтиды. Өзекті бағдарламалар мен жаңалықтар ҚР Кәсіподақтар федерациясының сайтында жарияланады.",
     "training.body": "Оқыту еңбек құқықтары, әлеуметтік әріптестік, еңбекті қорғау және кәсіподақ жұмысының дағдыларына негізделеді. Нақты сабақтардың мазмұны мен кестесін ұйымдастырушыдан нақтылаңыз.",
-    "news.1.title": "Кәсіподақтар 25 қызметкерге жалақы берешегін қайтаруға көмектесті",
-    "news.1.text": "Астана кәсіподақ орталығының құқықтық клиникасы қызметкерлерге берешекті өндіріп алуға көмектесті.",
-    "news.2.title": "Кәсіподақ көшбасшысының мектебі: келіссөздерден әлеуметтік кепілдіктерге дейін",
-    "news.2.text": "ҚР Кәсіподақтар федерациясы кәсіподақ активіне арналған оқыту семинарын өткізді.",
-    "news.3.title": "Лайықты еңбек туралы халықаралық диалог",
-    "news.3.text": "Кәсіподақ өкілдері еңбекті қорғау және халықаралық ынтымақтастық мәселелерін талқылады."
   },
   en: {
     "topbar.note": "Protection. Support. Progress.",
     "brand.line1": "Education Workers’", "brand.line2": "Trade Union of Astana",
     "nav.about": "About the Union", "nav.legal": "Legal Resources", "nav.laws": "Laws",
+    "nav.unionHistory": "Union history", "nav.leadership": "Governing bodies",
+    "nav.council": "Council", "nav.executive": "Executive Committee",
+    "nav.audit": "Audit Commission", "nav.staff": "Union staff",
     "nav.activities": "Activities", "nav.training": "Training", "nav.news": "News",
     "nav.faq": "Q&A", "nav.ask": "Ask a question",
     "legal.labor": "Labour Code", "legal.laws": "Laws of Kazakhstan", "legal.npa": "Regulations", "legal.acts": "Union acts",
     "activity.partnership": "Social partnership", "activity.legal": "Legal service",
-    "activity.internationalPolicy": "International policy", "activity.youth": "Youth policy",
-    "activity.cooperation": "International cooperation", "activity.safety": "Occupational safety",
+    "activity.internationalWork": "International work", "activity.internationalText": "International relations and exchange of experience.",
+    "activity.youth": "Youth policy", "activity.safety": "Occupational safety",
     "training.concept": "Training concept", "training.courses": "Professional development courses",
     "training.activists": "Trade union representatives’ training",
     "hero.eyebrow": "Astana", "hero.title": "Protecting rights, supporting and developing education workers.",
@@ -226,7 +243,8 @@ const translations = {
     "hero.priority": "Our priority", "hero.panelTitle": "Decent work builds strong education",
     "hero.panelText": "We support workers, foster dialogue and help find solutions.",
     "contact.phone": "Phone", "contact.email": "Email", "contact.address": "Address & directions",
-    "contact.telegramNote": "Coming soon: your friendly trade union chatbot, ready to help!",
+    "telegram.kicker": "Telegram", "telegram.title": "Our Telegram channel will appear here",
+    "telegram.text": "The channel is not available yet. We’ll add the link when it is ready.", "telegram.soon": "Coming soon",
     "stat.rights": "Protection", "stat.rightsSub": "of rights and interests", "stat.support": "Support",
     "stat.supportSub": "for education workers", "stat.learning": "Learning", "stat.learningSub": "professional growth",
     "stat.dialogue": "Dialogue", "stat.dialogueSub": "social partnership",
@@ -240,10 +258,9 @@ const translations = {
     "activity.youthText": "Initiatives and development of young union leaders.",
     "activity.safetyText": "Safe working conditions and risk prevention.",
     "activity.all": "All areas of activity →",
-    "news.kicker": "News", "news.title": "News and events", "news.filter": "Year",
-    "news.allYears": "All years", "news.schedule": "Publication days: publication dates are shown on each news card.",
-    "news.empty": "There are no posts for the selected year yet.", "news.read": "Read on the FPRK website →",
-    "news.federation": "Federation of Trade Unions of Kazakhstan",
+    "news.kicker": "News", "news.title": "News", "news.read": "More details",
+    "news.close": "Close news",
+    "news.facebookEmpty": "News will appear here.",
     "legal.kicker": "Documents and regulations", "legal.title": "Legal resources", "legal.all": "Open section →",
     "legal.laborMeta": "Labour rights and guarantees", "legal.lawsMeta": "Trade union and education laws",
     "legal.npaMeta": "Official regulations database", "legal.actsMeta": "Charters, agreements and documents",
@@ -273,6 +290,12 @@ const translations = {
     "faq.q4": "How do I register for training?", "faq.a4": "Open Training, choose a programme and complete the registration form. Your email app will prepare the application.",
     "faq.q5": "Where can I find labour law provisions?", "faq.a5": "The Legal Resources section links to the Labour Code and key laws. Official texts are published in the Adilet legal information system.",
     "page.about.title": "About the Union", "page.about.lead": "Worker solidarity, decent work and rights protection are at the heart of trade union activity.",
+    "page.unionHistory.title": "Union history", "page.unionHistory.lead": "History and main development milestones of Astana’s education workers’ union.",
+    "page.leadership.title": "Governing bodies", "page.leadership.lead": "Choose a trade union body.",
+    "page.leadershipCouncil.title": "Council", "page.leadershipCouncil.lead": "The composition and work of the trade union Council.",
+    "page.leadershipExecutive.title": "Executive Committee", "page.leadershipExecutive.lead": "The composition and decisions of the Executive Committee.",
+    "page.leadershipAudit.title": "Audit Commission", "page.leadershipAudit.lead": "Oversight of the union’s financial and statutory activities.",
+    "page.unionStaff.title": "Union staff", "page.unionStaff.lead": "Contact details for the trade union office staff.",
     "page.about.body": "The Education Workers’ Trade Union represents sector employees, supports the protection of labour and social-economic rights, and promotes social partnership. Its work includes legal support, occupational safety, training and worker participation in decision-making. This overview reflects the Federation of Trade Unions of Kazakhstan’s published priorities: protection, development and fair work.",
     "page.legalBase.title": "Legal resources", "page.legalBase.lead": "Choose a section to open a topic page and official sources.",
     "page.laws.title": "Laws", "page.laws.lead": "Official texts of legal documents are available in the Adilet system.",
@@ -285,9 +308,10 @@ const translations = {
     "page.legalActs.title": "Trade union acts", "page.legalActs.lead": "Charters, organisational documents, collective agreements and decisions of trade union bodies.",
     "page.partnership.title": "Social partnership", "page.partnership.lead": "Negotiation and cooperation between workers, employers and public authorities.",
     "page.legalService.title": "Legal service", "page.legalService.lead": "Guidance on labour rights, prevention of violations and support for workers.",
-    "page.internationalPolicy.title": "International policy", "page.internationalPolicy.lead": "The trade union movement participates in international dialogue on decent work and labour rights.",
+    "page.legalService.body": "This section contains guidance on labour matters and materials from the trade union’s legal service.",
+    "page.internationalWork.title": "International work", "page.internationalWork.lead": "International relations, memoranda and exchange of experience.",
+    "page.internationalWork.body": "The union develops international relations and exchanges experience with education workers’ organisations.",
     "page.youth.title": "Youth policy", "page.youth.lead": "Support for young workers, new initiatives and development of trade union leaders.",
-    "page.cooperation.title": "International cooperation", "page.cooperation.lead": "Exchange of experience and cooperation with trade union organisations and partners.",
     "page.safety.title": "Occupational safety", "page.safety.lead": "A safe working environment, risk prevention and information for workers.",
     "page.trainingConcept.title": "Training concept", "page.trainingConcept.lead": "Systematic learning helps workers protect their rights and participate in union activity.",
     "page.trainingCourses.title": "Professional development courses", "page.trainingCourses.lead": "Leave your contact details to submit a course application.",
@@ -296,7 +320,10 @@ const translations = {
     "page.ask.title": "Ask a question", "page.ask.lead": "Describe your situation; an email to the trade union will be prepared.",
     "link.labor": "Labour Code of Kazakhstan No. 414-V", "link.unions": "Law on Trade Unions",
     "link.education": "Law on Education", "link.adilet": "Search legal acts on Adilet",
-    "link.federation": "Federation of Trade Unions of the Republic of Kazakhstan", "link.source": "Source: kasipodaq.kz",
+    "link.kazakhstanLaw": "Law of the Republic of Kazakhstan", "link.read": "Read on this site",
+    "document.close": "Close document",
+    "link.federation": "Federation of Trade Unions of the Republic of Kazakhstan", "link.source": "Source page",
+    "staff.position": "Position", "staff.phone": "Phone",
     "link.laborArticle": "Code: key articles and topics", "link.article22": "Article 22 — employee rights and duties",
     "link.article23": "Article 23 — employer rights and duties", "link.article52": "Article 52 — grounds for termination",
     "link.article68": "Article 68 — standard working hours", "link.article87": "Article 87 — annual paid leave",
@@ -304,34 +331,144 @@ const translations = {
     "link.socialAgreement": "Social partnership: agreements and dialogue",
     "activity.body": "This area includes worker representation, advice, training and cooperation with partners. Current programmes and news are published by the Federation of Trade Unions of Kazakhstan.",
     "training.body": "Training focuses on practical labour rights, social partnership, occupational safety and trade union skills. Confirm the content and schedule of specific sessions with the organiser.",
-    "news.1.title": "Trade unions helped 25 workers recover unpaid wages",
-    "news.1.text": "The legal clinic of the Astana Trade Union Centre helped workers recover wage arrears.",
-    "news.2.title": "Trade union leadership school: from negotiations to social guarantees",
-    "news.2.text": "The Federation of Trade Unions of Kazakhstan held a training seminar for union representatives.",
-    "news.3.title": "International dialogue on decent work",
-    "news.3.text": "Trade union representatives discussed labour protection and international cooperation."
   }
 };
 
+const courseDocuments = [
+  { title: "«Развитие профессиональных компетенций учителей «казахского языка» и «казахской литературы»", href: "assets/downloads/training/Prikaz-6-kazakh-language.pdf" },
+  { title: "«Развитие профессиональных компетенций педагогов организаций среднего образования «Формирование инклюзивной культуры. Планирование и оценивание образовательной траектории детей с особыми образовательными потребностями» - СОГЛАСОВАНИЕ", href: "assets/readers/Inclusive-education.html" },
+  { title: "«Развитие профессиональных компетенций учителей-логопедов и учителей-дефектологов» - СОГЛАСОВАНИЕ", href: "assets/readers/Speech-therapy-and-defectology.html" },
+  { title: "«Развитие профессиональных компетенций педагогов начальных классов «Читательская грамотность: от слогового чтения до вдумчивого читателя» - СОГЛАСОВАНИЕ", href: "assets/readers/Primary-school.html" },
+  { title: "Развитие профессиональных компетенций учителей биологии", href: "assets/downloads/training/Biology-teachers.pdf" }
+];
+
+const facebookPosts = [
+  {
+    videoUrl: "https://www.facebook.com/reel/2731815813902687",
+    title: "АСТАНА ҚАЛАСЫ ӘКІМДІГІНІҢ ҚАНЫШ СӘТБАЕВ АТЫНДАҒЫ № 61 МЕКТЕП-ЛИЦЕЙІНІҢ ҰЖЫМЫМЕН КЕЗДЕСУ",
+    text: `Астана қаласының білім беру қызметкерлері Кәсіподағының төрағасы Батыр Әлиев Астана қаласы әкімдігінің Қаныш Сәтбаев атындағы № 61 мектеп-лицейінің ұжымымен кездесу өткізді.
+
+Кездесудің негізгі мақсаты – педагогтердің еңбек құқықтары мен әлеуметтік-экономикалық мүдделерін қорғау, кәсіподақ мүшелеріне көрсетілетін қолдау шараларын түсіндіру және еңбек қатынастарына қатысты өзекті мәселелерді талқылау.
+
+Кездесу барысында Батыр Әлиев Астана қаласының Білім басқармасы мен Астана қаласының білім беру қызметкерлері Кәсіподағы арасындағы әлеуметтік әріптестік туралы келісім аясында атқарылып жатқан жұмыстарға тоқталды. Сонымен қатар кәсіподақ мүшелерінің әлеуметтік жағдайын жақсарту, еңбек құқықтарын қорғау, заңды мүдделерін қолдау және білім беру ұйымдарында әлеуметтік әріптестікті нығайту бағытындағы жұмыстар туралы ақпарат берді.
+
+Педагогтер үшін маңызды бірқатар мәселелерге де ерекше назар аударылды. Атап айтқанда:
+• Сауықтыру жәрдемақысы – еңбек демалысы кезінде төленетін сауықтыру жәрдемақысын есептеу және төлеу тәртібі;
+• Біліктілікті арттыру курстары – курстан өту кезеңінде педагогтің оқу жүктемесіне сәйкес жалақысының сақталуы;
+• Педагогтердің жұмыс уақыты – жұмыс режимі мен жұмыс уақытына қойылатын негізгі талаптар;
+• Еңбек құқықтарын қорғау – қызметкерлердің құқықтары мен заңды мүдделерін қамтамасыз ету тетіктері.
+
+Кездесу ашық диалог форматында өтті. Мектеп ұжымы өздерін толғандырған сұрақтарын қойып, еңбек заңнамасы мен кәсіподақ қызметіне қатысты тиісті жауаптар мен түсініктемелер алды.`
+  },
+  {
+    videoUrl: "https://www.facebook.com/reel/813061841901916",
+    title: "БАСТАУЫШ КӘСІПОДАҚ ҰЙЫМДАРЫНЫҢ ТӨРАҒАЛАРЫНА АРНАЛҒАН СЕМИНАР-КЕҢЕС",
+    text: `Астана қаласының білім беру қызметкерлері Кәсіподағы бастауыш кәсіподақ ұйымдарының төрағаларына арналған дәстүрлі жыл сайынғы семинар-кеңес өткізді.
+
+Семинардың негізгі мақсаты – бастауыш кәсіподақ ұйымдарының қызметін жетілдіру, кәсіподақ төрағаларының құқықтық сауаттылығын арттыру, тәжірибе алмасу және кәсіподақ жұмысының өзекті мәселелерін талқылау.
+
+Іс-шара барысында Кәсіподақ төрағасы Батыр Әлиев Қазақстан Республикасының Еңбек кодексі мен білім беру саласына қатысты нормативтік-құқықтық актілердің жекелеген нормаларын тәжірибеде қолдану мәселелеріне жан-жақты тоқталды.
+
+Сонымен қатар, Кәсіподақтың негізгі қызмет бағыттары, атқарылған жұмыстар мен алдағы жоспарлар туралы кеңінен ақпарат берді. Атап айтқанда, әлеуметтік әріптестікті дамыту, кәсіподақ мүшелерінің еңбек құқықтары мен әлеуметтік-экономикалық мүдделерін қорғау, қоғамдық бақылауды күшейту, құқықтық көмек көрсету және бастауыш кәсіподақ ұйымдарының жұмысын жандандыру мәселелері қозғалды.
+
+Семинар-кеңес ашық диалог және еркін пікір алмасу форматында өтті. Қатысушылар өздерін толғандырған сұрақтарын қойып, нақты әрі мазмұнды жауаптар алды. Сондай-ақ күнделікті кәсіподақ қызметінде кездесетін өзекті мәселелерді ортаға салып, өзара тәжірибе алмасты.
+
+Мұндай кездесулер бастауыш кәсіподақ ұйымдарының жұмысын жүйелеуге, кәсіподақ төрағаларының кәсіби біліктілігін арттыруға және ұйымдар арасындағы ынтымақтастықты нығайтуға мүмкіндік береді.
+
+Семинар-кеңес соңында кәсіподақ қозғалысының дамуына үлес қосып, қоғамдық жұмыстарда белсенділік танытып жүрген бірқатар кәсіподақ мүшелері арнайы марапаттармен марапатталды.`
+  },
+  {
+    videoUrl: "https://www.facebook.com/reel/2278532966024705",
+    title: "АСТАНА ҚАЛАСЫ ӘКІМДІГІНІҢ №115 ЖАЛПЫ БІЛІМ БЕРЕТІН МЕКТЕБІНІҢ ҰЖЫМЫМЕН КЕЗДЕСУ",
+    text: `Бүгін Астана қаласының білім беру қызметкерлері Кәсіподағының төрағасы Батыр Әлиев Астана қаласы әкімдігінің №115 жалпы білім беретін мектебінің ұжымымен кездесу өткізді.
+
+Кездесудің негізгі мақсаты – педагогтердің еңбек құқықтары мен әлеуметтік-экономикалық мүдделерін қорғау, кәсіподақ мүшелеріне көрсетілетін қолдау шараларын түсіндіру және еңбек қатынастарына қатысты өзекті мәселелерді талқылау.
+
+Кездесу барысында Батыр Әлиев Астана қаласының Білім басқармасы мен Астана қаласының білім беру қызметкерлері Кәсіподағы арасындағы әлеуметтік әріптестік туралы келісім аясында атқарылып жатқан жұмыстарға тоқталды. Сонымен қатар кәсіподақ мүшелерінің әлеуметтік жағдайын жақсарту, еңбек құқықтарын қорғау, заңды мүдделерін қолдау және білім беру ұйымдарында әлеуметтік әріптестікті нығайту бағытындағы жұмыстар туралы ақпарат берді.
+
+Педагогтер үшін маңызды бірқатар мәселелерге де ерекше назар аударылды. Атап айтқанда:
+- Сауықтыру жәрдемақысы – еңбек демалысы кезінде төленетін сауықтыру жәрдемақысын есептеу және төлеу тәртібі;
+- Біліктілікті арттыру курстары – курстан өту кезеңінде педагогтің оқу жүктемесіне сәйкес жалақысының сақталуы;
+- Педагогтердің жұмыс уақыты – жұмыс режимі мен жұмыс уақытына қойылатын негізгі талаптар;
+- Еңбек құқықтарын қорғау – қызметкерлердің құқықтары мен заңды мүдделерін қамтамасыз ету тетіктері.
+
+Кездесу ашық диалог форматында өтті. Мектеп ұжымы өздерін толғандырған сұрақтарын қойып, еңбек заңнамасы мен кәсіподақ қызметіне қатысты тиісті жауаптар мен түсініктемелер алды.
+
+Мұндай кездесулер педагогтердің еңбек құқықтары туралы хабардарлығын арттырып, кәсіподақ қызметінің ашықтығын қамтамасыз етуге және кәсіподақ ұйымы мен білім беру қызметкерлері арасындағы байланысты нығайтуға ықпал етеді.
+
+Кәсіподақтың басты міндеті – еңбек адамының құқығын қорғау, әлеуметтік қолдау көрсету және әрбір қызметкердің заңды мүддесін қамтамасыз ету!`
+  },
+  {
+    videoUrl: "https://www.facebook.com/reel/2204828916732012",
+    title: "АСТАНА ҚАЛАСЫ ӘКІМДІГІНІҢ ҚАЙЫМ МҰХАМЕДХАНОВ АТЫНДАҒЫ №90 МЕКТЕП-ГИМНАЗИЯ ҰЖЫМЫМЕН КЕЗДЕСУ",
+    text: `Бүгін Астана қаласының білім беру қызметкерлері Кәсіподағының төрағасы Батыр Әлиев Астана қаласы әкімдігінің Қайым Мұхамедханов атындағы №90 мектеп-гимназиясының ұжымымен кездесу өткізді.
+
+Кездесудің негізгі мақсаты – педагогтердің еңбек құқықтары мен әлеуметтік-экономикалық мүдделерін қорғау, кәсіподақ мүшелеріне көрсетілетін қолдау шаралары туралы ақпарат беру және еңбек қатынастарына қатысты өзекті мәселелерді талқылау.
+
+Кездесу барысында Батыр Әлиев Астана қаласының Білім басқармасы мен Астана қаласының білім беру қызметкерлері Кәсіподағы арасындағы әлеуметтік әріптестік туралы келісім аясында атқарылып жатқан жұмыстарға тоқталды. Атап айтқанда, кәсіподақ мүшелерінің әлеуметтік жағдайын жақсарту, еңбек құқықтарын қорғау, заңды мүдделерін қолдау және білім беру ұйымдарында әлеуметтік әріптестікті дамыту бағытындағы бастамалар туралы баяндады.
+
+Сонымен қатар педагогтер үшін маңызды бірқатар мәселелерге түсініктеме берілді. Атап айтқанда:
+- Еңбек демалысы кезіндегі сауықтыру жәрдемақысы – педагогтің нақты жүктемесіне сәйкес төлену тәртібі;
+- Біліктілікті арттыру курстары – курстан өту кезеңінде жалақының педагогтің оқу жүктемесіне сәйкес толық көлемде сақталуы;
+- Педагогтердің жұмыс уақыты – еңбек режимі мен жұмыс уақытына қатысты негізгі талаптар;
+- Еңбек құқықтарын қорғау – қызметкерлердің құқықтары мен заңды мүдделерін қамтамасыз ету мәселелері.
+
+Кездесу ашық диалог форматында өтіп, мектеп-гимназия ұжымы өздерін толғандырған сұрақтарын қойып, тиісті жауаптар мен түсініктемелер алды.
+
+Мұндай кездесулер педагогтерді еңбек заңнамасындағы маңызды мәселелер туралы хабардар етуге, кәсіподақ қызметінің ашықтығын қамтамасыз етуге және қызметкерлер мен кәсіподақ ұйымы арасындағы байланысты нығайтуға мүмкіндік береді.
+
+Кәсіподақтың басты міндеті – еңбек адамының құқығын қорғау, әлеуметтік қолдау көрсету және әрбір қызметкердің заңды мүддесін қамтамасыз ету!`
+  }
+];
+
+const unionActDocuments = [
+  { title: "Положение о Совете ветеранов системы образования города Астаны", href: "assets/downloads/acts/Veterans-Council-Regulation.pdf" },
+  { title: "Протокол профсоюзного Собрания о годовом отчете Первичной организации профсоюза (ОБРАЗЕЦ)", href: "assets/readers/Primary-Union-Annual-Report-Minutes.html" },
+  { title: "Протокол Конференции Первичной организации профсоюза об избрании нового председателя и других выборных органов (ОБРАЗЕЦ)", href: "assets/readers/Primary-Union-Election-Conference-Minutes.html" },
+  { title: "Заявление о вступлении в профсоюз", href: "assets/readers/Union-Membership-Application.html" },
+  { title: "ПОЛОЖЕНИЕ об оказании благотворительной помощи членам профсоюза ОО \"Профсоюз работников образования города Астаны\"", href: "assets/readers/Charitable-Assistance-Regulation.html" },
+  { title: "Протокол отчетно-выборной Конференции Первичной организации профсоюза об избрании председателя и других выборных органов (ОБРАЗЕЦ)", href: "assets/readers/Primary-Union-Election-Report-Minutes.html" },
+  { title: "Протокол профсоюзного Собрания о создании Первичной организации Профсоюза работников образования города Астаны (ОБРАЗЕЦ)", href: "assets/readers/Primary-Union-Establishment-Minutes.html" },
+  { title: "Положение о Первичной организации Профсоюза работников образования города Астаны", href: "assets/readers/Primary-Union-Regulation.html" },
+  { title: "Протокол заседания Профкома Первичной организации профсоюза об утверждении Плана работы и другие организационные вопросы (ОБРАЗЕЦ)", href: "assets/readers/Primary-Union-Work-Plan-Minutes.html" },
+  { title: "План работы Первичной организации профсоюза на год (ОБРАЗЕЦ)", href: "assets/readers/Primary-Union-Annual-Plan.html" },
+  { title: "Основные направления работы Первичной организации Профсоюза (ОБРАЗЕЦ)", href: "assets/readers/Primary-Union-Key-Activities.html" },
+  { title: "Журнал учета членов профсоюза в Первичной организации профсоюза", href: "assets/readers/Primary-Union-Membership-Register.html" }
+];
+
+const unionStaff = [
+  { name: "АЛИЕВ Батыр Алиевич", position: "Председатель", phone: "+7 (7172) 211082" },
+  { name: "САДЫКОВ Кайрат Кусаинович", position: "Заместитель председателя", phone: "+7 (7172) 211085" },
+  { name: "ВАСЮК Клавдия Александровна", position: "Бухгалтер", phone: "+7 (7172) 216038" },
+  { name: "АМРАШЕВА Асель Елутаевна", position: "Главный бухгалтер", phone: "+7 (7172) 216038" },
+  { name: "ТОКБАЛИНА Динара Калеловна", position: "Главный специалист по правовым вопросам", phone: "+7 (7172) 217106" },
+  { name: "ИСАТАЕВА Эльмира Нукеновна", position: "Бухгалтер", phone: "+7 (7172) 216038" }
+];
+
 const pageDefinitions = {
-  "about": { key: "page.about", source: "https://kasipodaq.kz/ru/" },
+  "about": { key: "page.about" },
+  "union-history": { key: "page.unionHistory" },
+  "leadership": { key: "page.leadership", cards: ["leadership-council", "leadership-executive", "leadership-audit", "union-staff"] },
+  "leadership-council": { key: "page.leadershipCouncil" },
+  "leadership-executive": { key: "page.leadershipExecutive" },
+  "leadership-audit": { key: "page.leadershipAudit" },
+  "union-staff": { key: "page.unionStaff", people: unionStaff },
   "legal-base": { key: "page.legalBase", cards: ["legal-labor", "legal-laws", "legal-npa", "legal-acts"] },
   "laws": { key: "page.laws", cards: ["legal-labor", "legal-laws", "legal-npa"] },
-  "activities": { key: "page.activities", cards: ["activity-partnership", "activity-legal", "activity-international-policy", "activity-youth", "activity-cooperation", "activity-safety"] },
+  "activities": { key: "page.activities", cards: ["activity-partnership", "activity-legal", "activity-international", "activity-youth", "activity-safety"] },
   "training": { key: "page.training", cards: ["training-concept", "training-courses", "training-activists"] },
   "legal-labor": { key: "page.legalLabor", body: "page.legalLabor.body", links: ["link.laborArticle", "link.article22", "link.article23", "link.article52", "link.article68", "link.article87", "link.article113"], external: "https://adilet.zan.kz/rus/docs/K1500000414" },
-  "legal-laws": { key: "page.legalLaws", links: ["link.unions", "link.education"] },
+  "legal-laws": { key: "page.legalLaws", links: ["link.unions", "link.education", "link.kazakhstanLaw"] },
   "legal-npa": { key: "page.legalNpa", links: ["link.adilet"] },
-  "legal-acts": { key: "page.legalActs", links: ["link.socialAgreement", "link.federation"], source: "https://kasipodaq.kz/ru/" },
-  "activity-partnership": { key: "page.partnership", body: "activity.body", links: ["link.socialAgreement", "link.federation"], source: "https://kasipodaq.kz/ru/" },
-  "activity-legal": { key: "page.legalService", body: "activity.body", links: ["link.labor", "link.unions"], source: "https://kasipodaq.kz/ru/" },
-  "activity-international-policy": { key: "page.internationalPolicy", body: "activity.body", source: "https://kasipodaq.kz/ru/" },
-  "activity-youth": { key: "page.youth", body: "activity.body", source: "https://kasipodaq.kz/ru/" },
-  "activity-cooperation": { key: "page.cooperation", body: "activity.body", source: "https://kasipodaq.kz/ru/" },
-  "activity-safety": { key: "page.safety", body: "activity.body", links: ["link.labor"], source: "https://kasipodaq.kz/ru/" },
-  "training-concept": { key: "page.trainingConcept", body: "training.body", source: "https://kasipodaq.kz/ru/" },
-  "training-courses": { key: "page.trainingCourses", body: "training.body", form: "course", source: "https://kasipodaq.kz/ru/" },
-  "training-activists": { key: "page.trainingActivists", body: "training.body", form: "course", source: "https://kasipodaq.kz/ru/" },
+  "legal-acts": { key: "page.legalActs", resources: unionActDocuments },
+  "activity-partnership": { key: "page.partnership", body: "activity.body", links: ["link.socialAgreement", "link.federation"] },
+  "activity-legal": { key: "page.legalService", body: "page.legalService.body" },
+  "activity-international": { key: "page.internationalWork", body: "page.internationalWork.body" },
+  "activity-youth": { key: "page.youth", body: "activity.body" },
+  "activity-safety": { key: "page.safety", body: "activity.body" },
+  "training-concept": { key: "page.trainingConcept", body: "training.body" },
+  "training-courses": { key: "page.trainingCourses", body: "training.body", resources: courseDocuments, form: "course" },
+  "training-activists": { key: "page.trainingActivists", body: "training.body", form: "course" },
   "faq": { key: "page.faq", faq: true },
   "ask": { key: "page.ask", form: "question" }
 };
@@ -347,16 +484,11 @@ const documentLinks = {
   "link.article113": "https://adilet.zan.kz/rus/docs/K1500000414",
   "link.unions": "https://adilet.zan.kz/rus/docs/Z1400000211",
   "link.education": "https://adilet.zan.kz/rus/docs/Z070000319_",
+  "link.kazakhstanLaw": "https://adilet.zan.kz/document/0a851b3f-e374-430b-808c-aa24128e6beb",
   "link.adilet": "https://adilet.zan.kz/rus",
   "link.federation": "https://kasipodaq.kz/ru/",
   "link.socialAgreement": "https://kasipodaq.kz/ru/"
 };
-
-const newsItems = [
-  { key: "news.1", date: "2026-11-02", url: "https://kasipodaq.kz/ru/news/947/" },
-  { key: "news.2", date: "2026-10-30", url: "https://kasipodaq.kz/ru/news/934/" },
-  { key: "news.3", date: "2026-10-30", url: "https://kasipodaq.kz/ru/news/932/" }
-];
 
 let currentLanguage = "ru";
 const yearElement = document.getElementById("year");
@@ -364,11 +496,23 @@ const homeContent = document.getElementById("home-content");
 const pageView = document.getElementById("page-view");
 const navToggle = document.querySelector(".nav-toggle");
 const mainNav = document.querySelector(".main-nav");
+let textMotionObserver = null;
 
 if (yearElement) yearElement.textContent = new Date().getFullYear();
 
 function translate(key) {
   return translations[currentLanguage][key] || translations.ru[key] || key;
+}
+
+function observeTextMotion() {
+  const textTargets = "#home-content h1, #home-content h2, #home-content h3, #home-content p, #home-content .section-kicker, #home-content .stat-value, #home-content .stat-label, #home-content li, #page-view h1, #page-view h2, #page-view h3, #page-view p, #page-view .section-kicker";
+  document.querySelectorAll(textTargets).forEach((item, index) => {
+    item.classList.add("text-reveal");
+    item.style.transitionDelay = `${index % 5 * 80}ms`;
+    if (item.classList.contains("is-visible")) return;
+    if (textMotionObserver) textMotionObserver.observe(item);
+    else item.classList.add("is-visible");
+  });
 }
 
 function applyTranslations() {
@@ -391,26 +535,27 @@ function applyTranslations() {
   document.querySelectorAll(".nav-toggle").forEach((button) => {
     button.setAttribute("aria-label", currentLanguage === "en" ? "Open menu" : currentLanguage === "kz" ? "Мәзірді ашу" : "Открыть меню");
   });
-  document.querySelectorAll("#news-year").forEach((select) => {
-    select.setAttribute("aria-label", currentLanguage === "en" ? "Filter news by year" : currentLanguage === "kz" ? "Жаңалықтарды жыл бойынша сүзу" : "Фильтр новостей по году");
-  });
   renderNews();
   renderCurrentPage();
+  observeTextMotion();
+}
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, (character) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;"
+  })[character]);
 }
 
 function renderNews() {
   const grid = document.getElementById("news-grid");
   if (!grid) return;
-  const yearSelect = document.getElementById("news-year");
-  const year = yearSelect ? yearSelect.value : "all";
-  const items = newsItems.filter((item) => year === "all" || item.date.slice(0, 4) === year);
-  if (!items.length) {
-    grid.innerHTML = `<p class="empty-state">${translate("news.empty")}</p>`;
+  if (!facebookPosts.length) {
+    grid.innerHTML = `<p class="empty-state">${translate("news.facebookEmpty")}</p>`;
     return;
   }
-  grid.innerHTML = items.map((item) => {
-    const date = new Intl.DateTimeFormat(currentLanguage === "kz" ? "kk-KZ" : currentLanguage === "en" ? "en-GB" : "ru-RU", { day: "numeric", month: "long", year: "numeric" }).format(new Date(`${item.date}T12:00:00`));
-    return `<article class="news-card"><span class="news-tag">${translate("news.federation")}</span><time datetime="${item.date}">${date}</time><h3>${translate(`${item.key}.title`)}</h3><p>${translate(`${item.key}.text`)}</p><a href="${item.url}" target="_blank" rel="noopener noreferrer">${translate("news.read")}</a></article>`;
+  grid.innerHTML = facebookPosts.map((post, index) => {
+    const videoEmbed = `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(post.videoUrl)}&show_text=false&width=500`;
+    return `<article class="news-card"><div class="news-video-frame"><iframe src="${escapeHtml(videoEmbed)}" title="${escapeHtml(post.title)}" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe></div><h3>${escapeHtml(post.title)}</h3><button class="news-read" type="button" data-news-index="${index}">${translate("news.read")} →</button></article>`;
   }).join("");
 }
 
@@ -422,8 +567,10 @@ function routeSlug() {
 function titleForSlug(slug) {
   const keyMap = {
     "legal-labor": "legal.labor", "legal-laws": "legal.laws", "legal-npa": "legal.npa", "legal-acts": "legal.acts",
-    "activity-partnership": "activity.partnership", "activity-legal": "activity.legal", "activity-international-policy": "activity.internationalPolicy",
-    "activity-youth": "activity.youth", "activity-cooperation": "activity.cooperation", "activity-safety": "activity.safety",
+    "activity-partnership": "activity.partnership", "activity-legal": "activity.legal", "activity-international": "activity.internationalWork",
+    "activity-youth": "activity.youth", "activity-safety": "activity.safety",
+    "leadership-council": "nav.council", "leadership-executive": "nav.executive",
+    "leadership-audit": "nav.audit", "union-staff": "nav.staff",
     "training-concept": "training.concept", "training-courses": "training.courses", "training-activists": "training.activists"
   };
   return translate(keyMap[slug] || "page.more");
@@ -440,6 +587,16 @@ function renderCard(slug) {
   if (!definition) return "";
   const title = titleForSlug(slug);
   return `<a class="link-card page-link-card" href="#page/${slug}"><span class="link-name">${title}</span><span class="link-meta">${translate("page.more")}</span><span class="card-arrow" aria-hidden="true">↗</span></a>`;
+}
+
+function renderResources(resources) {
+  if (!resources?.length) return "";
+  return `<div class="link-grid page-link-grid resource-grid">${resources.map((resource) => `<article class="link-card resource-card"><span class="link-name">${escapeHtml(resource.title)}</span><button class="resource-link" type="button" data-reader-src="${escapeHtml(resource.href)}" data-reader-title="${escapeHtml(resource.title)}">${translate("link.read")} ↗</button></article>`).join("")}</div>`;
+}
+
+function renderPeople(people) {
+  if (!people?.length) return "";
+  return `<div class="staff-grid">${people.map((person) => `<article class="staff-card"><div class="staff-photo-placeholder" aria-hidden="true">✦</div><h2>${person.name}</h2><p><strong>${translate("staff.position")}:</strong> ${person.position}</p><p><strong>${translate("staff.phone")}:</strong> <a href="tel:${person.phone.replace(/[^\d+]/g, "")}">${person.phone}</a></p></article>`).join("")}</div>`;
 }
 
 function courseForm() {
@@ -498,11 +655,12 @@ function renderCurrentPage() {
   const body = bodyKey ? `<p class="page-body">${translate(bodyKey)}</p>` : "";
   const links = definition.links ? `<div class="link-grid page-link-grid">${definition.links.map((key) => `<a class="link-card" href="${linkDestination(key, definition)}" target="_blank" rel="noopener noreferrer"><span class="link-name">${translate(key)}</span><span class="link-meta">${translate("page.external")}</span></a>`).join("")}</div>` : "";
   const childCards = definition.cards ? `<div class="link-grid page-link-grid">${definition.cards.map(renderCard).join("")}</div>` : "";
-  const source = definition.source ? `<p class="source-note">${translate("page.source")}: <a href="${definition.source}" target="_blank" rel="noopener noreferrer">${translate("link.source")}</a></p>` : "";
+  const resources = renderResources(definition.resources);
+  const people = renderPeople(definition.people);
   const form = definition.form === "course" ? courseForm() : definition.form === "question" ? questionForm() : "";
   const faq = definition.faq ? faqContent() : "";
   const externalButton = definition.external ? `<a class="btn btn-primary official-button" href="${definition.external}" target="_blank" rel="noopener noreferrer">${translate("page.external")}</a>` : "";
-  pageView.innerHTML = `<div class="container page-content"><a class="back-link" href="#home">${translate("page.back")}</a><header class="page-heading"><span class="section-kicker">${translate("page.source")}</span><h1>${title}</h1><p>${lead}</p></header>${body}${links}${childCards}${faq}${externalButton}${form}${source}</div>`;
+  pageView.innerHTML = `<div class="container page-content"><a class="back-link" href="#home">${translate("page.back")}</a><header class="page-heading"><span class="section-kicker">${translate("page.source")}</span><h1>${title}</h1><p>${lead}</p></header>${body}${links}${childCards}${resources}${people}${faq}${externalButton}${form}</div>`;
   pageView.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
@@ -511,10 +669,6 @@ document.querySelectorAll("[data-lang]").forEach((button) => {
     currentLanguage = button.dataset.lang;
     applyTranslations();
   });
-});
-
-document.addEventListener("change", (event) => {
-  if (event.target.matches("#news-year")) renderNews();
 });
 
 document.addEventListener("submit", (event) => {
@@ -526,6 +680,49 @@ document.addEventListener("submit", (event) => {
   const subject = form.dataset.form === "course" ? translate("form.mailSubjectCourse") : translate("form.questionTitle");
   const body = Array.from(values.entries()).map(([key, value]) => `${key}: ${value}`).join("\n");
   window.location.href = `mailto:prof_adilet@mail.ru?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+});
+
+const documentDialog = document.getElementById("document-dialog");
+const documentViewer = document.getElementById("document-viewer");
+const documentDialogTitle = document.getElementById("document-dialog-title");
+const newsDialog = document.getElementById("news-dialog");
+const newsDialogTitle = document.getElementById("news-dialog-title");
+const newsDialogBody = document.getElementById("news-dialog-body");
+document.addEventListener("click", (event) => {
+  const closeNewsButton = event.target.closest("[data-news-close]");
+  if (closeNewsButton) {
+    newsDialog?.close();
+    return;
+  }
+  const newsTrigger = event.target.closest("[data-news-index]");
+  if (newsTrigger && newsDialog && newsDialogTitle && newsDialogBody) {
+    const post = facebookPosts[Number(newsTrigger.dataset.newsIndex)];
+    if (!post) return;
+    newsDialogTitle.textContent = post.title;
+    newsDialogBody.innerHTML = post.text.split(/\n\s*\n/).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("");
+    newsDialog.showModal();
+    return;
+  }
+  const closeButton = event.target.closest("[data-reader-close]");
+  if (closeButton) {
+    documentDialog?.close();
+    return;
+  }
+  const trigger = event.target.closest("[data-reader-src]");
+  if (!trigger || !documentDialog || !documentViewer || !documentDialogTitle) return;
+  const source = trigger.dataset.readerSrc;
+  const title = trigger.dataset.readerTitle;
+  if (!source || !title) return;
+  documentDialogTitle.textContent = title;
+  documentViewer.title = title;
+  documentViewer.src = source.toLowerCase().endsWith(".pdf") ? `${source}#toolbar=0&navpanes=0` : source;
+  documentDialog.showModal();
+});
+documentDialog?.addEventListener("close", () => {
+  if (documentViewer) documentViewer.src = "about:blank";
+});
+newsDialog?.addEventListener("close", () => {
+  if (newsDialogBody) newsDialogBody.replaceChildren();
 });
 
 if (navToggle && mainNav) {
@@ -602,7 +799,7 @@ document.querySelectorAll(".reveal").forEach((item, index) => {
   item.style.transitionDelay = `${Math.min(index, 6) * 70}ms`;
 });
 if ("IntersectionObserver" in window) {
-  const revealObserver = new IntersectionObserver((entries, observer) => {
+  textMotionObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("is-visible");
@@ -610,10 +807,13 @@ if ("IntersectionObserver" in window) {
       }
     });
   }, { threshold: 0.12 });
-  document.querySelectorAll(".reveal").forEach((item) => revealObserver.observe(item));
+  document.querySelectorAll(".reveal").forEach((item) => textMotionObserver.observe(item));
 } else {
   document.querySelectorAll(".reveal").forEach((item) => item.classList.add("is-visible"));
 }
 
-window.addEventListener("hashchange", renderCurrentPage);
+window.addEventListener("hashchange", () => {
+  renderCurrentPage();
+  observeTextMotion();
+});
 applyTranslations();
