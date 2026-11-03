@@ -308,15 +308,13 @@ select {
   line-height: 1.1;
 }
 
-.brand-title,
-.brand-subtitle {
+.brand-title {
   font-weight: 800;
   color: var(--navy);
   letter-spacing: -0.03em;
 }
 
-.brand-title,
-.brand-subtitle {
+.brand-title {
   font-size: 0.9rem;
   text-transform: uppercase;
 }
@@ -1084,11 +1082,6 @@ select {
     justify-content: center;
   }
 
-  .brand-title,
-  .brand-subtitle {
-    font-size: 0.7rem;
-  }
-
   .stats-grid,
   .feature-grid,
   .news-grid,
@@ -1171,8 +1164,7 @@ select {
   gap: 4px;
 }
 
-.brand-title,
-.brand-subtitle {
+.brand-title {
   font-size: 0.83rem;
 }
 
@@ -1770,11 +1762,6 @@ select {
 
   .brand-copy {
     max-width: 180px;
-  }
-
-  .brand-title,
-  .brand-subtitle {
-    font-size: 0.73rem;
   }
 
   .header-question {

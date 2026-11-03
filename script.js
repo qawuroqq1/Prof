@@ -1,7 +1,7 @@
 const translations = {
   ru: {
     "topbar.note": "Защита. Поддержка. Развитие.",
-    "brand.line1": "Профсоюз работников", "brand.line2": "образования города Астаны",
+    "brand.title": "Профсоюз работников образования города Астаны",
     "nav.about": "О профсоюзе", "nav.legal": "Правовая база", "nav.laws": "Законы",
     "nav.unionHistory": "История профсоюза", "nav.leadership": "Руководящие органы",
     "nav.council": "Совет", "nav.executive": "Исполнительный комитет",
@@ -112,7 +112,7 @@ const translations = {
   },
   kz: {
     "topbar.note": "Қорғау. Қолдау. Даму.",
-    "brand.line1": "Білім қызметкерлерінің", "brand.line2": "Астана қалалық кәсіподағы",
+    "brand.title": "Астана қаласының білім қызметкерлері кәсіподағы",
     "nav.about": "Кәсіподақ туралы", "nav.legal": "Құқықтық база", "nav.laws": "Заңдар",
     "nav.unionHistory": "Кәсіподақ тарихы", "nav.leadership": "Басқарушы органдар",
     "nav.council": "Кеңес", "nav.executive": "Атқару комитеті",
@@ -223,7 +223,7 @@ const translations = {
   },
   en: {
     "topbar.note": "Protection. Support. Progress.",
-    "brand.line1": "Education Workers’", "brand.line2": "Trade Union of Astana",
+    "brand.title": "Education Workers’ Trade Union of Astana",
     "nav.about": "About the Union", "nav.legal": "Legal Resources", "nav.laws": "Laws",
     "nav.unionHistory": "Union history", "nav.leadership": "Governing bodies",
     "nav.council": "Council", "nav.executive": "Executive Committee",
