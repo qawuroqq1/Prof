@@ -342,6 +342,64 @@ const courseDocuments = [
   { title: "Развитие профессиональных компетенций учителей биологии", href: "assets/downloads/training/Biology-teachers.pdf" }
 ];
 
+const meetingNewsCopy = {
+  ru: {
+    opening: (school) => `Сегодня председатель Профсоюза работников образования города Астаны Батыр Алиев провёл встречу с ${school}.`,
+    purpose: "Основная цель встречи — защита трудовых прав и социально-экономических интересов педагогов, разъяснение мер поддержки членов Профсоюза и обсуждение актуальных вопросов трудовых отношений.",
+    partnership: "В ходе встречи Батыр Алиев рассказал о работе, проводимой в рамках Соглашения о социальном партнёрстве между Управлением образования города Астаны и Профсоюзом работников образования города Астаны. Он также проинформировал о мерах по улучшению социального положения членов Профсоюза, защите их трудовых прав и законных интересов и укреплению социального партнёрства в организациях образования.",
+    issueIntro: "Особое внимание уделили важным для педагогов вопросам:",
+    issues: [
+      "Оздоровительное пособие — порядок расчёта и выплаты пособия во время трудового отпуска.",
+      "Курсы повышения квалификации — сохранение заработной платы педагога с учётом учебной нагрузки на период обучения.",
+      "Рабочее время педагогов — основные требования к режиму и продолжительности рабочего времени.",
+      "Защита трудовых прав — механизмы обеспечения прав и законных интересов работников."
+    ],
+    actualWorkloadIssues: [
+      "Оздоровительное пособие — выплата с учётом фактической нагрузки педагога.",
+      "Курсы повышения квалификации — полное сохранение заработной платы с учётом учебной нагрузки педагога на период обучения."
+    ],
+    discussion: (school) => `Встреча прошла в формате открытого диалога. ${school} задали волнующие их вопросы и получили ответы и разъяснения по трудовому законодательству и деятельности Профсоюза.`,
+    impact: "Такие встречи помогают педагогам лучше знать свои трудовые права, способствуют открытости профсоюзной работы и укрепляют связь между Профсоюзом и работниками образования.",
+    mission: "Главная задача Профсоюза — защищать права работников, оказывать социальную поддержку и отстаивать законные интересы каждого сотрудника."
+  },
+  en: {
+    opening: (school) => `Today, Batyr Aliyev, Chair of the Astana Education Workers’ Trade Union, met with ${school}.`,
+    purpose: "The meeting focused on protecting teachers’ labour rights and socio-economic interests, explaining the support available to union members, and discussing current workplace issues.",
+    partnership: "Batyr Aliyev spoke about the work carried out under the social partnership agreement between the Astana City Education Department and the Astana Education Workers’ Trade Union. He also outlined efforts to improve union members’ well-being, protect their labour rights and legitimate interests, and strengthen social partnership in educational organisations.",
+    issueIntro: "The discussion also covered several issues important to teachers:",
+    issues: [
+      "Wellness allowance — how the allowance is calculated and paid during annual leave.",
+      "Professional development courses — teachers’ salaries are maintained in line with their teaching workload while they attend courses.",
+      "Teachers’ working hours — key requirements for work schedules and working time.",
+      "Protection of labour rights — mechanisms for safeguarding employees’ rights and legitimate interests."
+    ],
+    actualWorkloadIssues: [
+      "Wellness allowance — payment based on the teacher’s actual workload.",
+      "Professional development courses — teachers’ full salaries are maintained in line with their teaching workload while they attend courses."
+    ],
+    discussion: (school) => `The meeting was held as an open dialogue. ${school} asked questions and received answers and guidance on labour law and the Trade Union’s work.`,
+    impact: "Meetings like these help teachers better understand their labour rights, support transparency in the Trade Union’s work, and strengthen ties between the Union and education workers.",
+    mission: "The Trade Union’s main mission is to protect workers’ rights, provide social support, and safeguard the legitimate interests of every employee."
+  }
+};
+
+function buildMeetingNewsText(language, { school, schoolType, actualWorkload = false, includeImpact = false, includeMission = false }) {
+  const copy = meetingNewsCopy[language];
+  const issues = actualWorkload
+    ? [...copy.actualWorkloadIssues, ...copy.issues.slice(2)]
+    : copy.issues;
+
+  return [
+    copy.opening(school),
+    copy.purpose,
+    copy.partnership,
+    `${copy.issueIntro}\n${issues.map((issue) => `• ${issue}`).join("\n")}`,
+    copy.discussion(schoolType),
+    includeImpact ? copy.impact : "",
+    includeMission ? copy.mission : ""
+  ].filter(Boolean).join("\n\n");
+}
+
 const facebookPosts = [
   {
     videoUrl: "https://www.facebook.com/reel/2731815813902687",
@@ -421,6 +479,97 @@ const facebookPosts = [
   }
 ];
 
+const facebookPostTranslations = {
+  "https://www.facebook.com/reel/2731815813902687": {
+    ru: {
+      title: "Встреча с коллективом школы-лицея № 61 имени Каныша Сатпаева",
+      text: buildMeetingNewsText("ru", {
+        school: "коллективом школы-лицея № 61 имени Каныша Сатпаева акимата города Астаны",
+        schoolType: "Педагоги школы-лицея"
+      })
+    },
+    en: {
+      title: "Meeting with the staff of Kanysh Satpayev School-Lyceum No. 61",
+      text: buildMeetingNewsText("en", {
+        school: "the staff of Kanysh Satpayev School-Lyceum No. 61, run by the Astana city administration",
+        schoolType: "The school-lyceum staff"
+      })
+    }
+  },
+  "https://www.facebook.com/reel/813061841901916": {
+    ru: {
+      title: "Семинар-совещание для председателей первичных профсоюзных организаций",
+      text: `Профсоюз работников образования города Астаны провёл традиционный ежегодный семинар-совещание для председателей первичных профсоюзных организаций.
+
+Основная цель семинара — совершенствование работы первичных профсоюзных организаций, повышение правовой грамотности профсоюзных председателей, обмен опытом и обсуждение актуальных вопросов профсоюзной деятельности.
+
+В ходе мероприятия председатель Профсоюза Батыр Алиев подробно остановился на практическом применении отдельных норм Трудового кодекса Республики Казахстан и нормативных правовых актов, регулирующих сферу образования.
+
+Он также рассказал об основных направлениях деятельности Профсоюза, проделанной работе и планах на предстоящий период. Обсуждались развитие социального партнёрства, защита трудовых прав и социально-экономических интересов членов Профсоюза, усиление общественного контроля, оказание правовой помощи и активизация работы первичных профсоюзных организаций.
+
+Семинар-совещание прошло в формате открытого диалога и свободного обмена мнениями. Участники задали интересующие их вопросы и получили содержательные ответы, обсудили актуальные проблемы повседневной профсоюзной работы и поделились опытом.
+
+Такие встречи помогают систематизировать работу первичных профсоюзных организаций, повышать профессиональную компетентность профсоюзных председателей и укреплять взаимодействие между организациями.
+
+В завершение семинара-совещания ряд членов Профсоюза, внесших вклад в развитие профсоюзного движения и активно участвующих в общественной работе, были отмечены специальными наградами.`
+    },
+    en: {
+      title: "Annual seminar for leaders of primary trade union organisations",
+      text: `The Astana Education Workers’ Trade Union held its traditional annual seminar for leaders of primary trade union organisations.
+
+The seminar aimed to improve the work of primary trade union organisations, strengthen union leaders’ knowledge of the law, share experience, and discuss current trade union issues.
+
+During the event, Trade Union Chair Batyr Aliyev gave a detailed overview of how specific provisions of the Labour Code of the Republic of Kazakhstan and education-related regulations are applied in practice.
+
+He also spoke about the Trade Union’s main areas of work, achievements, and plans for the coming period. Topics included developing social partnership, protecting members’ labour rights and socio-economic interests, strengthening public oversight, providing legal assistance, and increasing the activity of primary trade union organisations.
+
+The seminar was held as an open dialogue and exchange of views. Participants asked questions and received detailed answers, discussed current challenges in day-to-day union work, and shared their experience.
+
+Meetings like these help organise the work of primary trade union organisations, strengthen union leaders’ professional skills, and foster cooperation between organisations.
+
+At the end of the seminar, several Trade Union members who had contributed to the development of the trade union movement and taken an active part in community work received special awards.`
+    }
+  },
+  "https://www.facebook.com/reel/2278532966024705": {
+    ru: {
+      title: "Встреча с коллективом общеобразовательной школы № 115",
+      text: buildMeetingNewsText("ru", {
+        school: "коллективом общеобразовательной школы № 115 акимата города Астаны",
+        schoolType: "Педагоги школы"
+      }) + `\n\n${meetingNewsCopy.ru.impact}\n\n${meetingNewsCopy.ru.mission}`
+    },
+    en: {
+      title: "Meeting with the staff of General Education School No. 115",
+      text: buildMeetingNewsText("en", {
+        school: "the staff of General Education School No. 115, run by the Astana city administration",
+        schoolType: "The school staff"
+      }) + `\n\n${meetingNewsCopy.en.impact}\n\n${meetingNewsCopy.en.mission}`
+    }
+  },
+  "https://www.facebook.com/reel/2204828916732012": {
+    ru: {
+      title: "Встреча с коллективом школы-гимназии № 90 имени Кайыма Мухамедханова",
+      text: buildMeetingNewsText("ru", {
+        school: "коллективом школы-гимназии № 90 имени Кайыма Мухамедханова акимата города Астаны",
+        schoolType: "Педагоги школы-гимназии",
+        actualWorkload: true,
+        includeImpact: true,
+        includeMission: true
+      })
+    },
+    en: {
+      title: "Meeting with the staff of Kayiym Mukhamedkhanov Gymnasium No. 90",
+      text: buildMeetingNewsText("en", {
+        school: "the staff of Kayiym Mukhamedkhanov Gymnasium No. 90, run by the Astana city administration",
+        schoolType: "The gymnasium staff",
+        actualWorkload: true,
+        includeImpact: true,
+        includeMission: true
+      })
+    }
+  }
+};
+
 const unionActDocuments = [
   { title: "Положение о Совете ветеранов системы образования города Астаны", href: "assets/downloads/acts/Veterans-Council-Regulation.pdf" },
   { title: "Протокол профсоюзного Собрания о годовом отчете Первичной организации профсоюза (ОБРАЗЕЦ)", href: "assets/readers/Primary-Union-Annual-Report-Minutes.html" },
@@ -491,6 +640,7 @@ const documentLinks = {
 };
 
 let currentLanguage = "ru";
+let activeNewsIndex = null;
 const yearElement = document.getElementById("year");
 const homeContent = document.getElementById("home-content");
 const pageView = document.getElementById("page-view");
@@ -536,6 +686,7 @@ function applyTranslations() {
     button.setAttribute("aria-label", currentLanguage === "en" ? "Open menu" : currentLanguage === "kz" ? "Мәзірді ашу" : "Открыть меню");
   });
   renderNews();
+  if (activeNewsIndex !== null && newsDialog?.open) renderNewsArticle(activeNewsIndex);
   renderCurrentPage();
   observeTextMotion();
 }
@@ -554,8 +705,9 @@ function renderNews() {
     return;
   }
   grid.innerHTML = facebookPosts.map((post, index) => {
+    const localizedPost = facebookPostTranslations[post.videoUrl]?.[currentLanguage] || post;
     const videoEmbed = `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(post.videoUrl)}&show_text=false&width=500`;
-    return `<article class="news-card"><div class="news-video-frame"><iframe src="${escapeHtml(videoEmbed)}" title="${escapeHtml(post.title)}" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe></div><h3>${escapeHtml(post.title)}</h3><button class="news-read" type="button" data-news-index="${index}">${translate("news.read")} →</button></article>`;
+    return `<article class="news-card"><div class="news-video-frame"><iframe src="${escapeHtml(videoEmbed)}" title="${escapeHtml(localizedPost.title)}" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe></div><h3>${escapeHtml(localizedPost.title)}</h3><button class="news-read" type="button" data-news-index="${index}">${translate("news.read")} →</button></article>`;
   }).join("");
 }
 
@@ -688,18 +840,30 @@ const documentDialogTitle = document.getElementById("document-dialog-title");
 const newsDialog = document.getElementById("news-dialog");
 const newsDialogTitle = document.getElementById("news-dialog-title");
 const newsDialogBody = document.getElementById("news-dialog-body");
+
+function renderNewsArticle(index) {
+  const post = facebookPosts[index];
+  if (!post || !newsDialogTitle || !newsDialogBody) return;
+  const localizedPost = facebookPostTranslations[post.videoUrl]?.[currentLanguage] || post;
+  newsDialogTitle.textContent = localizedPost.title;
+  newsDialogBody.innerHTML = localizedPost.text.split(/\n\s*\n/).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("");
+}
+
 document.addEventListener("click", (event) => {
   const closeNewsButton = event.target.closest("[data-news-close]");
   if (closeNewsButton) {
     newsDialog?.close();
+    activeNewsIndex = null;
     return;
   }
   const newsTrigger = event.target.closest("[data-news-index]");
   if (newsTrigger && newsDialog && newsDialogTitle && newsDialogBody) {
-    const post = facebookPosts[Number(newsTrigger.dataset.newsIndex)];
-    if (!post) return;
-    newsDialogTitle.textContent = post.title;
-    newsDialogBody.innerHTML = post.text.split(/\n\s*\n/).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("");
+    activeNewsIndex = Number(newsTrigger.dataset.newsIndex);
+    if (!facebookPosts[activeNewsIndex]) {
+      activeNewsIndex = null;
+      return;
+    }
+    renderNewsArticle(activeNewsIndex);
     newsDialog.showModal();
     return;
   }
@@ -723,6 +887,7 @@ documentDialog?.addEventListener("close", () => {
 });
 newsDialog?.addEventListener("close", () => {
   if (newsDialogBody) newsDialogBody.replaceChildren();
+  activeNewsIndex = null;
 });
 
 if (navToggle && mainNav) {
