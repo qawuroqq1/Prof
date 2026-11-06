@@ -920,7 +920,7 @@ async function renderProtectedPdf(source) {
       const page = await pdf.getPage(pageNumber);
       if (protectedPdfState !== state) return;
       const baseViewport = page.getViewport({ scale: 1 });
-      const scale = Math.min((protectedPdfViewer.clientWidth - 32) / baseViewport.width, 1.5);
+      const scale = Math.min((protectedPdfViewer.clientWidth - 32) / baseViewport.width, 1.15);
       const viewport = page.getViewport({ scale });
       const outputScale = Math.min(window.devicePixelRatio || 1, 1.5);
       const canvas = document.createElement("canvas");
@@ -928,6 +928,7 @@ async function renderProtectedPdf(source) {
       canvas.height = Math.floor(viewport.height * outputScale);
       canvas.setAttribute("aria-hidden", "true");
       canvas.draggable = false;
+      pageContainer.style.width = `${viewport.width}px`;
       pageContainer.style.aspectRatio = `${viewport.width} / ${viewport.height}`;
       pageContainer.append(canvas);
       await page.render({
