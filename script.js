@@ -47,12 +47,14 @@ const translations = {
     "contact.addressValue": "Астана, проспект Абая, 38, офис 401", "contact.mapTitle": "Открыть маршрут",
     "contact.mapSubtitle": "Схема района · точный маршрут в 2GIS",
     "assistant.title": "ИИ-помощник профсоюза", "assistant.status": "На связи · ответы по частым вопросам",
-    "assistant.disclaimer": "Я виртуальный помощник и не заменяю юридическую консультацию.",
+    "assistant.disclaimer": "Я виртуальный помощник и не заменяю юридическую консультацию. Сообщения отправляются OpenAI для обработки.",
     "assistant.welcome": "Здравствуйте! Спросите о трудовых правах, обучении или контактах профсоюза.",
     "assistant.inputLabel": "Ваш вопрос", "assistant.placeholder": "Напишите свой вопрос...",
     "assistant.send": "Отправить", "assistant.close": "Закрыть чат", "assistant.launcher": "ИИ-помощник",
     "assistant.contactLink": "Нужен специалист? Задать вопрос →",
     "assistant.fallback": "Я пока не нашёл точный ответ. Попробуйте спросить о трудовых правах, коллективном договоре, курсах или контактах.",
+    "assistant.error": "Не удалось связаться с помощником. Попробуйте позже или задайте вопрос специалисту профсоюза.",
+    "assistant.loading": "Думаю...",
     "assistant.contactAnswer": "Позвоните по номеру +7 (7172) 21-71-06 или напишите на prof_adilet@mail.ru. Адрес: Астана, проспект Абая, 38, офис 401.",
     "footer": "Профсоюз работников образования города Астаны. Все права защищены.",
     "page.back": "← На главную", "page.external": "Официальный источник →", "page.more": "Подробнее →",
@@ -158,12 +160,14 @@ const translations = {
     "contact.addressValue": "Астана, Абай даңғылы, 38, 401-кеңсе", "contact.mapTitle": "Бағытты ашу",
     "contact.mapSubtitle": "Аудан сызбасы · нақты бағыт 2GIS-те",
     "assistant.title": "Кәсіподақтың ЖИ-көмекшісі", "assistant.status": "Желіде · жиі қойылатын сұрақтарға жауап",
-    "assistant.disclaimer": "Мен виртуалды көмекшімін, заңгерлік кеңесті алмастырмаймын.",
+    "assistant.disclaimer": "Мен виртуалды көмекшімін, заңгерлік кеңесті алмастырмаймын. Хабарламалар өңдеу үшін OpenAI-ға жіберіледі.",
     "assistant.welcome": "Сәлеметсіз бе! Еңбек құқықтары, оқу немесе кәсіподақ байланыстары туралы сұраңыз.",
     "assistant.inputLabel": "Сұрағыңыз", "assistant.placeholder": "Сұрағыңызды жазыңыз...",
     "assistant.send": "Жіберу", "assistant.close": "Чатты жабу", "assistant.launcher": "ЖИ-көмекші",
     "assistant.contactLink": "Маман керек пе? Сұрақ қою →",
     "assistant.fallback": "Әзірше нақты жауап таба алмадым. Еңбек құқықтары, ұжымдық шарт, курстар немесе байланыс туралы сұрап көріңіз.",
+    "assistant.error": "Көмекшіге қосылу мүмкін болмады. Кейінірек қайталап көріңіз немесе кәсіподақ маманына сұрақ қойыңыз.",
+    "assistant.loading": "Ойланып жатырмын...",
     "assistant.contactAnswer": "+7 (7172) 21-71-06 нөміріне қоңырау шалыңыз немесе prof_adilet@mail.ru поштасына жазыңыз. Мекенжай: Астана, Абай даңғылы, 38, 401-кеңсе.",
     "footer": "Астана қаласының білім қызметкерлері кәсіподағы. Барлық құқықтар қорғалған.",
     "page.back": "← Басты бетке", "page.external": "Ресми дереккөз →", "page.more": "Толығырақ →",
@@ -269,12 +273,14 @@ const translations = {
     "contact.addressValue": "38 Abay Avenue, office 401, Astana", "contact.mapTitle": "Open directions",
     "contact.mapSubtitle": "Area map · get directions in 2GIS",
     "assistant.title": "Trade union AI assistant", "assistant.status": "Online · answers to common questions",
-    "assistant.disclaimer": "I’m a virtual assistant and not a substitute for legal advice.",
+    "assistant.disclaimer": "I’m a virtual assistant, not a substitute for legal advice. Messages are sent to OpenAI for processing.",
     "assistant.welcome": "Hello! Ask about labour rights, training or union contacts.",
     "assistant.inputLabel": "Your question", "assistant.placeholder": "Type your question...",
     "assistant.send": "Send", "assistant.close": "Close chat", "assistant.launcher": "AI assistant",
     "assistant.contactLink": "Need a specialist? Ask a question →",
     "assistant.fallback": "I couldn’t find an exact answer yet. Try asking about labour rights, collective agreements, courses or contact details.",
+    "assistant.error": "Could not connect to the assistant. Please try again later or contact the union.",
+    "assistant.loading": "Thinking...",
     "assistant.contactAnswer": "Call +7 (7172) 21-71-06 or email prof_adilet@mail.ru. Address: 38 Abay Avenue, office 401, Astana.",
     "footer": "Astana Education Workers’ Trade Union. All rights reserved.",
     "page.back": "← Home", "page.external": "Official source →", "page.more": "Learn more →",
@@ -908,6 +914,7 @@ const assistantLauncher = document.querySelector(".assistant-launcher");
 const assistantClose = document.querySelector(".assistant-close");
 const assistantInput = document.getElementById("assistant-input");
 const assistantMessages = document.getElementById("assistant-messages");
+const ASSISTANT_API_URL = "https://prof.danik-makashev.workers.dev";
 
 function setAssistantOpen(isOpen) {
   if (!assistantPanel || !assistantLauncher) return;
@@ -948,16 +955,43 @@ assistantClose?.addEventListener("click", () => setAssistantOpen(false));
 assistantPanel?.addEventListener("keydown", (event) => {
   if (event.key === "Escape") setAssistantOpen(false);
 });
-document.getElementById("assistant-form")?.addEventListener("submit", (event) => {
+document.getElementById("assistant-form")?.addEventListener("submit", async (event) => {
   event.preventDefault();
   const form = event.currentTarget;
   if (!(form instanceof HTMLFormElement) || !form.reportValidity() || !assistantInput) return;
   const question = assistantInput.value.trim();
   if (!question) return;
   addAssistantMessage(question, "assistant-question");
-  addAssistantMessage(getAssistantAnswer(question), "assistant-reply");
   form.reset();
-  assistantInput.focus();
+  const submitButton = form.querySelector('button[type="submit"]');
+  if (!ASSISTANT_API_URL) {
+    addAssistantMessage(getAssistantAnswer(question), "assistant-reply");
+    assistantInput.focus();
+    return;
+  }
+
+  if (submitButton instanceof HTMLButtonElement) submitButton.disabled = true;
+  addAssistantMessage(translate("assistant.loading"), "assistant-reply");
+  const loadingMessage = assistantMessages?.lastElementChild;
+  try {
+    const response = await fetch(ASSISTANT_API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ question, language: currentLanguage })
+    });
+    if (!response.ok) throw new Error(`Assistant request failed (${response.status})`);
+    const result = await response.json();
+    if (typeof result.answer !== "string" || !result.answer.trim()) {
+      throw new Error("Assistant returned an empty answer");
+    }
+    if (loadingMessage) loadingMessage.textContent = result.answer;
+  } catch (error) {
+    console.error("Could not get an assistant response:", error);
+    if (loadingMessage) loadingMessage.textContent = translate("assistant.error");
+  } finally {
+    if (submitButton instanceof HTMLButtonElement) submitButton.disabled = false;
+    assistantInput.focus();
+  }
 });
 
 document.querySelectorAll(".reveal").forEach((item, index) => {

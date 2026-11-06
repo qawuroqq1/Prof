@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "prof",
+  "main": "worker.js",
+  "compatibility_date": "2026-11-04",
+  "workers_dev": true,
+  "vars": {
+    "ALLOWED_ORIGIN": "https://qawuroqq1.github.io",
+    "OPENAI_MODEL": "gpt-4o-mini"
+  }
+}
