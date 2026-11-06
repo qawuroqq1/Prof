@@ -947,7 +947,7 @@ async function renderProtectedPdf(source) {
   await renderPage(pages[0]);
   loadingMessage.remove();
   if (protectedPdfState !== state) return;
-  protectedPdfViewer.scrollTop = pages[0].pageContainer.offsetTop + pages[0].pageContainer.clientHeight * 0.26;
+  protectedPdfViewer.scrollTop = pages[0].pageContainer.clientHeight * 0.26;
 
   state.observer = new IntersectionObserver((entries) => {
     for (const entry of entries) {
