@@ -58,6 +58,7 @@ const translations = {
     "assistant.contactAnswer": "Позвоните по номеру +7 (7172) 21-71-06 или напишите на prof_adilet@mail.ru. Адрес: Астана, проспект Абая, 38, офис 401.",
     "footer": "Профсоюз работников образования города Астаны. Все права защищены.",
     "page.back": "← На главную", "page.external": "Официальный источник →", "page.more": "Подробнее →",
+    "document.loading": "Загрузка документа…", "document.error": "Не удалось открыть документ. Попробуйте позже.",
     "page.source": "Материалы и принципы раздела", "form.courseTitle": "Запись на курс",
     "form.fio": "ФИО", "form.email": "Электронная почта", "form.phone": "Контактный телефон",
     "form.birth": "Дата рождения", "form.work": "Место работы", "form.position": "Должность",
@@ -173,6 +174,7 @@ const translations = {
     "assistant.contactAnswer": "+7 (7172) 21-71-06 нөміріне қоңырау шалыңыз немесе prof_adilet@mail.ru поштасына жазыңыз. Мекенжай: Астана, Абай даңғылы, 38, 401-кеңсе.",
     "footer": "Астана қаласының білім қызметкерлері кәсіподағы. Барлық құқықтар қорғалған.",
     "page.back": "← Басты бетке", "page.external": "Ресми дереккөз →", "page.more": "Толығырақ →",
+    "document.loading": "Құжат жүктелуде…", "document.error": "Құжатты ашу мүмкін болмады. Кейінірек қайталап көріңіз.",
     "page.source": "Бөлім материалдары мен қағидаттары", "form.courseTitle": "Курсқа тіркелу",
     "form.fio": "Аты-жөні", "form.email": "Электрондық пошта", "form.phone": "Байланыс телефоны",
     "form.birth": "Туған күні", "form.work": "Жұмыс орны", "form.position": "Лауазымы",
@@ -288,6 +290,7 @@ const translations = {
     "assistant.contactAnswer": "Call +7 (7172) 21-71-06 or email prof_adilet@mail.ru. Address: 38 Abay Avenue, office 401, Astana.",
     "footer": "Astana Education Workers’ Trade Union. All rights reserved.",
     "page.back": "← Home", "page.external": "Official source →", "page.more": "Learn more →",
+    "document.loading": "Loading document…", "document.error": "Could not open the document. Please try again later.",
     "page.source": "Section information and principles", "form.courseTitle": "Course registration",
     "form.fio": "Full name", "form.email": "Email", "form.phone": "Contact phone",
     "form.birth": "Date of birth", "form.work": "Place of work", "form.position": "Position",
@@ -626,7 +629,7 @@ const pageDefinitions = {
   "activity-partnership": {
     key: "page.partnership",
     body: "activity.body",
-    resources: [{ titleKey: "agreement.title", href: "assets/readers/Regional-Social-Partnership-Agreement-2026-2028.pdf" }]
+    resources: [{ titleKey: "agreement.title", href: "assets/readers/Regional-Social-Partnership-Agreement-2026-2028.pdf", protectCopy: true }]
   },
   "activity-organizational": { key: "page.organizational", body: "activity.body" },
   "activity-legal": { key: "page.legalService", body: "page.legalService.body" },
@@ -762,7 +765,8 @@ function renderResources(resources) {
   if (!resources?.length) return "";
   return `<div class="link-grid page-link-grid resource-grid">${resources.map((resource) => {
     const title = resource.titleKey ? translate(resource.titleKey) : resource.title;
-    return `<article class="link-card resource-card"><span class="link-name">${escapeHtml(title)}</span><button class="resource-link" type="button" data-reader-src="${escapeHtml(resource.href)}" data-reader-title="${escapeHtml(title)}">${translate("link.read")} ↗</button></article>`;
+    const protectCopy = resource.protectCopy ? ' data-reader-protect-copy="true"' : "";
+    return `<article class="link-card resource-card"><span class="link-name">${escapeHtml(title)}</span><button class="resource-link" type="button" data-reader-src="${escapeHtml(resource.href)}" data-reader-title="${escapeHtml(title)}"${protectCopy}>${translate("link.read")} ↗</button></article>`;
   }).join("")}</div>`;
 }
 
@@ -876,7 +880,97 @@ document.addEventListener("input", (event) => {
 
 const documentDialog = document.getElementById("document-dialog");
 const documentViewer = document.getElementById("document-viewer");
+const protectedPdfViewer = document.getElementById("protected-pdf-viewer");
 const documentDialogTitle = document.getElementById("document-dialog-title");
+let protectedPdfState = null;
+
+async function renderProtectedPdf(source) {
+  if (!protectedPdfViewer) return;
+  protectedPdfViewer.replaceChildren();
+  protectedPdfViewer.hidden = false;
+  const loadingMessage = document.createElement("p");
+  loadingMessage.className = "protected-pdf-message";
+  loadingMessage.textContent = translate("document.loading");
+  protectedPdfViewer.append(loadingMessage);
+
+  const pdfjs = await import("./assets/pdfjs/pdf.min.mjs");
+  pdfjs.GlobalWorkerOptions.workerSrc = new URL("assets/pdfjs/pdf.worker.min.mjs", document.baseURI).href;
+  const loadingTask = pdfjs.getDocument({ url: source });
+  const state = { loadingTask, observer: null };
+  protectedPdfState = state;
+  const pdf = await loadingTask.promise;
+  if (protectedPdfState !== state) return;
+
+  protectedPdfViewer.replaceChildren();
+  const pages = [];
+  for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber += 1) {
+    const pageContainer = document.createElement("div");
+    pageContainer.className = "protected-pdf-page";
+    pageContainer.dataset.pageNumber = String(pageNumber);
+    pageContainer.setAttribute("role", "img");
+    pageContainer.setAttribute("aria-label", `${pageNumber} / ${pdf.numPages}`);
+    pageContainer.style.aspectRatio = "210 / 297";
+    protectedPdfViewer.append(pageContainer);
+    pages.push({ pageNumber, pageContainer });
+  }
+
+  const renderPage = async ({ pageNumber, pageContainer }) => {
+    if (pageContainer.dataset.rendered === "true") return;
+    pageContainer.dataset.rendered = "true";
+    try {
+      const page = await pdf.getPage(pageNumber);
+      if (protectedPdfState !== state) return;
+      const baseViewport = page.getViewport({ scale: 1 });
+      const scale = Math.min((protectedPdfViewer.clientWidth - 32) / baseViewport.width, 1.5);
+      const viewport = page.getViewport({ scale });
+      const outputScale = Math.min(window.devicePixelRatio || 1, 1.5);
+      const canvas = document.createElement("canvas");
+      canvas.width = Math.floor(viewport.width * outputScale);
+      canvas.height = Math.floor(viewport.height * outputScale);
+      canvas.setAttribute("aria-hidden", "true");
+      canvas.draggable = false;
+      pageContainer.style.aspectRatio = `${viewport.width} / ${viewport.height}`;
+      pageContainer.append(canvas);
+      await page.render({
+        canvasContext: canvas.getContext("2d"),
+        viewport,
+        transform: outputScale === 1 ? null : [outputScale, 0, 0, outputScale, 0, 0]
+      }).promise;
+    } catch (error) {
+      pageContainer.dataset.rendered = "false";
+      pageContainer.classList.add("protected-pdf-page-error");
+      pageContainer.textContent = translate("document.error");
+      console.error(`Could not render agreement page ${pageNumber}:`, error);
+    }
+  };
+
+  state.observer = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      const page = pages[Number(entry.target.dataset.pageNumber) - 1];
+      if (!page) continue;
+      if (entry.isIntersecting) {
+        renderPage(page);
+      } else if (page.pageContainer.dataset.rendered === "true") {
+        page.pageContainer.replaceChildren();
+        page.pageContainer.dataset.rendered = "false";
+      }
+    }
+  }, { root: protectedPdfViewer, rootMargin: "1000px 0px" });
+  pages.forEach(({ pageContainer }) => state.observer.observe(pageContainer));
+}
+
+document.addEventListener("contextmenu", (event) => {
+  if (event.target instanceof Element && event.target.closest("#protected-pdf-viewer")) {
+    event.preventDefault();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (!documentDialog?.open || !documentDialog.classList.contains("document-dialog-protected")) return;
+  if ((event.ctrlKey || event.metaKey) && ["a", "c", "p", "s", "u"].includes(event.key.toLowerCase())) {
+    event.preventDefault();
+  }
+});
 const newsDialog = document.getElementById("news-dialog");
 const newsDialogTitle = document.getElementById("news-dialog-title");
 const newsDialogBody = document.getElementById("news-dialog-body");
@@ -918,12 +1012,41 @@ document.addEventListener("click", (event) => {
   const title = trigger.dataset.readerTitle;
   if (!source || !title) return;
   documentDialogTitle.textContent = title;
-  documentViewer.title = title;
-  documentViewer.src = source.toLowerCase().endsWith(".pdf") ? `${source}#toolbar=0&navpanes=0` : source;
+  const protectCopy = trigger.dataset.readerProtectCopy === "true";
+  documentDialog.classList.toggle("document-dialog-protected", protectCopy);
+  if (protectCopy) {
+    documentViewer.hidden = true;
+    documentViewer.src = "about:blank";
+    renderProtectedPdf(source).catch((error) => {
+      console.error("Could not open the agreement:", error);
+      if (protectedPdfViewer) {
+        protectedPdfViewer.replaceChildren();
+        const errorMessage = document.createElement("p");
+        errorMessage.className = "protected-pdf-message";
+        errorMessage.textContent = translate("document.error");
+        protectedPdfViewer.append(errorMessage);
+      }
+    });
+  } else {
+    protectedPdfViewer.hidden = true;
+    documentViewer.hidden = false;
+    documentViewer.title = title;
+    documentViewer.src = source.toLowerCase().endsWith(".pdf") ? `${source}#toolbar=0&navpanes=0` : source;
+  }
   documentDialog.showModal();
 });
 documentDialog?.addEventListener("close", () => {
   if (documentViewer) documentViewer.src = "about:blank";
+  if (protectedPdfState) {
+    protectedPdfState.observer?.disconnect();
+    protectedPdfState.loadingTask.destroy().catch((error) => console.error("Could not close the agreement viewer:", error));
+    protectedPdfState = null;
+  }
+  if (protectedPdfViewer) {
+    protectedPdfViewer.replaceChildren();
+    protectedPdfViewer.hidden = true;
+  }
+  documentDialog.classList.remove("document-dialog-protected");
 });
 newsDialog?.addEventListener("close", () => {
   if (newsDialogBody) newsDialogBody.replaceChildren();
