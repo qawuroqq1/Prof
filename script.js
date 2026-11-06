@@ -901,7 +901,6 @@ async function renderProtectedPdf(source) {
   const pdf = await loadingTask.promise;
   if (protectedPdfState !== state) return;
 
-  protectedPdfViewer.replaceChildren();
   const pages = [];
   for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber += 1) {
     const pageContainer = document.createElement("div");
@@ -943,6 +942,10 @@ async function renderProtectedPdf(source) {
       console.error(`Could not render agreement page ${pageNumber}:`, error);
     }
   };
+
+  await renderPage(pages[0]);
+  loadingMessage.remove();
+  if (protectedPdfState !== state) return;
 
   state.observer = new IntersectionObserver((entries) => {
     for (const entry of entries) {
