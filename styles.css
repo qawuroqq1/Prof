@@ -2372,6 +2372,10 @@ select {
   background: #f7f9fc;
 }
 
+.document-dialog iframe[hidden] {
+  display: none;
+}
+
 .protected-pdf-viewer {
   width: 100%;
   height: calc(100% - 64px);
