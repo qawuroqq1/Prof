@@ -1059,7 +1059,7 @@ select {
     display: flex;
   }
 
-  .btn-primary {
+  .header-question {
     display: none;
   }
 
@@ -1243,13 +1243,32 @@ select {
 }
 
 .hero-inner {
-  padding-top: 74px;
-  padding-bottom: 82px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  padding: 38px 0 46px;
+}
+
+.hero-copy {
+  max-width: 900px;
 }
 
 .hero-copy h1 {
-  font-size: clamp(2.8rem, 5vw, 5.4rem);
-  line-height: 0.98;
+  max-width: 900px;
+  font-size: clamp(2.6rem, 4vw, 4.2rem);
+  line-height: 1;
+}
+
+.hero-identity {
+  margin-bottom: 12px;
+}
+
+.hero-copy p {
+  margin-top: 14px;
+  max-width: 720px;
+}
+
+.hero-actions {
+  margin-top: 18px;
 }
 
 .hero-identity {
@@ -1770,9 +1789,8 @@ select {
   }
 
   .hero-inner {
-    gap: 34px;
-    padding-top: 50px;
-    padding-bottom: 62px;
+    gap: 0;
+    padding: 34px 0 40px;
   }
 
   .hero-identity {
