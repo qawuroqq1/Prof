@@ -353,6 +353,177 @@ select {
   transform: scaleX(1);
 }
 
+.site-search {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.site-search-toggle {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  padding: 10px;
+  border: 1px solid rgba(11, 33, 62, 0.1);
+  border-radius: 50%;
+  background: linear-gradient(145deg, #fff, #f3f8f6);
+  color: var(--navy);
+  cursor: pointer;
+  box-shadow: 0 5px 14px rgba(11, 33, 62, 0.1);
+  transition: color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.site-search-toggle:hover,
+.site-search-toggle[aria-expanded="true"] {
+  transform: translateY(-1px);
+  background: var(--green);
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(27, 183, 125, 0.24);
+}
+
+.site-search-toggle svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+.site-search-form {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: -8px;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: min(440px, calc(100vw - 32px));
+  padding: 12px;
+  border: 1px solid rgba(11, 33, 62, 0.1);
+  border-radius: 18px;
+  background: linear-gradient(145deg, #fff 0%, #f8fbfa 100%);
+  box-shadow: 0 18px 48px rgba(11, 33, 62, 0.2);
+}
+
+.site-search-form[hidden] {
+  display: none;
+}
+
+.site-search-input-wrap {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  align-items: center;
+  gap: 10px;
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid rgba(11, 33, 62, 0.1);
+  border-radius: 13px;
+  background: #fff;
+  color: #718093;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.site-search-input-wrap:focus-within {
+  border-color: var(--green);
+  box-shadow: 0 0 0 4px rgba(27, 183, 125, 0.13);
+}
+
+.site-search-input-wrap svg {
+  width: 19px;
+  height: 19px;
+  flex: 0 0 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+.site-search-form input {
+  min-width: 0;
+  flex: 1;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--navy);
+  font: inherit;
+}
+
+.site-search-form input:focus {
+  outline: 0;
+}
+
+.site-search-submit {
+  min-height: 48px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 13px;
+  background: var(--green);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(27, 183, 125, 0.22);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.site-search-submit:hover {
+  transform: translateY(-1px);
+  background: #15976a;
+}
+
+.site-search-results {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  left: 0;
+  max-height: min(55vh, 390px);
+  overflow: auto;
+  padding: 7px;
+  border: 1px solid rgba(11, 33, 62, 0.1);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 18px 48px rgba(11, 33, 62, 0.18);
+}
+
+.site-search-results[hidden] {
+  display: none;
+}
+
+.site-search-result {
+  display: grid;
+  gap: 4px;
+  padding: 11px 13px;
+  border-radius: 11px;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.site-search-result:hover,
+.site-search-result:focus-visible {
+  outline: 0;
+  background: #eff8f4;
+}
+
+.site-search-result strong {
+  font-size: 0.92rem;
+}
+
+.site-search-result span,
+.site-search-empty {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.site-search-empty {
+  padding: 12px;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -659,7 +830,7 @@ select {
 }
 
 .feature-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .feature-card {
@@ -1604,7 +1775,8 @@ select {
 }
 
 .form-grid input,
-.form-grid textarea {
+.form-grid textarea,
+.form-grid select {
   width: 100%;
   min-height: 46px;
   padding: 10px 12px;
@@ -1616,6 +1788,7 @@ select {
 
 .form-grid input:focus,
 .form-grid textarea:focus,
+.form-grid select:focus,
 .year-filter select:focus {
   outline: 3px solid rgba(27, 183, 125, 0.22);
   border-color: var(--green);
@@ -2448,6 +2621,11 @@ select {
   color: var(--navy);
   font-size: 1.15rem;
   line-height: 1.25;
+}
+
+.staff-card h2 span {
+  display: block;
+  white-space: nowrap;
 }
 
 .staff-card p {

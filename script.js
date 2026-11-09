@@ -1,6 +1,6 @@
 const translations = {
   ru: {
-    "topbar.note": "Защита. Поддержка. Развитие.",
+    "topbar.note": "Защита Поддержка Развитие",
     "brand.title": "Профсоюз работников образования города Астаны",
     "nav.about": "О Профсоюзе", "nav.legal": "Правовая база", "nav.laws": "Законы",
     "nav.unionHistory": "История Профсоюза", "nav.leadership": "Руководящие органы",
@@ -8,21 +8,24 @@ const translations = {
     "nav.audit": "Контрольно-ревизионная комиссия", "nav.staff": "Аппарат Профсоюза",
     "nav.activities": "Деятельность", "nav.training": "Обучение", "nav.news": "Новости",
     "nav.faq": "Вопросы и ответы", "nav.ask": "Задать вопрос",
+    "search.open": "Открыть поиск", "search.placeholder": "Поиск по сайту",
+    "search.submit": "Найти", "search.noResults": "Совпадений не найдено",
     "legal.labor": "Трудовой кодекс РК", "legal.laws": "Законы РК", "legal.npa": "НПА РК", "legal.acts": "Акты Профсоюза",
     "activity.partnership": "Социальное партнерство", "activity.organizational": "Организационная работа", "activity.legal": "Правовая служба",
     "activity.internationalWork": "Международная работа", "activity.internationalText": "Международные связи и обмен опытом.",
+    "activity.organizationalText": "Развитие первичных организаций и поддержка профсоюзного актива.",
     "activity.youth": "Молодежная политика", "activity.safety": "Охрана труда",
     "training.concept": "Концепция обучения", "training.courses": "Курсы повышения квалификации",
     "training.activists": "Обучение актива Профсоюза",
-    "hero.eyebrow": "Город Астана", "hero.title": "Защищаем права работников образования Астаны.",
+    "hero.eyebrow": "Город Астана", "hero.title": "Защищаем права работников образования",
     "hero.text": "Поддерживаем работников и помогаем отстаивать их интересы.",
     "hero.action": "Задать вопрос профсоюзу", "hero.about": "О Профсоюзе",
     "hero.point1": "Социальная защита", "hero.point2": "Правовая помощь", "hero.point3": "Профессиональное развитие",
     "hero.priority": "Наш приоритет", "hero.panelTitle": "Достойный труд — сильное образование",
     "hero.panelText": "Поддерживаем работников, развиваем диалог и помогаем находить решения.",
     "contact.phone": "Телефон", "contact.email": "Электронная почта", "contact.address": "Адрес и маршрут",
-    "telegram.kicker": "Telegram", "telegram.title": "Telegram-бот профсоюза",
-    "telegram.text": "Задайте вопрос или свяжитесь с профсоюзом через нашего Telegram-бота.", "telegram.soon": "Открыть бота →",
+    "telegram.kicker": "Telegram", "telegram.title": "Telegram-бот Профсоюза",
+    "telegram.text": "Задайте вопрос или свяжитесь с Профсоюзом через нашего Telegram-бота.", "telegram.soon": "Открыть бота →",
     "stat.rights": "Защита", "stat.rightsSub": "прав и интересов", "stat.support": "Поддержка",
     "stat.supportSub": "работников образования", "stat.learning": "Обучение", "stat.learningSub": "профессиональный рост",
     "stat.dialogue": "Диалог", "stat.dialogueSub": "социальное партнерство",
@@ -46,9 +49,9 @@ const translations = {
     "faq.open": "Вопросы и ответы", "contact.kicker": "Контакты", "contact.title": "Свяжитесь с нами",
     "contact.addressValue": "Астана, проспект Абая, 38, офис 401", "contact.mapTitle": "Открыть маршрут",
     "contact.mapSubtitle": "Схема района · точный маршрут в 2GIS",
-    "assistant.title": "ИИ-помощник профсоюза", "assistant.status": "На связи · ответы по частым вопросам",
+    "assistant.title": "ИИ-помощник Профсоюза", "assistant.status": "На связи · ответы по частым вопросам",
     "assistant.disclaimer": "Я виртуальный помощник и не заменяю юридическую консультацию. Сообщения отправляются OpenAI для обработки.",
-    "assistant.welcome": "Здравствуйте! Спросите о трудовых правах, обучении или контактах профсоюза.",
+    "assistant.welcome": "Здравствуйте, вас приветствует ИИ Профсоюз. Чем вам помочь?",
     "assistant.inputLabel": "Ваш вопрос", "assistant.placeholder": "Напишите свой вопрос...",
     "assistant.send": "Отправить", "assistant.close": "Закрыть чат", "assistant.launcher": "ИИ-помощник",
     "assistant.contactLink": "Нужен специалист? Задать вопрос →",
@@ -59,7 +62,8 @@ const translations = {
     "footer": "Профсоюз работников образования города Астаны. Все права защищены.",
     "page.back": "← На главную", "page.external": "Официальный источник →", "page.more": "Подробнее →",
     "document.loading": "Загрузка документа…", "document.error": "Не удалось открыть документ. Попробуйте позже.",
-    "page.source": "Материалы и принципы раздела", "form.courseTitle": "Запись на курс",
+    "form.courseTitle": "Запись на курс", "form.courseTopic": "Тема курса",
+    "form.courseTopicPlaceholder": "Выберите тему курса",
     "form.fio": "ФИО", "form.email": "Электронная почта", "form.phone": "Контактный телефон",
     "form.birth": "Дата рождения", "form.work": "Место работы", "form.position": "Должность",
     "form.send": "Подать заявку", "form.notice": "Отправка выполняется через почтовую программу: проверьте заполненное письмо и нажмите «Отправить».",
@@ -116,7 +120,7 @@ const translations = {
     "training.body": "Обучение строится вокруг практических трудовых прав, социального партнерства, охраны труда и навыков профсоюзной работы. Содержание и расписание конкретных занятий уточняются организатором.",
   },
   kz: {
-    "topbar.note": "Қорғау. Қолдау. Даму.",
+    "topbar.note": "Қорғау Қолдау Даму",
     "brand.title": "Астана қаласының білім қызметкерлері кәсіподағы",
     "nav.about": "Кәсіподақ туралы", "nav.legal": "Құқықтық база", "nav.laws": "Заңдар",
     "nav.unionHistory": "Кәсіподақ тарихы", "nav.leadership": "Басқарушы органдар",
@@ -124,13 +128,16 @@ const translations = {
     "nav.audit": "Бақылау-тексеру комиссиясы", "nav.staff": "Кәсіподақ аппараты",
     "nav.activities": "Қызметі", "nav.training": "Оқыту", "nav.news": "Жаңалықтар",
     "nav.faq": "Сұрақ-жауап", "nav.ask": "Сұрақ қою",
+    "search.open": "Іздеуді ашу", "search.placeholder": "Сайттан іздеу",
+    "search.submit": "Іздеу", "search.noResults": "Сәйкестік табылмады",
     "legal.labor": "ҚР Еңбек кодексі", "legal.laws": "ҚР заңдары", "legal.npa": "ҚР НҚА", "legal.acts": "Кәсіподақ актілері",
     "activity.partnership": "Әлеуметтік әріптестік", "activity.organizational": "Ұйымдастыру жұмысы", "activity.legal": "Құқықтық қызмет",
     "activity.internationalWork": "Халықаралық жұмыс", "activity.internationalText": "Халықаралық байланыстар және тәжірибе алмасу.",
+    "activity.organizationalText": "Бастауыш ұйымдарды дамыту және кәсіподақ активін қолдау.",
     "activity.youth": "Жастар саясаты", "activity.safety": "Еңбекті қорғау",
     "training.concept": "Оқыту тұжырымдамасы", "training.courses": "Біліктілікті арттыру курстары",
     "training.activists": "Кәсіподақ активін оқыту",
-    "hero.eyebrow": "Астана қаласы", "hero.title": "Астана білім қызметкерлерінің құқықтарын қорғаймыз.",
+    "hero.eyebrow": "Астана қаласы", "hero.title": "Білім қызметкерлерінің құқықтарын қорғаймыз",
     "hero.text": "Қызметкерлерге қолдау көрсетіп, мүдделерін қорғауға көмектесеміз.",
     "hero.action": "Кәсіподаққа сұрақ қою", "hero.about": "Кәсіподақ туралы",
     "hero.point1": "Әлеуметтік қорғау", "hero.point2": "Құқықтық көмек", "hero.point3": "Кәсіби даму",
@@ -164,7 +171,7 @@ const translations = {
     "contact.mapSubtitle": "Аудан сызбасы · нақты бағыт 2GIS-те",
     "assistant.title": "Кәсіподақтың ЖИ-көмекшісі", "assistant.status": "Желіде · жиі қойылатын сұрақтарға жауап",
     "assistant.disclaimer": "Мен виртуалды көмекшімін, заңгерлік кеңесті алмастырмаймын. Хабарламалар өңдеу үшін OpenAI-ға жіберіледі.",
-    "assistant.welcome": "Сәлеметсіз бе! Еңбек құқықтары, оқу немесе кәсіподақ байланыстары туралы сұраңыз.",
+    "assistant.welcome": "Сәлеметсіз бе, сізге Кәсіподақтың ЖИ-көмекшісі жауап береді. Қалай көмектесемін?",
     "assistant.inputLabel": "Сұрағыңыз", "assistant.placeholder": "Сұрағыңызды жазыңыз...",
     "assistant.send": "Жіберу", "assistant.close": "Чатты жабу", "assistant.launcher": "ЖИ-көмекші",
     "assistant.contactLink": "Маман керек пе? Сұрақ қою →",
@@ -175,7 +182,8 @@ const translations = {
     "footer": "Астана қаласының білім қызметкерлері кәсіподағы. Барлық құқықтар қорғалған.",
     "page.back": "← Басты бетке", "page.external": "Ресми дереккөз →", "page.more": "Толығырақ →",
     "document.loading": "Құжат жүктелуде…", "document.error": "Құжатты ашу мүмкін болмады. Кейінірек қайталап көріңіз.",
-    "page.source": "Бөлім материалдары мен қағидаттары", "form.courseTitle": "Курсқа тіркелу",
+    "form.courseTitle": "Курсқа тіркелу", "form.courseTopic": "Курс тақырыбы",
+    "form.courseTopicPlaceholder": "Курс тақырыбын таңдаңыз",
     "form.fio": "Аты-жөні", "form.email": "Электрондық пошта", "form.phone": "Байланыс телефоны",
     "form.birth": "Туған күні", "form.work": "Жұмыс орны", "form.position": "Лауазымы",
     "form.send": "Өтінім беру", "form.notice": "Өтінім пошта бағдарламасында дайындалады: хатты тексеріп, «Жіберу» түймесін басыңыз.",
@@ -232,7 +240,7 @@ const translations = {
     "training.body": "Оқыту еңбек құқықтары, әлеуметтік әріптестік, еңбекті қорғау және кәсіподақ жұмысының дағдыларына негізделеді. Нақты сабақтардың мазмұны мен кестесін ұйымдастырушыдан нақтылаңыз.",
   },
   en: {
-    "topbar.note": "Protection. Support. Progress.",
+    "topbar.note": "Protection Support Progress",
     "brand.title": "Education Workers’ Trade Union of Astana",
     "nav.about": "About the Union", "nav.legal": "Legal Resources", "nav.laws": "Laws",
     "nav.unionHistory": "Union history", "nav.leadership": "Governing bodies",
@@ -240,20 +248,24 @@ const translations = {
     "nav.audit": "Audit Commission", "nav.staff": "Union staff",
     "nav.activities": "Activities", "nav.training": "Training", "nav.news": "News",
     "nav.faq": "Q&A", "nav.ask": "Ask a question",
+    "search.open": "Open search", "search.placeholder": "Search the site",
+    "search.submit": "Search", "search.noResults": "No matches found",
     "legal.labor": "Labour Code", "legal.laws": "Laws of Kazakhstan", "legal.npa": "Regulations", "legal.acts": "Union acts",
     "activity.partnership": "Social partnership", "activity.legal": "Legal service",
     "activity.internationalWork": "International work", "activity.internationalText": "International relations and exchange of experience.",
+    "activity.organizational": "Organisational work",
+    "activity.organizationalText": "Developing primary organisations and supporting union representatives.",
     "activity.youth": "Youth policy", "activity.safety": "Occupational safety",
     "training.concept": "Training concept", "training.courses": "Professional development courses",
     "training.activists": "Trade union activists’ training",
-    "hero.eyebrow": "Astana", "hero.title": "Protecting the rights of Astana’s education workers.",
+    "hero.eyebrow": "Astana", "hero.title": "Protecting the rights of education workers",
     "hero.text": "We support workers and help protect their interests.",
     "hero.action": "Ask the union", "hero.about": "About the Union",
     "hero.point1": "Social protection", "hero.point2": "Legal support", "hero.point3": "Professional development",
     "hero.priority": "Our priority", "hero.panelTitle": "Decent work builds strong education",
     "hero.panelText": "We support workers, foster dialogue and help find solutions.",
     "contact.phone": "Phone", "contact.email": "Email", "contact.address": "Address & directions",
-    "telegram.kicker": "Telegram", "telegram.title": "Trade union Telegram bot",
+    "telegram.kicker": "Telegram", "telegram.title": "Trade Union Telegram bot",
     "telegram.text": "Ask a question or contact the union through our Telegram bot.", "telegram.soon": "Open the bot →",
     "stat.rights": "Protection", "stat.rightsSub": "of rights and interests", "stat.support": "Support",
     "stat.supportSub": "for education workers", "stat.learning": "Learning", "stat.learningSub": "professional growth",
@@ -278,9 +290,9 @@ const translations = {
     "faq.open": "Questions & answers", "contact.kicker": "Contact", "contact.title": "Get in touch",
     "contact.addressValue": "38 Abay Avenue, office 401, Astana", "contact.mapTitle": "Open directions",
     "contact.mapSubtitle": "Area map · get directions in 2GIS",
-    "assistant.title": "Trade union AI assistant", "assistant.status": "Online · answers to common questions",
+    "assistant.title": "Trade Union AI assistant", "assistant.status": "Online · answers to common questions",
     "assistant.disclaimer": "I’m a virtual assistant, not a substitute for legal advice. Messages are sent to OpenAI for processing.",
-    "assistant.welcome": "Hello! Ask about labour rights, training or union contacts.",
+    "assistant.welcome": "Hello, you are speaking with the Trade Union AI Assistant. How can I help you?",
     "assistant.inputLabel": "Your question", "assistant.placeholder": "Type your question...",
     "assistant.send": "Send", "assistant.close": "Close chat", "assistant.launcher": "AI assistant",
     "assistant.contactLink": "Need a specialist? Ask a question →",
@@ -291,7 +303,8 @@ const translations = {
     "footer": "Astana Education Workers’ Trade Union. All rights reserved.",
     "page.back": "← Home", "page.external": "Official source →", "page.more": "Learn more →",
     "document.loading": "Loading document…", "document.error": "Could not open the document. Please try again later.",
-    "page.source": "Section information and principles", "form.courseTitle": "Course registration",
+    "form.courseTitle": "Course registration", "form.courseTopic": "Course topic",
+    "form.courseTopicPlaceholder": "Select a course topic",
     "form.fio": "Full name", "form.email": "Email", "form.phone": "Contact phone",
     "form.birth": "Date of birth", "form.work": "Place of work", "form.position": "Position",
     "form.send": "Submit application", "form.notice": "Your email app will open with a prepared application. Review it and select Send.",
@@ -590,7 +603,6 @@ const unionActDocuments = [
   { title: "Протокол профсоюзного Собрания о годовом отчете Первичной организации профсоюза (ОБРАЗЕЦ)", href: "assets/readers/Primary-Union-Annual-Report-Minutes.html" },
   { title: "Протокол Конференции Первичной организации профсоюза об избрании нового председателя и других выборных органов (ОБРАЗЕЦ)", href: "assets/readers/Primary-Union-Election-Conference-Minutes.html" },
   { title: "Заявление о вступлении в профсоюз", href: "assets/readers/Union-Membership-Application.html" },
-  { title: "ПОЛОЖЕНИЕ об оказании благотворительной помощи членам профсоюза ОО \"Профсоюз работников образования города Астаны\"", href: "assets/readers/Charitable-Assistance-Regulation.html" },
   { title: "Протокол отчетно-выборной Конференции Первичной организации профсоюза об избрании председателя и других выборных органов (ОБРАЗЕЦ)", href: "assets/readers/Primary-Union-Election-Report-Minutes.html" },
   { title: "Протокол профсоюзного Собрания о создании Первичной организации Профсоюза работников образования города Астаны (ОБРАЗЕЦ)", href: "assets/readers/Primary-Union-Establishment-Minutes.html" },
   { title: "Положение о Первичной организации Профсоюза работников образования города Астаны", href: "assets/readers/Primary-Union-Regulation.html" },
@@ -601,13 +613,13 @@ const unionActDocuments = [
 ];
 
 const unionStaff = [
-  { name: "АЛИЕВ Батыр Алиевич", position: "Председатель", phone: "+7 (7172) 211082" },
-  { name: "САДЫКОВ Кайрат Кусаинович", position: "Заместитель председателя", phone: "+7 (7172) 211085" },
-  { name: "АМРАШЕВА Асель Елутаевна", position: "Главный бухгалтер", phone: "+7 (7172) 216038" },
-  { name: "ВАСЮК Клавдия Александровна", position: "Бухгалтер", phone: "+7 (7172) 216038" },
-  { name: "ИСАТАЕВА Эльмира Нукеновна", position: "Бухгалтер", phone: "+7 (7172) 216038" },
-  { name: "ТОКБАЛИНА Динара Калеловна", position: "Главный специалист по правовым вопросам", phone: "+7 (7172) 217106" },
-  { name: "Жақыпбек Дархан Жақыпбекұлы", position: "Главный специалист по организационным вопросам", phone: "+7 (7172) 211084" }
+  { surname: "АЛИЕВ", givenName: "Батыр Алиевич", position: "Председатель", phone: "+7 (7172) 211082" },
+  { surname: "САДЫКОВ", givenName: "Кайрат Кусаинович", position: "Заместитель председателя", phone: "+7 (7172) 211085" },
+  { surname: "АМРАШЕВА", givenName: "Асель Елутаевна", position: "Главный бухгалтер", phone: "+7 (7172) 216038" },
+  { surname: "ВАСЮК", givenName: "Клавдия Александровна", position: "Бухгалтер", phone: "+7 (7172) 216038" },
+  { surname: "ИСАТАЕВА", givenName: "Эльмира Нукеновна", position: "Бухгалтер", phone: "+7 (7172) 216038" },
+  { surname: "ТОКБАЛИНА", givenName: "Динара Калеловна", position: "Главный специалист по правовым вопросам", phone: "+7 (7172) 217106" },
+  { surname: "ЖАҚЫПБЕК", givenName: "Дархан Жақыпбекұлы", position: "Главный специалист по организационным вопросам", phone: "+7 (7172) 211084" }
 ];
 
 const pageDefinitions = {
@@ -772,7 +784,7 @@ function renderResources(resources) {
 
 function renderPeople(people) {
   if (!people?.length) return "";
-  return `<div class="staff-grid">${people.map((person) => `<article class="staff-card"><div class="staff-photo-placeholder" aria-hidden="true">✦</div><h2>${person.name}</h2><p><strong>${translate("staff.position")}:</strong> ${person.position}</p><p><strong>${translate("staff.phone")}:</strong> <a href="tel:${person.phone.replace(/[^\d+]/g, "")}">${person.phone}</a></p></article>`).join("")}</div>`;
+  return `<div class="staff-grid">${people.map((person) => `<article class="staff-card"><div class="staff-photo-placeholder" aria-hidden="true">✦</div><h2><span>${person.surname}</span><span>${person.givenName}</span></h2><p><strong>${translate("staff.position")}:</strong> ${person.position}</p><p><strong>${translate("staff.phone")}:</strong> <a href="tel:${person.phone.replace(/[^\d+]/g, "")}">${person.phone}</a></p></article>`).join("")}</div>`;
 }
 
 function courseForm() {
@@ -785,6 +797,10 @@ function courseForm() {
       <label>${translate("form.birth")}<input name="birth" type="date" required /></label>
       <label>${translate("form.work")}<input name="work" autocomplete="organization" required /></label>
       <label>${translate("form.position")}<input name="position" required /></label>
+      <label class="form-wide">${translate("form.courseTopic")}<select name="courseTopic" required>
+        <option value="" selected disabled>${translate("form.courseTopicPlaceholder")}</option>
+        ${courseDocuments.map((course) => `<option value="${escapeHtml(course.title)}">${escapeHtml(course.title)}</option>`).join("")}
+      </select></label>
     </div>
     <button class="btn btn-primary" type="submit">${translate("form.send")}</button>
     <p class="form-notice">${translate("form.notice")}</p>
@@ -842,7 +858,7 @@ function renderCurrentPage() {
   const form = definition.form === "course" ? courseForm() : definition.form === "question" ? questionForm() : "";
   const faq = definition.faq ? faqContent() : "";
   const externalButton = definition.external ? `<a class="btn btn-primary official-button" href="${definition.external}" target="_blank" rel="noopener noreferrer">${translate("page.external")}</a>` : "";
-  pageView.innerHTML = `<div class="container page-content"><a class="back-link" href="#home">${translate("page.back")}</a><header class="page-heading"><span class="section-kicker">${translate("page.source")}</span><h1>${title}</h1>${headingLead}</header>${body}${links}${childCards}${resources}${people}${faq}${externalButton}${form}</div>`;
+  pageView.innerHTML = `<div class="container page-content"><a class="back-link" href="#home">${translate("page.back")}</a><header class="page-heading"><h1>${title}</h1>${headingLead}</header>${body}${links}${childCards}${resources}${people}${faq}${externalButton}${form}</div>`;
   pageView.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
@@ -851,6 +867,188 @@ document.querySelectorAll("[data-lang]").forEach((button) => {
     currentLanguage = button.dataset.lang;
     applyTranslations();
   });
+});
+
+const searchToggle = document.querySelector(".site-search-toggle");
+const searchForm = document.querySelector(".site-search-form");
+const searchInput = searchForm?.querySelector('input[type="search"]');
+const searchResults = searchForm?.querySelector(".site-search-results");
+let activeSearchTargets = [];
+
+searchToggle?.addEventListener("click", () => {
+  const isOpen = searchForm?.hidden ?? true;
+  if (searchForm) searchForm.hidden = !isOpen;
+  searchToggle.setAttribute("aria-expanded", String(isOpen));
+  if (isOpen) {
+    searchInput?.focus();
+    if (searchInput?.value.trim()) renderSearchResults(searchInput.value);
+  } else if (searchResults) {
+    searchResults.hidden = true;
+  }
+});
+
+function normalizeSearchText(value) {
+  return String(value)
+    .toLocaleLowerCase(currentLanguage)
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/ё/g, "е")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function searchTextMatches(query, text) {
+  const queryTokens = normalizeSearchText(query).split(" ").filter(Boolean);
+  const textTokens = normalizeSearchText(text).split(" ").filter(Boolean);
+  return queryTokens.every((queryToken) => textTokens.some((textToken) => {
+    if (textToken.includes(queryToken)) return true;
+    let sharedPrefix = 0;
+    while (sharedPrefix < queryToken.length && sharedPrefix < textToken.length && queryToken[sharedPrefix] === textToken[sharedPrefix]) {
+      sharedPrefix += 1;
+    }
+    return Math.min(queryToken.length, textToken.length) >= 4 && sharedPrefix >= 4;
+  }));
+}
+
+function getSiteSearchItems() {
+  const items = [];
+  const known = new Set();
+  const addItem = (title, href, description = "", homeTarget = null) => {
+    const cleanTitle = title.trim();
+    if (!cleanTitle) return;
+    const key = `${href}|${normalizeSearchText(cleanTitle)}`;
+    if (known.has(key)) return;
+    known.add(key);
+    items.push({ title: cleanTitle, href, description: description.trim(), homeTarget });
+  };
+
+  for (const [slug, definition] of Object.entries(pageDefinitions)) {
+    const title = translate(`${definition.key}.title`);
+    const details = [
+      definition.hideLead ? "" : translate(`${definition.key}.lead`),
+      definition.body ? translate(definition.body) : "",
+      ...(definition.cards || []).map(titleForSlug),
+      ...(definition.resources || []).map((resource) => resource.titleKey ? translate(resource.titleKey) : resource.title),
+      ...(definition.links || []).map(translate)
+    ].filter(Boolean).join(" ");
+    addItem(title, `#page/${slug}`, details);
+
+    for (const resource of definition.resources || []) {
+      addItem(resource.titleKey ? translate(resource.titleKey) : resource.title, `#page/${slug}`, title);
+    }
+
+    for (const person of definition.people || []) {
+      const name = person.surname ? `${person.surname} ${person.givenName}` : person.name;
+      addItem(name, `#page/${slug}`, `${person.position} ${person.phone}`);
+    }
+  }
+
+  for (const element of document.querySelectorAll("#home-content h1, #home-content h2, #home-content h3, #home-content p, #home-content a")) {
+    const title = element.textContent.trim();
+    if (!title) continue;
+    const link = element.closest("a[href^='#']");
+    if (link) {
+      const linkTitle = link.querySelector("h2, h3, strong")?.textContent.trim() || title;
+      addItem(linkTitle, link.getAttribute("href"), linkTitle === title ? "" : title);
+      continue;
+    }
+    const section = element.closest("section");
+    const href = section?.id ? `#${section.id}` : "#home";
+    addItem(title, href, "", section?.id ? null : section);
+  }
+
+  for (const post of facebookPosts) {
+    const localizedPost = facebookPostTranslations[post.videoUrl]?.[currentLanguage] || post;
+    addItem(localizedPost.title, "#news", localizedPost.text);
+  }
+
+  return items;
+}
+
+function renderSearchResults(value) {
+  if (!searchResults) return;
+  const query = normalizeSearchText(value);
+  searchResults.replaceChildren();
+  activeSearchTargets = [];
+  if (!query) {
+    searchResults.hidden = true;
+    return;
+  }
+
+  const matches = getSiteSearchItems()
+    .filter((item) => searchTextMatches(query, `${item.title} ${item.description}`))
+    .sort((first, second) => {
+      const score = (item) => {
+        const title = normalizeSearchText(item.title);
+        if (title.includes(query)) return 0;
+        if (searchTextMatches(query, title)) return 1;
+        if (searchTextMatches(query, item.description)) return 2;
+        return 3;
+      };
+      return score(first) - score(second);
+    })
+    .slice(0, 8);
+
+  if (!matches.length) {
+    const empty = document.createElement("p");
+    empty.className = "site-search-empty";
+    empty.textContent = translate("search.noResults");
+    searchResults.append(empty);
+    searchResults.hidden = false;
+    return;
+  }
+
+  matches.forEach((match, index) => {
+    const link = document.createElement("a");
+    link.className = "site-search-result";
+    link.href = match.href;
+    link.setAttribute("role", "option");
+    link.dataset.searchResultIndex = String(index);
+    const title = document.createElement("strong");
+    title.textContent = match.title;
+    link.append(title);
+    if (match.description) {
+      const description = document.createElement("span");
+      description.textContent = match.description.slice(0, 120);
+      link.append(description);
+    }
+    searchResults.append(link);
+    activeSearchTargets.push(match);
+  });
+  searchResults.hidden = false;
+}
+
+searchInput?.addEventListener("input", () => renderSearchResults(searchInput.value));
+
+searchForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  searchResults?.querySelector(".site-search-result")?.click();
+});
+
+searchResults?.addEventListener("click", (event) => {
+  const link = event.target.closest("[data-search-result-index]");
+  if (!link) return;
+  const target = activeSearchTargets[Number(link.dataset.searchResultIndex)];
+  searchForm.hidden = true;
+  searchResults.hidden = true;
+  searchToggle?.setAttribute("aria-expanded", "false");
+  if (!target?.homeTarget) return;
+  event.preventDefault();
+  if (window.location.hash === "#home") {
+    homeContent.hidden = false;
+    pageView.hidden = true;
+  } else {
+    window.location.hash = "#home";
+  }
+  window.setTimeout(() => target.homeTarget.scrollIntoView({ behavior: "smooth", block: "center" }), 0);
+});
+
+document.addEventListener("click", (event) => {
+  if (event.target instanceof Node && !searchForm?.contains(event.target) && !searchToggle?.contains(event.target)) {
+    if (searchForm) searchForm.hidden = true;
+    if (searchResults) searchResults.hidden = true;
+    searchToggle?.setAttribute("aria-expanded", "false");
+  }
 });
 
 document.addEventListener("submit", (event) => {

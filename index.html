@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20261107-copyguard6" />
+    <link rel="stylesheet" href="styles.css?v=20261109-site-updates3" />
   </head>
   <body>
     <div class="topbar">
@@ -25,7 +25,7 @@
           <a class="social-icon instagram" href="https://www.instagram.com/profsouz_astana/profilecard/?igsh=enNxY3JueDl6NTMz" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="icon-dot" cx="18" cy="6" r="1"/></svg></a>
           <a class="social-icon facebook" href="https://www.facebook.com/profobrNS?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 21v-8h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.4c-.8-.1-1.8-.2-3-.2-3 0-5 1.8-5 5.2V9H7v4h3v8z"/></svg></a>
           <a class="social-icon youtube" href="https://www.youtube.com/channel/UCBahmcthWl_O9zsdiRtsWvA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7a3 3 0 0 0-2-2C19 4.5 12 4.5 12 4.5S5 4.5 3 5a3 3 0 0 0-2 2 31 31 0 0 0-.5 5 31 31 0 0 0 .5 5 3 3 0 0 0 2 2c2 .5 9 .5 9 .5s7 0 9-.5a3 3 0 0 0 2-2 31 31 0 0 0 .5-5 31 31 0 0 0-.5-5ZM10 15.5v-7l6 3.5z"/></svg></a>
-          <a class="social-icon telegram" href="https://t.me/AstanaEducationTradeUnionBOT" target="_blank" rel="noopener noreferrer" aria-label="Открыть Telegram-бот профсоюза"><svg viewBox="0 0 24 24"><path d="m21.8 3.3-3.3 17.1c-.2 1.2-.9 1.5-1.9.9l-5.2-3.8-2.5 2.4c-.3.3-.5.5-1 .5l.4-5.3 9.7-8.8c.4-.4-.1-.6-.6-.2L5.4 13.6.3 12c-1.1-.3-1.1-1 .2-1.5L20.4 2.8c.9-.3 1.7.2 1.4 1.5Z"/></svg></a>
+          <a class="social-icon telegram" href="https://t.me/AstanaEducationTradeUnionBOT" target="_blank" rel="noopener noreferrer" aria-label="Открыть Telegram-бот Профсоюза"><svg viewBox="0 0 24 24"><path d="m21.8 3.3-3.3 17.1c-.2 1.2-.9 1.5-1.9.9l-5.2-3.8-2.5 2.4c-.3.3-.5.5-1 .5l.4-5.3 9.7-8.8c.4-.4-.1-.6-.6-.2L5.4 13.6.3 12c-1.1-.3-1.1-1 .2-1.5L20.4 2.8c.9-.3 1.7.2 1.4 1.5Z"/></svg></a>
         </div>
       </div>
     </div>
@@ -41,6 +41,19 @@
         <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
+        <div class="site-search">
+          <button class="site-search-toggle" type="button" aria-label="Открыть поиск" aria-expanded="false" data-i18n-aria="search.open">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+          </button>
+          <form class="site-search-form" role="search" hidden>
+            <label class="site-search-input-wrap">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+              <input type="search" data-i18n-placeholder="search.placeholder" aria-label="Поиск по сайту" autocomplete="off" />
+            </label>
+            <button class="site-search-submit" type="submit" data-i18n="search.submit">Найти</button>
+            <div class="site-search-results" role="listbox" aria-label="Результаты поиска" hidden></div>
+          </form>
+        </div>
         <nav class="main-nav" aria-label="Основное меню">
           <div class="nav-dropdown">
             <a href="#page/about" class="nav-dropdown-trigger" data-i18n="nav.about">О Профсоюзе</a>
@@ -97,14 +110,8 @@
           <div class="hero-pattern" aria-hidden="true"></div>
           <div class="container hero-inner">
             <div class="hero-copy reveal">
-              <div class="hero-identity">
-                <span class="eyebrow" data-i18n="hero.eyebrow">Город Астана</span>
-              </div>
-              <h1 data-i18n="hero.title">Защита прав, поддержка и развитие работников образования.</h1>
+              <h1 data-i18n="hero.title">Защита прав, поддержка и развитие работников образования</h1>
               <p data-i18n="hero.text">Объединяем работников образования, защищаем трудовые права и создаем возможности для профессионального роста.</p>
-              <div class="hero-actions">
-                <a class="btn btn-primary" href="#page/ask" data-i18n="hero.action">Задать вопрос профсоюзу</a>
-              </div>
             </div>
           </div>
         </section>
@@ -115,20 +122,6 @@
             <div class="stat-item"><span class="stat-value" data-i18n="stat.support">Поддержка</span><span class="stat-label" data-i18n="stat.supportSub">работников образования</span></div>
             <div class="stat-item"><span class="stat-value" data-i18n="stat.learning">Обучение</span><span class="stat-label" data-i18n="stat.learningSub">профессиональный рост</span></div>
             <div class="stat-item"><span class="stat-value" data-i18n="stat.dialogue">Диалог</span><span class="stat-label" data-i18n="stat.dialogueSub">социальное партнерство</span></div>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="container">
-            <div class="section-head"><div><span class="section-kicker" data-i18n="activity.kicker">Направления</span><h2 data-i18n="activity.title">Деятельность профсоюза</h2></div></div>
-            <div class="feature-grid">
-              <a class="feature-card reveal" href="#page/activity-partnership"><span class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 12h10M12 7v10M4 5h16v14H4z"/></svg></span><h3 data-i18n="activity.partnership">Социальное партнерство</h3><p data-i18n="activity.partnershipText">Переговоры, соглашения и совместные решения.</p></a>
-              <a class="feature-card reveal" href="#page/activity-legal"><span class="icon-wrap icon-law" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7l-8-4Zm-3 9 2 2 4-4"/></svg></span><h3 data-i18n="activity.legal">Правовая служба</h3><p data-i18n="activity.legalText">Разъяснения и помощь по трудовым вопросам.</p></a>
-              <a class="feature-card reveal" href="#page/activity-youth"><span class="icon-wrap icon-youth" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2"/><path d="M3 20c0-4 2-6 6-6s6 2 6 6m0-4c3 0 5 1 5 4"/></svg></span><h3 data-i18n="activity.youth">Молодежная политика</h3><p data-i18n="activity.youthText">Инициативы и развитие молодых профсоюзных лидеров.</p></a>
-              <a class="feature-card reveal" href="#page/activity-safety"><span class="icon-wrap icon-safety" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 6v5c0 5 3 8 8 10 5-2 8-5 8-10V6l-8-3Zm-3 9 2 2 4-4"/></svg></span><h3 data-i18n="activity.safety">Охрана труда</h3><p data-i18n="activity.safetyText">Безопасные условия труда и профилактика рисков.</p></a>
-              <a class="feature-card reveal" href="#page/activity-international"><span class="icon-wrap icon-international" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.4 2.5 3.5 5.5 3.5 9s-1.1 6.5-3.5 9c-2.4-2.5-3.5-5.5-3.5-9S9.6 5.5 12 3Z"/></svg></span><h3 data-i18n="activity.internationalWork">Международная работа</h3><p data-i18n="activity.internationalText">Международные связи и обмен опытом.</p></a>
-            </div>
-            <div class="all-directions"><a class="text-link" href="#page/activities" data-i18n="activity.all">Все направления деятельности →</a></div>
           </div>
         </section>
 
@@ -145,11 +138,26 @@
               <span class="telegram-callout-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m21.8 3.3-3.3 17.1c-.2 1.2-.9 1.5-1.9.9l-5.2-3.8-2.5 2.4c-.3.3-.5.5-1 .5l.4-5.3 9.7-8.8c.4-.4-.1-.6-.6-.2L5.4 13.6.3 12c-1.1-.3-1.1-1 .2-1.5L20.4 2.8c.9-.3 1.7.2 1.4 1.5Z"/></svg></span>
               <div class="telegram-callout-copy">
                 <span class="section-kicker" data-i18n="telegram.kicker">Telegram</span>
-                <h2 data-i18n="telegram.title">Telegram-бот профсоюза</h2>
-                <p data-i18n="telegram.text">Задайте вопрос или свяжитесь с профсоюзом через нашего Telegram-бота.</p>
+                <h2 data-i18n="telegram.title">Telegram-бот Профсоюза</h2>
+                <p data-i18n="telegram.text">Задайте вопрос или свяжитесь с Профсоюзом через нашего Telegram-бота.</p>
               </div>
               <a class="telegram-soon" href="https://t.me/AstanaEducationTradeUnionBOT" target="_blank" rel="noopener noreferrer" data-i18n="telegram.soon">Открыть бота →</a>
             </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="section-head"><div><span class="section-kicker" data-i18n="activity.kicker">Направления</span><h2 data-i18n="activity.title">Деятельность профсоюза</h2></div></div>
+            <div class="feature-grid">
+              <a class="feature-card reveal" href="#page/activity-partnership"><span class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 12h10M12 7v10M4 5h16v14H4z"/></svg></span><h3 data-i18n="activity.partnership">Социальное партнерство</h3><p data-i18n="activity.partnershipText">Переговоры, соглашения и совместные решения.</p></a>
+              <a class="feature-card reveal" href="#page/activity-legal"><span class="icon-wrap icon-law" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7l-8-4Zm-3 9 2 2 4-4"/></svg></span><h3 data-i18n="activity.legal">Правовая служба</h3><p data-i18n="activity.legalText">Разъяснения и помощь по трудовым вопросам.</p></a>
+              <a class="feature-card reveal" href="#page/activity-organizational"><span class="icon-wrap icon-youth" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h8M8 17h5"/></svg></span><h3 data-i18n="activity.organizational">Организационная работа</h3><p data-i18n="activity.organizationalText">Развитие первичных организаций и поддержка профсоюзного актива.</p></a>
+              <a class="feature-card reveal" href="#page/activity-international"><span class="icon-wrap icon-international" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.4 2.5 3.5 5.5 3.5 9s-1.1 6.5-3.5 9c-2.4-2.5-3.5-5.5-3.5-9S9.6 5.5 12 3Z"/></svg></span><h3 data-i18n="activity.internationalWork">Международная работа</h3><p data-i18n="activity.internationalText">Международные связи и обмен опытом.</p></a>
+              <a class="feature-card reveal" href="#page/activity-youth"><span class="icon-wrap icon-youth" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2"/><path d="M3 20c0-4 2-6 6-6s6 2 6 6m0-4c3 0 5 1 5 4"/></svg></span><h3 data-i18n="activity.youth">Молодежная политика</h3><p data-i18n="activity.youthText">Инициативы и развитие молодых профсоюзных лидеров.</p></a>
+              <a class="feature-card reveal" href="#page/activity-safety"><span class="icon-wrap icon-safety" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 6v5c0 5 3 8 8 10 5-2 8-5 8-10V6l-8-3Zm-3 9 2 2 4-4"/></svg></span><h3 data-i18n="activity.safety">Охрана труда</h3><p data-i18n="activity.safetyText">Безопасные условия труда и профилактика рисков.</p></a>
+            </div>
+            <div class="all-directions"><a class="text-link" href="#page/activities" data-i18n="activity.all">Все направления деятельности →</a></div>
           </div>
         </section>
 
@@ -166,7 +174,7 @@
                 <a class="social-icon instagram" href="https://www.instagram.com/profsouz_astana/profilecard/?igsh=enNxY3JueDl6NTMz" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="icon-dot" cx="18" cy="6" r="1"/></svg></a>
                 <a class="social-icon youtube" href="https://www.youtube.com/channel/UCBahmcthWl_O9zsdiRtsWvA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7a3 3 0 0 0-2-2C19 4.5 12 4.5 12 4.5S5 4.5 3 5a3 3 0 0 0-2 2 31 31 0 0 0-.5 5 31 31 0 0 0 .5 5 3 3 0 0 0 2 2c2 .5 9 .5 9 .5s7 0 9-.5a3 3 0 0 0 2-2 31 31 0 0 0 .5-5 31 31 0 0 0-.5-5ZM10 15.5v-7l6 3.5z"/></svg></a>
                 <a class="social-icon facebook" href="https://www.facebook.com/profobrNS?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 21v-8h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.4c-.8-.1-1.8-.2-3-.2-3 0-5 1.8-5 5.2V9H7v4h3v8z"/></svg></a>
-                <a class="social-icon telegram" href="https://t.me/AstanaEducationTradeUnionBOT" target="_blank" rel="noopener noreferrer" aria-label="Открыть Telegram-бот профсоюза"><svg viewBox="0 0 24 24"><path d="m21.8 3.3-3.3 17.1c-.2 1.2-.9 1.5-1.9.9l-5.2-3.8-2.5 2.4c-.3.3-.5.5-1 .5l.4-5.3 9.7-8.8c.4-.4-.1-.6-.6-.2L5.4 13.6.3 12c-1.1-.3-1.1-1 .2-1.5L20.4 2.8c.9-.3 1.7.2 1.4 1.5Z"/></svg></a>
+                <a class="social-icon telegram" href="https://t.me/AstanaEducationTradeUnionBOT" target="_blank" rel="noopener noreferrer" aria-label="Открыть Telegram-бот Профсоюза"><svg viewBox="0 0 24 24"><path d="m21.8 3.3-3.3 17.1c-.2 1.2-.9 1.5-1.9.9l-5.2-3.8-2.5 2.4c-.3.3-.5.5-1 .5l.4-5.3 9.7-8.8c.4-.4-.1-.6-.6-.2L5.4 13.6.3 12c-1.1-.3-1.1-1 .2-1.5L20.4 2.8c.9-.3 1.7.2 1.4 1.5Z"/></svg></a>
               </div>
             </div>
             <a class="map-card reveal" href="https://2gis.kz/astana/search/проспект%20Абая%2038" target="_blank" rel="noopener noreferrer" aria-label="Открыть карту 2ГИС и маршрут до профсоюза">
@@ -184,14 +192,14 @@
         <header class="assistant-header">
           <span class="assistant-avatar" aria-hidden="true">AI</span>
           <span class="assistant-heading">
-            <strong id="assistant-title" data-i18n="assistant.title">ИИ-помощник профсоюза</strong>
+            <strong id="assistant-title" data-i18n="assistant.title">ИИ-помощник Профсоюза</strong>
             <span data-i18n="assistant.status">На связи · ответы по частым вопросам</span>
           </span>
           <button type="button" class="assistant-close" aria-label="Закрыть чат" data-i18n-aria="assistant.close">×</button>
         </header>
         <div class="assistant-messages" id="assistant-messages" role="log" aria-live="polite" aria-relevant="additions text">
           <p class="assistant-disclaimer" data-i18n="assistant.disclaimer">Я виртуальный помощник и не заменяю юридическую консультацию.</p>
-          <p class="assistant-message assistant-reply" data-i18n="assistant.welcome">Здравствуйте! Спросите о трудовых правах, обучении или контактах профсоюза.</p>
+          <p class="assistant-message assistant-reply" data-i18n="assistant.welcome">Здравствуйте, вас приветствует ИИ Профсоюз. Чем вам помочь?</p>
         </div>
         <form class="assistant-form" id="assistant-form">
           <label class="sr-only" for="assistant-input" data-i18n="assistant.inputLabel">Ваш вопрос</label>
@@ -224,6 +232,6 @@
     </dialog>
 
     <footer class="site-footer"><div class="container footer-inner"><p>© <span id="year"></span> <span data-i18n="footer">Профсоюз работников образования города Астаны. Все права защищены.</span></p></div></footer>
-    <script src="script.js?v=20261107-copyguard5"></script>
+    <script src="script.js?v=20261109-site-updates3"></script>
   </body>
 </html>
