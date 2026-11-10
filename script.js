@@ -50,7 +50,6 @@ const translations = {
     "contact.addressValue": "Астана, проспект Абая, 38, офис 401", "contact.mapTitle": "Открыть маршрут",
     "contact.mapSubtitle": "Схема района · точный маршрут в 2GIS",
     "assistant.title": "ИИ-помощник Профсоюза", "assistant.status": "На связи · ответы по частым вопросам",
-    "assistant.disclaimer": "Я виртуальный помощник и не заменяю юридическую консультацию. Сообщения отправляются OpenAI для обработки.",
     "assistant.welcome": "Здравствуйте, вас приветствует ИИ Профсоюз. Чем вам помочь?",
     "assistant.inputLabel": "Ваш вопрос", "assistant.placeholder": "Напишите свой вопрос...",
     "assistant.send": "Отправить", "assistant.close": "Закрыть чат", "assistant.launcher": "ИИ-помощник",
@@ -68,10 +67,13 @@ const translations = {
     "form.birth": "Дата рождения", "form.work": "Место работы", "form.position": "Должность",
     "form.send": "Подать заявку", "form.notice": "Отправка выполняется через почтовую программу: проверьте заполненное письмо и нажмите «Отправить».",
     "form.questionTitle": "Написать профсоюзу", "form.message": "Ваш вопрос", "form.askSend": "Отправить вопрос",
+    "form.attachment": "Прикрепить файл (необязательно)", "form.attachmentHelp": "Только PDF, размер до 2 МБ. После открытия письма прикрепите выбранный файл вручную.",
+    "form.questionNotice": "Письмо откроется в почтовой программе. Если нужен документ, прикрепите PDF вручную перед отправкой.",
+    "form.attachmentTypeError": "Можно прикрепить только PDF-файл.", "form.attachmentSizeError": "Размер PDF не должен превышать 2 МБ.",
     "form.maxWords": "Не более 100 слов.",
     "form.required": "Обязательное поле", "form.mailSubjectCourse": "Заявка на обучение",
     "faq.q1": "Что делать, если нарушены трудовые права?", "faq.a1": "Соберите трудовой договор, приказы и переписку по ситуации. Обратитесь в профсоюз за консультацией и укажите даты и факты произошедшего.",
-    "faq.q2": "Как получить консультацию правовой службы?", "faq.a2": "Направьте вопрос через форму или позвоните по телефону, указанному на странице контактов. Не отправляйте в открытой форме персональные документы и чувствительные данные.",
+    "faq.q2": "Как получить консультацию правовой службы?", "faq.a2": "Направьте вопрос через форму или позвоните по телефону, указанному на странице контактов. Если документ необходим для рассмотрения вопроса, приложите только нужный PDF до 2 МБ и не отправляйте лишние чувствительные данные.",
     "faq.q3": "Что такое коллективный договор?", "faq.a3": "Это соглашение между работодателем и представителями работников, которое закрепляет дополнительные трудовые и социальные гарантии. Действующий договор следует запросить у работодателя или профсоюзного комитета.",
     "faq.q4": "Как записаться на обучение?", "faq.a4": "Откройте раздел «Обучение», выберите программу и заполните форму записи. Заявка будет подготовлена в почтовой программе.",
     "faq.q5": "Где найти нормы трудового законодательства?", "faq.a5": "В правовой базе сайта собраны ссылки на Трудовой кодекс и основные законы. Официальные тексты размещены в информационно-правовой системе «Әділет».",
@@ -104,7 +106,7 @@ const translations = {
     "page.trainingCourses.title": "Курсы повышения квалификации", "page.trainingCourses.lead": "Оставьте контактные данные, чтобы направить заявку на курс.",
     "page.trainingActivists.title": "Обучение актива Профсоюза", "page.trainingActivists.lead": "Практические знания для представителей работников и профсоюзных лидеров.",
     "page.faq.title": "Вопросы и ответы", "page.faq.lead": "Короткие ориентиры по распространенным вопросам работников образования.",
-    "page.ask.title": "Задать вопрос", "page.ask.lead": "Опишите ситуацию — сообщение будет подготовлено для отправки на адрес профсоюза.",
+    "page.ask.title": "Задать вопрос", "page.ask.lead": "Опишите ситуацию. При необходимости приложите PDF-документ размером до 2 МБ.",
     "link.labor": "Трудовой кодекс РК № 414-V", "link.unions": "Закон РК «О профессиональных союзах»",
     "link.education": "Закон РК «Об образовании»", "link.adilet": "Поиск нормативных актов в Әділет",
     "link.kazakhstanLaw": "Закон РК «О статусе педагога»", "link.read": "Читать на сайте",
@@ -170,7 +172,6 @@ const translations = {
     "contact.addressValue": "Астана, Абай даңғылы, 38, 401-кеңсе", "contact.mapTitle": "Бағытты ашу",
     "contact.mapSubtitle": "Аудан сызбасы · нақты бағыт 2GIS-те",
     "assistant.title": "Кәсіподақтың ЖИ-көмекшісі", "assistant.status": "Желіде · жиі қойылатын сұрақтарға жауап",
-    "assistant.disclaimer": "Мен виртуалды көмекшімін, заңгерлік кеңесті алмастырмаймын. Хабарламалар өңдеу үшін OpenAI-ға жіберіледі.",
     "assistant.welcome": "Сәлеметсіз бе, сізге Кәсіподақтың ЖИ-көмекшісі жауап береді. Қалай көмектесемін?",
     "assistant.inputLabel": "Сұрағыңыз", "assistant.placeholder": "Сұрағыңызды жазыңыз...",
     "assistant.send": "Жіберу", "assistant.close": "Чатты жабу", "assistant.launcher": "ЖИ-көмекші",
@@ -188,10 +189,13 @@ const translations = {
     "form.birth": "Туған күні", "form.work": "Жұмыс орны", "form.position": "Лауазымы",
     "form.send": "Өтінім беру", "form.notice": "Өтінім пошта бағдарламасында дайындалады: хатты тексеріп, «Жіберу» түймесін басыңыз.",
     "form.questionTitle": "Кәсіподаққа жазу", "form.message": "Сұрағыңыз", "form.askSend": "Сұрақ жіберу",
+    "form.attachment": "Файл тіркеу (міндетті емес)", "form.attachmentHelp": "Тек PDF, көлемі 2 МБ-қа дейін. Пошта бағдарламасы ашылған соң файлды қолмен тіркеңіз.",
+    "form.questionNotice": "Хат пошта бағдарламасында ашылады. Құжат қажет болса, жібермес бұрын PDF файлын қолмен тіркеңіз.",
+    "form.attachmentTypeError": "Тек PDF файлын тіркеуге болады.", "form.attachmentSizeError": "PDF көлемі 2 МБ-тан аспауы керек.",
     "form.maxWords": "100 сөзден аспауы керек.",
     "form.required": "Міндетті өріс", "form.mailSubjectCourse": "Оқытуға өтінім",
     "faq.q1": "Еңбек құқықтары бұзылса не істеу керек?", "faq.a1": "Еңбек шартын, бұйрықтар мен хат алмасуды жинаңыз. Кәсіподаққа жүгініп, оқиға күндері мен фактілерін көрсетіңіз.",
-    "faq.q2": "Құқықтық қызметтен кеңесті қалай алуға болады?", "faq.a2": "Сұрағыңызды нысан арқылы жіберіңіз немесе байланыс бетінде көрсетілген телефонға қоңырау шалыңыз. Ашық нысанға жеке құжаттарды жібермеңіз.",
+    "faq.q2": "Құқықтық қызметтен кеңесті қалай алуға болады?", "faq.a2": "Сұрағыңызды нысан арқылы жіберіңіз немесе байланыс бетінде көрсетілген телефонға қоңырау шалыңыз. Құжат қажет болса, көлемі 2 МБ-қа дейінгі тек қажет PDF файлын тіркеп, артық құпия мәліметтерді жібермеңіз.",
     "faq.q3": "Ұжымдық шарт дегеніміз не?", "faq.a3": "Бұл жұмыс беруші мен қызметкерлер өкілдері арасындағы қосымша еңбек және әлеуметтік кепілдіктерді бекітетін келісім. Қолданыстағы шартты жұмыс берушіден немесе кәсіподақ комитетінен сұраңыз.",
     "faq.q4": "Оқуға қалай тіркелуге болады?", "faq.a4": "«Оқыту» бөлімін ашып, бағдарламаны таңдап, тіркеу нысанын толтырыңыз. Өтінім пошта бағдарламасында дайындалады.",
     "faq.q5": "Еңбек заңнамасының нормаларын қайдан табуға болады?", "faq.a5": "Құқықтық базада Еңбек кодексі мен негізгі заңдарға сілтемелер берілген. Ресми мәтіндер «Әділет» ақпараттық-құқықтық жүйесінде жарияланады.",
@@ -224,7 +228,7 @@ const translations = {
     "page.trainingCourses.title": "Біліктілікті арттыру курстары", "page.trainingCourses.lead": "Курсқа өтінім беру үшін байланыс деректерін қалдырыңыз.",
     "page.trainingActivists.title": "Кәсіподақ активін оқыту", "page.trainingActivists.lead": "Қызметкерлер өкілдері мен кәсіподақ көшбасшыларына арналған практикалық білім.",
     "page.faq.title": "Сұрақ-жауап", "page.faq.lead": "Білім қызметкерлерінің жиі кездесетін сұрақтарына қысқаша жауаптар.",
-    "page.ask.title": "Сұрақ қою", "page.ask.lead": "Жағдайды сипаттаңыз — хабарлама кәсіподақ поштасына жіберуге дайындалады.",
+    "page.ask.title": "Сұрақ қою", "page.ask.lead": "Жағдайды сипаттаңыз. Қажет болса, көлемі 2 МБ-қа дейінгі PDF құжатын тіркеңіз.",
     "link.labor": "ҚР Еңбек кодексі № 414-V", "link.unions": "«Кәсіптік одақтар туралы» ҚР Заңы",
     "link.education": "«Білім туралы» ҚР Заңы", "link.adilet": "Әділеттен нормативтік актілерді іздеу",
     "link.kazakhstanLaw": "«Педагог мәртебесі туралы» ҚР Заңы", "link.read": "Сайттан оқу",
@@ -291,7 +295,6 @@ const translations = {
     "contact.addressValue": "38 Abay Avenue, office 401, Astana", "contact.mapTitle": "Open directions",
     "contact.mapSubtitle": "Area map · get directions in 2GIS",
     "assistant.title": "Trade Union AI assistant", "assistant.status": "Online · answers to common questions",
-    "assistant.disclaimer": "I’m a virtual assistant, not a substitute for legal advice. Messages are sent to OpenAI for processing.",
     "assistant.welcome": "Hello, you are speaking with the Trade Union AI Assistant. How can I help you?",
     "assistant.inputLabel": "Your question", "assistant.placeholder": "Type your question...",
     "assistant.send": "Send", "assistant.close": "Close chat", "assistant.launcher": "AI assistant",
@@ -309,10 +312,13 @@ const translations = {
     "form.birth": "Date of birth", "form.work": "Place of work", "form.position": "Position",
     "form.send": "Submit application", "form.notice": "Your email app will open with a prepared application. Review it and select Send.",
     "form.questionTitle": "Contact the Union", "form.message": "Your question", "form.askSend": "Send question",
+    "form.attachment": "Attach a file (optional)", "form.attachmentHelp": "PDF only, up to 2 MB. Attach the selected file manually after your email app opens.",
+    "form.questionNotice": "Your email app will open. If a document is needed, attach the PDF manually before sending.",
+    "form.attachmentTypeError": "Only PDF files can be attached.", "form.attachmentSizeError": "The PDF must not exceed 2 MB.",
     "form.maxWords": "No more than 100 words.",
     "form.required": "Required field", "form.mailSubjectCourse": "Training course application",
     "faq.q1": "What should I do if my labour rights are violated?", "faq.a1": "Collect your employment contract, orders and relevant correspondence. Contact the union and include dates and factual details.",
-    "faq.q2": "How can I get legal advice?", "faq.a2": "Send your question using the form or call the number on the contact page. Do not send personal documents or sensitive data through a public form.",
+    "faq.q2": "How can I get legal advice?", "faq.a2": "Send your question using the form or call the number on the contact page. If a document is needed, attach only the relevant PDF up to 2 MB and avoid sending unnecessary sensitive information.",
     "faq.q3": "What is a collective agreement?", "faq.a3": "It is an agreement between an employer and worker representatives that sets additional employment and social guarantees. Request the current agreement from your employer or union committee.",
     "faq.q4": "How do I register for training?", "faq.a4": "Open Training, choose a programme and complete the registration form. Your email app will prepare the application.",
     "faq.q5": "Where can I find labour law provisions?", "faq.a5": "The Legal Resources section links to the Labour Code and key laws. Official texts are published in the Adilet legal information system.",
@@ -345,7 +351,7 @@ const translations = {
     "page.trainingCourses.title": "Professional development courses", "page.trainingCourses.lead": "Leave your contact details to submit a course application.",
     "page.trainingActivists.title": "Trade union representatives’ training", "page.trainingActivists.lead": "Practical knowledge for worker representatives and trade union leaders.",
     "page.faq.title": "Questions & answers", "page.faq.lead": "Brief guidance on common questions from education workers.",
-    "page.ask.title": "Ask a question", "page.ask.lead": "Describe your situation; an email to the trade union will be prepared.",
+    "page.ask.title": "Ask a question", "page.ask.lead": "Describe your situation. If needed, attach a PDF document up to 2 MB.",
     "link.labor": "Labour Code of Kazakhstan No. 414-V", "link.unions": "Law on Trade Unions",
     "link.education": "Law on Education", "link.adilet": "Search legal acts on Adilet",
     "link.kazakhstanLaw": "Law of the Republic of Kazakhstan “On the Status of a Teacher”", "link.read": "Read on this site",
@@ -624,7 +630,7 @@ const unionStaff = [
 
 const pageDefinitions = {
   "about": { key: "page.about" },
-  "union-history": { key: "page.unionHistory" },
+  "union-history": { key: "page.unionHistory", history: true },
   "leadership": { key: "page.leadership", hideLead: true, cards: ["leadership-council", "leadership-executive", "leadership-audit"] },
   "leadership-council": { key: "page.leadershipCouncil" },
   "leadership-executive": { key: "page.leadershipExecutive" },
@@ -654,6 +660,49 @@ const pageDefinitions = {
   "faq": { key: "page.faq", faq: true },
   "ask": { key: "page.ask", form: "question" }
 };
+
+const unionHistory = [
+  {
+    year: "1924",
+    title: "Начало профсоюзного движения работников просвещения",
+    text: "В мае на третьей профсоюзной конференции Казахстана было принято решение о создании республиканского комитета профсоюза работников просвещения. Первый съезд работников просвещения прошел в Кызыл-Орде под лозунгом «Лицом к деревне»: учителя и профсоюзные организации участвовали в просветительской работе и ликвидации неграмотности."
+  },
+  {
+    year: "1930–1937",
+    title: "Расширение школьного образования",
+    text: "К 1930 году в школах Казахстана работало около 11 тысяч учителей. К концу второй пятилетки (1936–1937 годы) был завершен переход к всеобщему начальному обучению и велась работа по ликвидации неграмотности среди взрослых."
+  },
+  {
+    year: "1940–1981",
+    title: "Развитие образования и профсоюза в городе",
+    text: "В 1940–1950-е годы открывались вечерние школы и школы рабочей молодежи. Система образования Целинограда (ныне Астаны) развивалась с 1950-х годов: расширялась школьная сеть, создавались педагогические классы и вводилось обязательное восьмилетнее образование. Среди первых руководителей городского профсоюза была Антонина Петровна Сологубова, возглавлявшая организацию до 1981 года."
+  },
+  {
+    year: "1981–2000",
+    title: "Укрепление городской профсоюзной организации",
+    text: "Профсоюз города возглавляла Мадани Кулашевна Хамхожина. В этот период он входил в Акмолинскую областную организацию; первичные организации защищали трудовые и социально-экономические интересы работников, развивали социальное партнерство и заключали коллективные договоры."
+  },
+  {
+    year: "2000",
+    title: "Создание самостоятельного городского профсоюза «Адилет»",
+    text: "В феврале конференция учредила общественное объединение «Городской профсоюз работников образования “Адилет”». Председателем организации в 2000–2019 годах была Балсулу Музаппаровна Наурызбаева. Работа объединения была направлена на защиту прав работников, улучшение условий труда и развитие партнерства с работодателями и городскими органами."
+  },
+  {
+    year: "2019–2020",
+    title: "Новый этап защиты интересов педагогов",
+    text: "В 2019 году председателем избран Батыр Алиевич Алиев. Начиная с 2020 года, в рамках поручения Главы государства заработная плата педагогов за последующие четыре года увеличилась на 100 процентов."
+  },
+  {
+    year: "2022–2023",
+    title: "Переименование и развитие сотрудничества",
+    text: "В ноябре 2022 года организация получила название «Профсоюз работников образования города Астаны». В декабре 2022 года было подписано Региональное соглашение с Управлением образования города на 2023–2025 годы. По данным представленных исторических материалов, 230 коллективных договоров охватывали 22 790 работников (84,09% работников организаций столицы). Профсоюз развивал международное сотрудничество с организациями Минска и Москвы, проводил фестиваль педагогических мастерских молодых педагогов «Общайся! Создавай! Применяй!». В мае 2023 года в Астане прошла международная конференция с участием представителей Азербайджана, Беларуси, Кыргызстана, России и Таджикистана."
+  },
+  {
+    year: "2025",
+    title: "25-летие самостоятельной городской организации",
+    text: "Профсоюз отметил четверть века со дня создания самостоятельной городской организации."
+  }
+];
 
 const documentLinks = {
   "link.labor": "https://adilet.zan.kz/rus/docs/K1500000414",
@@ -817,10 +866,15 @@ function questionForm() {
       <label>${translate("form.work")}<input name="work" autocomplete="organization" required /></label>
       <label>${translate("form.position")}<input name="position" required /></label>
       <label class="form-wide">${translate("form.message")}<textarea name="message" rows="5" required></textarea><small>${translate("form.maxWords")}</small></label>
+      <label class="form-wide">${translate("form.attachment")}<input name="attachment" type="file" accept="application/pdf,.pdf" aria-describedby="question-file-help" /><small id="question-file-help">${translate("form.attachmentHelp")}</small></label>
     </div>
     <button class="btn btn-primary" type="submit">${translate("form.askSend")}</button>
-    <p class="form-notice">${translate("form.notice")}</p>
+    <p class="form-notice" role="status" aria-live="polite">${translate("form.questionNotice")}</p>
   </form>`;
+}
+
+function renderHistory() {
+  return `<ol class="union-history">${unionHistory.map((item) => `<li class="union-history-item"><span class="union-history-year">${item.year}</span><div><h2>${item.title}</h2><p>${item.text}</p></div></li>`).join("")}</ol>`;
 }
 
 function faqContent() {
@@ -857,8 +911,9 @@ function renderCurrentPage() {
   const people = renderPeople(definition.people);
   const form = definition.form === "course" ? courseForm() : definition.form === "question" ? questionForm() : "";
   const faq = definition.faq ? faqContent() : "";
+  const history = definition.history ? renderHistory() : "";
   const externalButton = definition.external ? `<a class="btn btn-primary official-button" href="${definition.external}" target="_blank" rel="noopener noreferrer">${translate("page.external")}</a>` : "";
-  pageView.innerHTML = `<div class="container page-content"><a class="back-link" href="#home">${translate("page.back")}</a><header class="page-heading"><h1>${title}</h1>${headingLead}</header>${body}${links}${childCards}${resources}${people}${faq}${externalButton}${form}</div>`;
+  pageView.innerHTML = `<div class="container page-content"><a class="back-link" href="#home">${translate("page.back")}</a><header class="page-heading"><h1>${title}</h1>${headingLead}</header>${body}${history}${links}${childCards}${resources}${people}${faq}${externalButton}${form}</div>`;
   pageView.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
@@ -1051,7 +1106,21 @@ document.addEventListener("click", (event) => {
   }
 });
 
-document.addEventListener("submit", (event) => {
+const MAX_QUESTION_FILE_BYTES = 2 * 1024 * 1024;
+document.addEventListener("change", (event) => {
+  const field = event.target;
+  if (!(field instanceof HTMLInputElement) || field.type !== "file" || !field.closest('[data-form="question"]')) return;
+  field.setCustomValidity("");
+  const file = field.files?.[0];
+  if (!file) return;
+  if (file.size > MAX_QUESTION_FILE_BYTES) {
+    field.setCustomValidity(translate("form.attachmentSizeError"));
+  } else if (!file.name.toLocaleLowerCase().endsWith(".pdf") || (file.type && file.type !== "application/pdf")) {
+    field.setCustomValidity(translate("form.attachmentTypeError"));
+  }
+});
+
+document.addEventListener("submit", async (event) => {
   const form = event.target.closest("[data-form]");
   if (!form) return;
   event.preventDefault();
@@ -1060,11 +1129,30 @@ document.addEventListener("submit", (event) => {
     const wordCount = messageField.value.trim().split(/\s+/).filter(Boolean).length;
     messageField.setCustomValidity(wordCount > 100 ? translate("form.maxWords") : "");
   }
+  const fileField = form.querySelector('input[name="attachment"]');
+  if (fileField instanceof HTMLInputElement) {
+    fileField.setCustomValidity("");
+    const file = fileField.files?.[0];
+    if (file && file.size > MAX_QUESTION_FILE_BYTES) {
+      fileField.setCustomValidity(translate("form.attachmentSizeError"));
+    } else if (file && (!file.name.toLocaleLowerCase().endsWith(".pdf") || (file.type && file.type !== "application/pdf"))) {
+      fileField.setCustomValidity(translate("form.attachmentTypeError"));
+    }
+  }
   if (!form.reportValidity()) return;
+
   const values = new FormData(form);
   const subject = form.dataset.form === "course" ? translate("form.mailSubjectCourse") : translate("form.questionTitle");
-  const body = Array.from(values.entries()).map(([key, value]) => `${key}: ${value}`).join("\n");
   const recipient = form.dataset.form === "course" ? "ec.profsistema@gmail.com" : "prof_adilet@mail.ru";
+  let body = Array.from(values.entries())
+    .filter(([key, value]) => key !== "attachment" && typeof value === "string")
+    .map(([key, value]) => `${key}: ${value}`)
+    .join("\n");
+  if (form.dataset.form === "question" && fileField instanceof HTMLInputElement && fileField.files?.[0]) {
+    const status = form.querySelector(".form-notice");
+    if (status) status.textContent = translate("form.questionNotice");
+    body = `${body}\nattachment: ${fileField.files[0].name} (attach this file manually before sending)`;
+  }
   window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
 

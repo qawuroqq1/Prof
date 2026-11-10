@@ -1786,6 +1786,16 @@ select {
   color: var(--text);
 }
 
+.form-grid input[type="file"] {
+  padding: 8px;
+}
+
+.form-grid label small {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 400;
+}
+
 .form-grid input:focus,
 .form-grid textarea:focus,
 .form-grid select:focus,
@@ -1802,6 +1812,42 @@ select {
   margin: 14px 0 0;
   color: var(--muted);
   font-size: 0.87rem;
+}
+
+.union-history {
+  display: grid;
+  gap: 18px;
+  margin: 30px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.union-history-item {
+  display: grid;
+  grid-template-columns: minmax(120px, 170px) minmax(0, 1fr);
+  gap: 20px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--card);
+  box-shadow: 0 10px 24px rgba(17, 41, 74, 0.06);
+}
+
+.union-history-year {
+  color: #168860;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.union-history-item h2 {
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-size: 1.15rem;
+}
+
+.union-history-item p {
+  margin: 0;
+  color: var(--muted);
 }
 
 .faq-list {
@@ -1990,6 +2036,12 @@ select {
 
   .form-wide {
     grid-column: auto;
+  }
+
+  .union-history-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 20px;
   }
 
   .application-form {
