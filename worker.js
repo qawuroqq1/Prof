@@ -73,7 +73,11 @@ async function answerAssistant(request, env, origin) {
 export default {
   async fetch(request, env) {
     const origin = request.headers.get("Origin");
-    if (!env.ALLOWED_ORIGIN || origin !== env.ALLOWED_ORIGIN) {
+    const allowedOrigins = (env.ALLOWED_ORIGIN || "")
+      .split(",")
+      .map((allowedOrigin) => allowedOrigin.trim())
+      .filter(Boolean);
+    if (!origin || !allowedOrigins.includes(origin)) {
       return new Response("Forbidden", { status: 403 });
     }
     if (request.method === "OPTIONS") {

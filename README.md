@@ -27,7 +27,7 @@
 3. В настройках Worker добавьте переменные:
    - `OPENAI_API_KEY` — секрет с вашим API-ключом OpenAI;
    - `OPENAI_MODEL` — `gpt-4o-mini`;
-   - `ALLOWED_ORIGIN` — origin сайта, например `https://username.github.io` (без пути `/repository` и завершающего слеша).
+   - `ALLOWED_ORIGIN` — разрешённые origin, разделённые запятыми, например `https://username.github.io,https://example.kz` (без путей и завершающих слешей).
 4. Скопируйте URL опубликованного Worker и укажите его в `ASSISTANT_API_URL` в `script.js`.
 5. Опубликуйте изменения сайта. Проверьте, что API-биллинг включён в OpenAI Platform; задайте доступные лимиты/уведомления расходов. Worker — публичный endpoint: проверка origin ограничивает браузерные вызовы, но не защищает от прямых автоматических запросов.
 
