@@ -1280,6 +1280,10 @@ select {
   }
 }
 
+.news-summary {
+  line-height: 1.55;
+}
+
 .topbar-inner {
   min-height: 38px;
 }
@@ -2465,14 +2469,64 @@ select {
   gap: 20px;
 }
 
+.news-archive-year,
+.news-archive-month {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.news-archive-year {
+  margin-bottom: 14px;
+  padding: 18px 22px;
+  box-shadow: 0 12px 24px rgba(17, 41, 74, 0.04);
+}
+
+.news-archive-year > summary,
+.news-archive-month > summary {
+  color: var(--navy);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.news-archive-year > summary {
+  font-size: 1.2rem;
+}
+
+.news-archive-month {
+  margin-top: 14px;
+  padding: 14px 18px;
+  background: #f8fafb;
+}
+
+.news-archive-month .facebook-posts {
+  margin-top: 18px;
+}
+
+.news-archive-video-link {
+  margin: 0 0 16px !important;
+}
+
+.news-archive-video-link a {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.news-archive-undated {
+  margin-top: 32px;
+}
+
+.news-archive-undated h2 {
+  color: var(--navy);
+}
+
 .news-video-frame {
   width: 100%;
   aspect-ratio: 9 / 16;
   max-height: 460px;
-  margin-bottom: 20px;
   overflow: hidden;
   border-radius: 14px;
-  background: #071b31;
+  background: #eef2f5;
 }
 
 .news-video-frame iframe {
@@ -2482,12 +2536,39 @@ select {
   border: 0;
 }
 
-@media (max-width: 980px) {
-  .news-video-frame {
-    height: min(620px, 177.78vw);
-    max-height: none;
-    aspect-ratio: auto;
-  }
+.news-video-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  max-height: 460px;
+  margin-bottom: 20px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #173a63, #071b31);
+  color: #fff;
+  gap: 12px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+.news-video-link:hover,
+.news-video-link:focus-visible {
+  background: linear-gradient(145deg, #205083, #0b213e);
+  color: #fff;
+}
+
+.news-video-play {
+  display: grid;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  font-size: 1.5rem;
+  padding-left: 4px;
 }
 
 .resource-card {

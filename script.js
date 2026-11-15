@@ -6,7 +6,7 @@ const translations = {
     "nav.unionHistory": "История Профсоюза", "nav.leadership": "Руководящие органы",
     "nav.council": "Совет", "nav.executive": "Исполнительный комитет",
     "nav.audit": "Контрольно-ревизионная комиссия", "nav.staff": "Аппарат Профсоюза",
-    "nav.activities": "Деятельность", "nav.training": "Обучение", "nav.news": "Новости",
+    "nav.activities": "Деятельность", "nav.training": "Обучение", "nav.news": "Новости", "nav.newsArchive": "Архив новостей",
     "nav.faq": "Вопросы и ответы", "nav.ask": "Задать вопрос",
     "search.open": "Открыть поиск", "search.placeholder": "Поиск по сайту",
     "search.submit": "Найти", "search.noResults": "Совпадений не найдено",
@@ -40,6 +40,9 @@ const translations = {
     "activity.safetyText": "Безопасные условия труда и профилактика рисков.",
     "activity.all": "Все направления деятельности →",
     "news.kicker": "Новости", "news.title": "Новости", "news.read": "Подробнее",
+    "news.archiveTitle": "Архив новостей", "news.archiveLead": "Выберите год, затем месяц, чтобы посмотреть публикации.",
+    "news.watchVideo": "Смотреть видео на Facebook",
+    "news.undated": "Дата не указана",
     "news.close": "Закрыть новость",
     "news.facebookEmpty": "Новости появятся здесь.",
     "legal.kicker": "Документы и нормы", "legal.title": "Правовая база", "legal.all": "Открыть раздел →",
@@ -77,6 +80,7 @@ const translations = {
     "faq.q3": "Что такое коллективный договор?", "faq.a3": "Это соглашение между работодателем и представителями работников, которое закрепляет дополнительные трудовые и социальные гарантии. Действующий договор следует запросить у работодателя или профсоюзного комитета.",
     "faq.q4": "Как записаться на обучение?", "faq.a4": "Откройте раздел «Обучение», выберите программу и заполните форму записи. Заявка будет подготовлена в почтовой программе.",
     "faq.q5": "Где найти нормы трудового законодательства?", "faq.a5": "В правовой базе сайта собраны ссылки на Трудовой кодекс и основные законы. Официальные тексты размещены в информационно-правовой системе «Әділет».",
+    "page.newsArchive.title": "Архив новостей", "page.newsArchive.lead": "Выберите год, затем месяц, чтобы посмотреть публикации.",
     "page.about.title": "О Профсоюзе", "page.about.lead": "Солидарность работников, достойный труд и защита прав — основа профсоюзной работы.",
     "page.unionHistory.title": "История Профсоюза", "page.unionHistory.lead": "История и основные этапы развития профсоюза работников образования города Астаны.",
     "page.leadership.title": "Руководящие органы", "page.leadership.lead": "",
@@ -128,7 +132,7 @@ const translations = {
     "nav.unionHistory": "Кәсіподақ тарихы", "nav.leadership": "Басқарушы органдар",
     "nav.council": "Кеңес", "nav.executive": "Атқару комитеті",
     "nav.audit": "Бақылау-тексеру комиссиясы", "nav.staff": "Кәсіподақ аппараты",
-    "nav.activities": "Қызметі", "nav.training": "Оқыту", "nav.news": "Жаңалықтар",
+    "nav.activities": "Қызметі", "nav.training": "Оқыту", "nav.news": "Жаңалықтар", "nav.newsArchive": "Жаңалықтар мұрағаты",
     "nav.faq": "Сұрақ-жауап", "nav.ask": "Сұрақ қою",
     "search.open": "Іздеуді ашу", "search.placeholder": "Сайттан іздеу",
     "search.submit": "Іздеу", "search.noResults": "Сәйкестік табылмады",
@@ -162,6 +166,9 @@ const translations = {
     "activity.safetyText": "Қауіпсіз еңбек жағдайлары және тәуекелдердің алдын алу.",
     "activity.all": "Қызметтің барлық бағыттары →",
     "news.kicker": "Жаңалықтар", "news.title": "Жаңалықтар", "news.read": "Толығырақ",
+    "news.archiveTitle": "Жаңалықтар мұрағаты", "news.archiveLead": "Жарияланымдарды көру үшін жылды, содан кейін айды таңдаңыз.",
+    "news.watchVideo": "Facebook-тен бейнені көру",
+    "news.undated": "Күні көрсетілмеген",
     "news.close": "Жаңалықты жабу",
     "news.facebookEmpty": "Жаңалықтар осында жарияланады.",
     "legal.kicker": "Құжаттар мен нормалар", "legal.title": "Құқықтық база", "legal.all": "Бөлімді ашу →",
@@ -199,6 +206,7 @@ const translations = {
     "faq.q3": "Ұжымдық шарт дегеніміз не?", "faq.a3": "Бұл жұмыс беруші мен қызметкерлер өкілдері арасындағы қосымша еңбек және әлеуметтік кепілдіктерді бекітетін келісім. Қолданыстағы шартты жұмыс берушіден немесе кәсіподақ комитетінен сұраңыз.",
     "faq.q4": "Оқуға қалай тіркелуге болады?", "faq.a4": "«Оқыту» бөлімін ашып, бағдарламаны таңдап, тіркеу нысанын толтырыңыз. Өтінім пошта бағдарламасында дайындалады.",
     "faq.q5": "Еңбек заңнамасының нормаларын қайдан табуға болады?", "faq.a5": "Құқықтық базада Еңбек кодексі мен негізгі заңдарға сілтемелер берілген. Ресми мәтіндер «Әділет» ақпараттық-құқықтық жүйесінде жарияланады.",
+    "page.newsArchive.title": "Жаңалықтар мұрағаты", "page.newsArchive.lead": "Жарияланымдарды көру үшін жылды, содан кейін айды таңдаңыз.",
     "page.about.title": "Кәсіподақ туралы", "page.about.lead": "Қызметкерлер ынтымақтастығы, лайықты еңбек және құқықтарды қорғау — кәсіподақ жұмысының негізі.",
     "page.unionHistory.title": "Кәсіподақ тарихы", "page.unionHistory.lead": "Астана қаласы білім қызметкерлері кәсіподағының тарихы мен даму кезеңдері.",
     "page.leadership.title": "Басқарушы органдар", "page.leadership.lead": "",
@@ -250,7 +258,7 @@ const translations = {
     "nav.unionHistory": "Union history", "nav.leadership": "Governing bodies",
     "nav.council": "Council", "nav.executive": "Executive Committee",
     "nav.audit": "Audit Commission", "nav.staff": "Union staff",
-    "nav.activities": "Activities", "nav.training": "Training", "nav.news": "News",
+    "nav.activities": "Activities", "nav.training": "Training", "nav.news": "News", "nav.newsArchive": "News archive",
     "nav.faq": "Q&A", "nav.ask": "Ask a question",
     "search.open": "Open search", "search.placeholder": "Search the site",
     "search.submit": "Search", "search.noResults": "No matches found",
@@ -285,6 +293,9 @@ const translations = {
     "activity.safetyText": "Safe working conditions and risk prevention.",
     "activity.all": "All areas of activity →",
     "news.kicker": "News", "news.title": "News", "news.read": "More details",
+    "news.archiveTitle": "News archive", "news.archiveLead": "Choose a year, then a month to view posts.",
+    "news.watchVideo": "Watch on Facebook",
+    "news.undated": "Date not available",
     "news.close": "Close news",
     "news.facebookEmpty": "News will appear here.",
     "legal.kicker": "Documents and regulations", "legal.title": "Legal resources", "legal.all": "Open section →",
@@ -322,6 +333,7 @@ const translations = {
     "faq.q3": "What is a collective agreement?", "faq.a3": "It is an agreement between an employer and worker representatives that sets additional employment and social guarantees. Request the current agreement from your employer or union committee.",
     "faq.q4": "How do I register for training?", "faq.a4": "Open Training, choose a programme and complete the registration form. Your email app will prepare the application.",
     "faq.q5": "Where can I find labour law provisions?", "faq.a5": "The Legal Resources section links to the Labour Code and key laws. Official texts are published in the Adilet legal information system.",
+    "page.newsArchive.title": "News archive", "page.newsArchive.lead": "Choose a year, then a month to view posts.",
     "page.about.title": "About the Union", "page.about.lead": "Worker solidarity, decent work and rights protection are at the heart of trade union activity.",
     "page.unionHistory.title": "Union history", "page.unionHistory.lead": "History and main development milestones of Astana’s education workers’ union.",
     "page.leadership.title": "Governing bodies", "page.leadership.lead": "",
@@ -436,7 +448,35 @@ function buildMeetingNewsText(language, { school, schoolType, actualWorkload = f
 
 const facebookPosts = [
   {
+    videoUrl: "https://www.facebook.com/reel/1835180904285226",
+    embedUrl: "https://www.facebook.com/profobrNS/videos/%D0%B0%D1%81%D1%82%D0%B0%D0%BD%D0%B0-%D2%9B%D0%B0%D0%BB%D0%B0%D1%81%D1%8B%D0%BD%D1%8B%D2%A3-%D0%B1%D1%96%D0%BB%D1%96%D0%BC-%D0%B1%D0%B5%D1%80%D1%83-%D2%9B%D1%8B%D0%B7%D0%BC%D0%B5%D1%82%D0%BA%D0%B5%D1%80%D0%BB%D0%B5%D1%80%D1%96-%D0%BA%D3%99%D1%81%D1%96%D0%BF%D0%BE%D0%B4%D0%B0%D2%93%D1%8B%D0%BD%D1%8B%D2%A3-%D2%9B%D0%B0%D0%BB%D0%B0%D0%BB%D1%8B%D2%9B-%D0%BA%D0%B5%D2%A3%D0%B5%D1%81%D1%96%D0%BD%D1%96%D2%A3-%D0%BA%D0%B5%D0%B7%D0%B5%D0%BA%D1%82/1835180904285226/",
+    date: "2026-11-09",
+    title: "Астана қаласы білім қызметкерлері кәсіподағының қалалық Кеңесінің кезекті отырысы өтті",
+    summary: "Кеңесте 2026 жылғы жұмыс қорытындылары мен кәсіподақ қызметінің негізгі бағыттары талқыланды. «Астананың үздік жас педагогі» байқауының жеңімпаздары марапатталды.",
+    text: "Қалалық Кеңестің отырысында кәсіподақ төрағасы Батыр Әлиев 2026 жылғы жұмыс қорытындылары, кәсіподақ мүшелерінің еңбек құқықтары мен мүдделерін қорғау және ұйым қызметінің негізгі бағыттары туралы баяндады. Отырыста «Астананың үздік жас педагогі» байқауының жеңімпаздары марапатталды."
+  },
+  {
+    videoUrl: "https://www.facebook.com/reel/2571912459971519",
+    embedBlocked: true,
+    embedUrl: "https://www.facebook.com/profobrNS/videos/%D0%B0%D1%81%D1%82%D0%B0%D0%BD%D0%B0-%D2%9B%D0%B0%D0%BB%D0%B0%D1%81%D1%8B%D0%BD%D1%8B%D2%A3-%D0%B1%D1%96%D0%BB%D1%96%D0%BC-%D0%B1%D0%B5%D1%80%D1%83-%D2%9B%D1%8B%D0%B7%D0%BC%D0%B5%D1%82%D0%BA%D0%B5%D1%80%D0%BB%D0%B5%D1%80%D1%96-%D0%BA%D3%99%D1%81%D1%96%D0%BF%D0%BE%D0%B4%D0%B0%D2%93%D1%8B-%D0%B1%D0%B0%D1%81-%D0%B1%D1%83%D1%85%D0%B3%D0%B0%D0%BB%D1%82%D0%B5%D1%80%D0%BB%D0%B5%D1%80%D0%B3%D0%B5-%D0%B0%D1%80%D0%BD%D0%B0%D0%BB%D2%93%D0%B0%D0%BD/2571912459971519/",
+    date: "2026-11-12",
+    title: "Бас бухгалтерлерге арналған семинар-кеңес",
+    summary: "Орта, техникалық және қосымша білім беру ұйымдарының бас бухгалтерлері кәсіби міндеттерді, еңбек заңнамасын, ұжымдық шарттарды және еңбекақы төлеу жүйесін талқылады.",
+    text: "Астана қаласының білім беру қызметкерлері Кәсіподағы орта, техникалық және қосымша білім беру ұйымдарының бас бухгалтерлеріне арналған семинар-кеңес өткізді. Қатысушылар бухгалтерлердің кәсіби міндеттері, еңбек заңнамасы, ұжымдық шарттарды қолдану және шаруашылық жүргізу құқығындағы мектептердегі еңбекақы төлеу ерекшеліктері туралы түсіндірме алды."
+  },
+  {
+    videoUrl: "https://www.facebook.com/reel/1166175305944785",
+    embedBlocked: true,
+    embedUrl: "https://www.facebook.com/profobrNS/videos/%D0%B0%D1%81%D1%82%D0%B0%D0%BD%D0%B0-%D2%9B%D0%B0%D0%BB%D0%B0%D1%81%D1%8B%D0%BD%D1%8B%D2%A3-%D0%B1%D1%96%D0%BB%D1%96%D0%BC-%D0%B1%D0%B5%D1%80%D1%83-%D2%9B%D1%8B%D0%B7%D0%BC%D0%B5%D1%82%D0%BA%D0%B5%D1%80%D0%BB%D0%B5%D1%80%D1%96-%D0%BA%D3%99%D1%81%D1%96%D0%BF%D0%BE%D0%B4%D0%B0%D2%93%D1%8B-%D0%BC%D0%B5%D0%BA%D1%82%D0%B5%D0%BF%D0%BA%D0%B5-%D0%B4%D0%B5%D0%B9%D1%96%D0%BD%D0%B3%D1%96-%D0%B6%D3%99%D0%BD%D0%B5-%D0%B0%D1%80%D0%BD%D0%B0%D0%B9/1166175305944785/",
+    date: "2026-11-13",
+    title: "Мектепке дейінгі және арнайы білім беру ұйымдарының бухгалтерлеріне арналған семинар-кеңес",
+    summary: "Семинарда бухгалтерлердің кәсіби міндеттері мен еңбек заңнамасы, ұжымдық шарттарды қолдану және еңбекақы төлеу жүйесінің ерекшеліктері қаралды.",
+    text: "Астана қаласының білім беру қызметкерлері Кәсіподағы мектепке дейінгі және арнайы білім беру ұйымдарының бухгалтерлеріне арналған семинар-кеңес өткізді. Қатысушылар бухгалтерлердің кәсіби міндеттері мен еңбек заңнамасын талқылап, ұжымдық шарттарды тәжірибеде қолдану және еңбекақы төлеу жүйесі туралы түсіндірме алды."
+  },
+  {
     videoUrl: "https://www.facebook.com/reel/2731815813902687",
+    embedUrl: "https://www.facebook.com/profobrNS/videos/%D0%B0%D1%81%D1%82%D0%B0%D0%BD%D0%B0-%D2%9B%D0%B0%D0%BB%D0%B0%D1%81%D1%8B-%D3%99%D0%BA%D1%96%D0%BC%D0%B4%D1%96%D0%B3%D1%96%D0%BD%D1%96%D2%A3-%D2%9B%D0%B0%D0%BD%D1%8B%D1%88-%D1%81%D3%99%D1%82%D0%B1%D0%B0%D0%B5%D0%B2-%D0%B0%D1%82%D1%8B%D0%BD%D0%B4%D0%B0%D2%93%D1%8B-61-%D0%BC%D0%B5%D0%BA%D1%82%D0%B5%D0%BF-%D0%BB%D0%B8%D1%86%D0%B5%D0%B9%D1%96%D0%BD%D1%96%D2%A3-%D2%B1%D0%B6%D1%8B%D0%BC%D1%8B%D0%BC%D0%B5%D0%BD-%D0%BA%D0%B5/2731815813902687/",
+    date: "2026-11-02",
     title: "АСТАНА ҚАЛАСЫ ӘКІМДІГІНІҢ ҚАНЫШ СӘТБАЕВ АТЫНДАҒЫ № 61 МЕКТЕП-ЛИЦЕЙІНІҢ ҰЖЫМЫМЕН КЕЗДЕСУ",
     text: `Астана қаласының білім беру қызметкерлері Кәсіподағының төрағасы Батыр Әлиев Астана қаласы әкімдігінің Қаныш Сәтбаев атындағы № 61 мектеп-лицейінің ұжымымен кездесу өткізді.
 
@@ -454,6 +494,8 @@ const facebookPosts = [
   },
   {
     videoUrl: "https://www.facebook.com/reel/813061841901916",
+    embedUrl: "https://www.facebook.com/profobrNS/videos/%D0%B1%D0%B0%D1%81%D1%82%D0%B0%D1%83%D1%8B%D1%88-%D0%BA%D3%99%D1%81%D1%96%D0%BF%D0%BE%D0%B4%D0%B0%D2%9B-%D2%B1%D0%B9%D1%8B%D0%BC%D0%B4%D0%B0%D1%80%D1%8B%D0%BD%D1%8B%D2%A3-%D1%82%D3%A9%D1%80%D0%B0%D2%93%D0%B0%D0%BB%D0%B0%D1%80%D1%8B%D0%BD%D0%B0-%D0%B0%D1%80%D0%BD%D0%B0%D0%BB%D2%93%D0%B0%D0%BD-%D1%81%D0%B5%D0%BC%D0%B8%D0%BD%D0%B0%D1%80-%D0%BA%D0%B5%D2%A3%D0%B5%D1%81%D0%B0%D1%81%D1%82%D0%B0%D0%BD%D0%B0-%D2%9B%D0%B0%D0%BB%D0%B0%D1%81%D1%8B%D0%BD/813061841901916/",
+    date: "2026-10-30",
     title: "БАСТАУЫШ КӘСІПОДАҚ ҰЙЫМДАРЫНЫҢ ТӨРАҒАЛАРЫНА АРНАЛҒАН СЕМИНАР-КЕҢЕС",
     text: `Астана қаласының білім беру қызметкерлері Кәсіподағы бастауыш кәсіподақ ұйымдарының төрағаларына арналған дәстүрлі жыл сайынғы семинар-кеңес өткізді.
 
@@ -471,6 +513,8 @@ const facebookPosts = [
   },
   {
     videoUrl: "https://www.facebook.com/reel/2278532966024705",
+    embedUrl: "https://www.facebook.com/profobrNS/videos/%D0%B0%D1%81%D1%82%D0%B0%D0%BD%D0%B0-%D2%9B%D0%B0%D0%BB%D0%B0%D1%81%D1%8B-%D3%99%D0%BA%D1%96%D0%BC%D0%B4%D1%96%D0%B3%D1%96%D0%BD%D1%96%D2%A3-115-%D0%B6%D0%B0%D0%BB%D0%BF%D1%8B-%D0%B1%D1%96%D0%BB%D1%96%D0%BC-%D0%B1%D0%B5%D1%80%D0%B5%D1%82%D1%96%D0%BD-%D0%BC%D0%B5%D0%BA%D1%82%D0%B5%D0%B1%D1%96%D0%BD%D1%96%D2%A3-%D2%B1%D0%B6%D1%8B%D0%BC%D1%8B%D0%BC%D0%B5%D0%BD-%D0%BA%D0%B5%D0%B7%D0%B4%D0%B5%D1%81%D1%83%D0%B1%D2%AF%D0%B3/2278532966024705/",
+    date: "2026-10-28",
     title: "АСТАНА ҚАЛАСЫ ӘКІМДІГІНІҢ №115 ЖАЛПЫ БІЛІМ БЕРЕТІН МЕКТЕБІНІҢ ҰЖЫМЫМЕН КЕЗДЕСУ",
     text: `Бүгін Астана қаласының білім беру қызметкерлері Кәсіподағының төрағасы Батыр Әлиев Астана қаласы әкімдігінің №115 жалпы білім беретін мектебінің ұжымымен кездесу өткізді.
 
@@ -492,6 +536,8 @@ const facebookPosts = [
   },
   {
     videoUrl: "https://www.facebook.com/reel/2204828916732012",
+    embedUrl: "https://www.facebook.com/profobrNS/videos/%D0%B0%D1%81%D1%82%D0%B0%D0%BD%D0%B0-%D2%9B%D0%B0%D0%BB%D0%B0%D1%81%D1%8B-%D3%99%D0%BA%D1%96%D0%BC%D0%B4%D1%96%D0%B3%D1%96%D0%BD%D1%96%D2%A3-%D2%9B%D0%B0%D0%B9%D1%8B%D0%BC-%D0%BC%D2%B1%D1%85%D0%B0%D0%BC%D0%B5%D0%B4%D1%85%D0%B0%D0%BD%D0%BE%D0%B2-%D0%B0%D1%82%D1%8B%D0%BD%D0%B4%D0%B0%D2%93%D1%8B-90-%D0%BC%D0%B5%D0%BA%D1%82%D0%B5%D0%BF-%D0%B3%D0%B8%D0%BC%D0%BD%D0%B0%D0%B7%D0%B8%D1%8F-%D2%B1%D0%B6%D1%8B%D0%BC%D1%8B%D0%BC%D0%B5/2204828916732012/",
+    date: "2026-10-15",
     title: "АСТАНА ҚАЛАСЫ ӘКІМДІГІНІҢ ҚАЙЫМ МҰХАМЕДХАНОВ АТЫНДАҒЫ №90 МЕКТЕП-ГИМНАЗИЯ ҰЖЫМЫМЕН КЕЗДЕСУ",
     text: `Бүгін Астана қаласының білім беру қызметкерлері Кәсіподағының төрағасы Батыр Әлиев Астана қаласы әкімдігінің Қайым Мұхамедханов атындағы №90 мектеп-гимназиясының ұжымымен кездесу өткізді.
 
@@ -514,6 +560,42 @@ const facebookPosts = [
 ];
 
 const facebookPostTranslations = {
+  "https://www.facebook.com/reel/1835180904285226": {
+    ru: {
+      title: "Состоялось очередное заседание городского Совета профсоюза работников образования Астаны",
+      summary: "На заседании подвели итоги работы за 2026 год и обсудили основные направления деятельности Профсоюза. Наградили победителей конкурса «Лучший молодой педагог Астаны».",
+      text: "Председатель Профсоюза Батыр Алиев рассказал об итогах работы за 2026 год, защите трудовых прав и интересов членов Профсоюза и основных направлениях деятельности организации. На заседании также наградили победителей конкурса «Лучший молодой педагог Астаны»."
+    },
+    en: {
+      title: "The Astana Education Workers’ Union City Council held its regular meeting",
+      summary: "The meeting reviewed the Union’s 2026 results and priorities. Winners of the “Best Young Teacher of Astana” competition received awards.",
+      text: "Union Chair Batyr Aliyev presented the 2026 work results and spoke about protecting members’ labour rights and the Union’s main priorities. The meeting also recognised the winners of the “Best Young Teacher of Astana” competition."
+    }
+  },
+  "https://www.facebook.com/reel/2571912459971519": {
+    ru: {
+      title: "Семинар-совещание для главных бухгалтеров",
+      summary: "Главные бухгалтеры организаций среднего, технического и дополнительного образования обсудили профессиональные обязанности, трудовое законодательство, коллективные договоры и оплату труда.",
+      text: "Профсоюз работников образования города Астаны провёл семинар-совещание для главных бухгалтеров организаций среднего, технического и дополнительного образования. Участники обсудили профессиональные обязанности бухгалтеров, требования трудового законодательства, применение коллективных договоров и особенности оплаты труда в школах на праве хозяйственного ведения."
+    },
+    en: {
+      title: "Seminar for chief accountants",
+      summary: "Chief accountants from general, technical and additional education organisations discussed professional duties, labour law, collective agreements and pay systems.",
+      text: "The Astana Education Workers’ Trade Union held a seminar for chief accountants from general, technical and additional education organisations. Participants discussed accountants’ professional duties, labour-law requirements, the application of collective agreements and pay systems in schools operating under the right of economic management."
+    }
+  },
+  "https://www.facebook.com/reel/1166175305944785": {
+    ru: {
+      title: "Семинар для бухгалтеров дошкольных и специальных образовательных организаций",
+      summary: "На семинаре рассмотрели профессиональные обязанности бухгалтеров, трудовое законодательство, коллективные договоры и особенности оплаты труда.",
+      text: "Профсоюз работников образования города Астаны провёл семинар для бухгалтеров дошкольных и специальных образовательных организаций. Участники обсудили профессиональные обязанности и требования трудового законодательства, а также получили разъяснения о применении коллективных договоров и особенностях оплаты труда."
+    },
+    en: {
+      title: "Seminar for accountants in preschool and special education organisations",
+      summary: "The seminar covered accountants’ professional duties, labour law, collective agreements and pay systems.",
+      text: "The Astana Education Workers’ Trade Union held a seminar for accountants from preschool and special education organisations. Participants discussed professional duties and labour-law requirements and received guidance on applying collective agreements and understanding pay systems."
+    }
+  },
   "https://www.facebook.com/reel/2731815813902687": {
     ru: {
       title: "Встреча с коллективом школы-лицея № 61 имени Каныша Сатпаева",
@@ -658,6 +740,7 @@ const pageDefinitions = {
   "training-courses": { key: "page.trainingCourses", body: "training.body", resources: courseDocuments, form: "course" },
   "training-activists": { key: "page.trainingActivists", body: "training.body", form: "course" },
   "faq": { key: "page.faq", faq: true },
+  "news-archive": { key: "page.newsArchive", newsArchive: true },
   "ask": { key: "page.ask", form: "question" }
 };
 
@@ -784,11 +867,81 @@ function renderNews() {
     grid.innerHTML = `<p class="empty-state">${translate("news.facebookEmpty")}</p>`;
     return;
   }
-  grid.innerHTML = facebookPosts.map((post, index) => {
-    const localizedPost = facebookPostTranslations[post.videoUrl]?.[currentLanguage] || post;
-    const videoEmbed = `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(post.videoUrl)}&show_text=false&width=500`;
-    return `<article class="news-card"><div class="news-video-frame"><iframe src="${escapeHtml(videoEmbed)}" title="${escapeHtml(localizedPost.title)}" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe></div><h3>${escapeHtml(localizedPost.title)}</h3><button class="news-read" type="button" data-news-index="${index}">${translate("news.read")} →</button></article>`;
-  }).join("");
+  const entries = facebookPosts.map((post, index) => ({ post, index }))
+    .filter(({ post }) => !post.embedBlocked)
+    .sort((a, b) => (b.post.date || "").localeCompare(a.post.date || "") || a.index - b.index);
+  const latestPosts = entries.slice(0, 4);
+  grid.innerHTML = `<div class="facebook-posts">${latestPosts.map(({ post, index }) => renderNewsCard(post, index)).join("")}</div>`;
+}
+
+const newsMonthNames = {
+  kz: ["қаңтар", "ақпан", "наурыз", "сәуір", "мамыр", "маусым", "шілде", "тамыз", "қыркүйек", "қазан", "қараша", "желтоқсан"],
+  ru: ["январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"],
+  en: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+};
+
+const newsMonthNamesGenitive = {
+  kz: newsMonthNames.kz,
+  ru: ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"],
+  en: newsMonthNames.en
+};
+
+function formatNewsDate(dateString) {
+  const [year, month, day] = dateString.split("-").map(Number);
+  if (currentLanguage === "kz") return `${year} жылғы ${day} ${newsMonthNamesGenitive.kz[month - 1]}`;
+  if (currentLanguage === "ru") return `${day} ${newsMonthNamesGenitive.ru[month - 1]} ${year} г.`;
+  return `${day} ${newsMonthNamesGenitive.en[month - 1]} ${year}`;
+}
+
+function renderNewsArchive() {
+  const years = new Map();
+  const undated = [];
+  facebookPosts.forEach((post, index) => {
+    if (!post.date) {
+      undated.push({ post, index });
+      return;
+    }
+    const [year, month] = post.date.split("-");
+    const months = years.get(year) || new Map();
+    const entries = months.get(month) || [];
+    entries.push({ post, index });
+    months.set(month, entries);
+    years.set(year, months);
+  });
+
+  const archives = [...years.entries()]
+    .sort(([firstYear], [secondYear]) => Number(secondYear) - Number(firstYear))
+    .map(([year, months]) => {
+      const monthSections = [...months.entries()]
+        .sort(([firstMonth], [secondMonth]) => Number(secondMonth) - Number(firstMonth))
+        .map(([month, entries]) => {
+          const label = newsMonthNames[currentLanguage][Number(month) - 1];
+          const cards = entries
+            .sort((first, second) => second.post.date.localeCompare(first.post.date))
+            .map(({ post, index }) => renderNewsCard(post, index))
+            .join("");
+          return `<details class="news-archive-month"><summary>${escapeHtml(label)}</summary><div class="facebook-posts">${cards}</div></details>`;
+        }).join("");
+      return `<details class="news-archive-year"><summary>${escapeHtml(year)}</summary>${monthSections}</details>`;
+    }).join("");
+
+  const undatedSection = undated.length
+    ? `<section class="news-archive-undated"><h2>${translate("news.undated")}</h2><div class="facebook-posts">${undated.map(({ post, index }) => renderNewsCard(post, index)).join("")}</div></section>`
+    : "";
+  return `<div class="news-archive">${archives}${undatedSection}</div>`;
+}
+
+function renderNewsCard(post, index) {
+  const localizedPost = facebookPostTranslations[post.videoUrl]?.[currentLanguage] || post;
+  const videoEmbed = `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(post.embedUrl || post.videoUrl)}&show_text=false&width=500`;
+  const video = post.embedBlocked
+    ? `<p class="news-archive-video-link"><a href="${escapeHtml(post.videoUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(translate("news.watchVideo"))} →</a></p>`
+    : `<div class="news-video-frame"><iframe src="${escapeHtml(videoEmbed)}" title="${escapeHtml(localizedPost.title)}" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>`;
+  const date = post.date
+    ? `<time datetime="${escapeHtml(post.date)}">${escapeHtml(formatNewsDate(post.date))}</time>`
+    : `<span class="news-date">${escapeHtml(translate("news.undated"))}</span>`;
+  const summary = localizedPost.summary || localizedPost.text.split(/\n\s*\n/)[0];
+  return `<article class="news-card">${video}${date}<h3>${escapeHtml(localizedPost.title)}</h3><p class="news-summary">${escapeHtml(summary)}</p><button class="news-read" type="button" data-news-index="${index}">${translate("news.read")} →</button></article>`;
 }
 
 function routeSlug() {
@@ -912,8 +1065,9 @@ function renderCurrentPage() {
   const form = definition.form === "course" ? courseForm() : definition.form === "question" ? questionForm() : "";
   const faq = definition.faq ? faqContent() : "";
   const history = definition.history ? renderHistory() : "";
+  const newsArchive = definition.newsArchive ? renderNewsArchive() : "";
   const externalButton = definition.external ? `<a class="btn btn-primary official-button" href="${definition.external}" target="_blank" rel="noopener noreferrer">${translate("page.external")}</a>` : "";
-  pageView.innerHTML = `<div class="container page-content"><a class="back-link" href="#home">${translate("page.back")}</a><header class="page-heading"><h1>${title}</h1>${headingLead}</header>${body}${history}${links}${childCards}${resources}${people}${faq}${externalButton}${form}</div>`;
+  pageView.innerHTML = `<div class="container page-content"><a class="back-link" href="#home">${translate("page.back")}</a><header class="page-heading"><h1>${title}</h1>${headingLead}</header>${body}${history}${links}${childCards}${resources}${people}${faq}${newsArchive}${externalButton}${form}</div>`;
   pageView.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
@@ -1014,7 +1168,7 @@ function getSiteSearchItems() {
 
   for (const post of facebookPosts) {
     const localizedPost = facebookPostTranslations[post.videoUrl]?.[currentLanguage] || post;
-    addItem(localizedPost.title, "#news", localizedPost.text);
+    addItem(localizedPost.title, "#page/news-archive", localizedPost.text);
   }
 
   return items;
@@ -1461,6 +1615,9 @@ if ("IntersectionObserver" in window) {
 
 window.addEventListener("hashchange", () => {
   renderCurrentPage();
+  if (window.location.hash === "#news") {
+    document.getElementById("news")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
   observeTextMotion();
 });
 applyTranslations();
