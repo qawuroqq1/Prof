@@ -1578,7 +1578,7 @@ select {
 
 .news-card time {
   display: block;
-  margin: -8px 0 14px;
+  margin: 10px 0 14px;
   color: var(--muted);
   font-size: 0.82rem;
 }
@@ -2593,6 +2593,17 @@ select {
   cursor: pointer;
 }
 
+.resource-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: auto;
+}
+
+.resource-actions .resource-link {
+  margin-top: 0;
+}
+
 .resource-link:hover,
 .resource-link:focus-visible {
   color: #065e42;
@@ -2680,6 +2691,29 @@ select {
 
 .document-dialog iframe[hidden] {
   display: none;
+}
+
+.docx-viewer {
+  width: 100%;
+  height: calc(100% - 64px);
+  overflow: auto;
+  padding: 18px;
+  background: #e8edf3;
+}
+
+.docx-viewer[hidden] {
+  display: none;
+}
+
+.docx-viewer .docx-wrapper {
+  padding: 0;
+  background: transparent;
+}
+
+.docx-viewer .docx-wrapper > section.docx {
+  max-width: 100%;
+  margin-bottom: 18px;
+  overflow-x: auto;
 }
 
 .protected-pdf-viewer {
@@ -2864,5 +2898,160 @@ select {
   .news-dialog-body {
     max-height: calc(100% - 72px);
     padding: 18px 16px 28px;
+  }
+}
+
+.union-history-intro {
+  margin: 24px 0 0;
+  padding: 22px 24px;
+  border-left: 4px solid var(--green);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  background: var(--green-soft);
+  color: var(--text);
+  line-height: 1.75;
+}
+
+.leadership-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.leadership-card {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-items: start;
+  gap: 14px;
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--card);
+  box-shadow: 0 10px 24px rgba(17, 41, 74, 0.05);
+}
+
+.leadership-number {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--green-soft);
+  color: var(--green);
+  font-weight: 800;
+}
+
+.leadership-card h2 {
+  margin: 2px 0 10px;
+  color: var(--navy);
+  font-size: 1.02rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.leadership-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.leadership-loading,
+.leadership-load-error {
+  margin: 24px 0 0;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  background: var(--green-soft);
+  color: var(--text);
+}
+
+.assistant-options {
+  max-height: 190px;
+  overflow-y: auto;
+  padding: 10px 12px;
+  border-top: 1px solid var(--border);
+  background: #fff;
+}
+
+.assistant-topic-grid,
+.assistant-question-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.assistant-option {
+  min-width: 0;
+  padding: 9px 10px;
+  border: 1px solid #dce8e2;
+  border-radius: 11px;
+  background: #f9fcfa;
+  color: var(--navy);
+  font: inherit;
+  font-size: 0.73rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.assistant-option:hover,
+.assistant-option:focus-visible {
+  border-color: var(--green);
+  background: var(--green-soft);
+}
+
+.assistant-option:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.assistant-option-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.assistant-option-nav button {
+  padding: 5px 8px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #087c57;
+  font: inherit;
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.assistant-option-nav button:hover,
+.assistant-option-nav button:focus-visible {
+  background: var(--green-soft);
+}
+
+.assistant-free-prompt {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 620px) {
+  .leadership-list {
+    grid-template-columns: 1fr;
+  }
+
+  .assistant-options {
+    max-height: 165px;
+    padding: 8px 10px;
+  }
+
+  .assistant-topic-grid,
+  .assistant-question-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }

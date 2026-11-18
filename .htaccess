@@ -1,5 +1,9 @@
 DirectoryIndex index.html
 
+<IfModule mod_mime.c>
+  AddType text/javascript .mjs
+</IfModule>
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteRule ^ru/home/?$ / [R=302,L]

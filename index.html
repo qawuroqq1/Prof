@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Профсоюз работников образования города Астаны: защита прав, обучение, поддержка и социальное партнерство." />
     <meta name="theme-color" content="#0b213e" />
+    <link rel="canonical" href="https://bilimkasipodaq.kz/" />
+    <meta property="og:title" content="Профсоюз работников образования города Астаны" />
+    <meta property="og:description" content="Защита прав, обучение, поддержка и социальное партнерство работников образования Астаны." />
+    <meta property="og:url" content="https://bilimkasipodaq.kz/" />
+    <meta property="og:type" content="website" />
     <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
     <title>Профсоюз работников образования города Астаны</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20261115-news-archive" />
+    <link rel="stylesheet" href="styles.css?v=20261115-news-menu" />
   </head>
   <body>
     <div class="topbar">
@@ -99,8 +104,12 @@
               <a href="#page/training-activists" data-i18n="training.activists">Обучение актива Профсоюза</a>
             </div>
           </div>
-          <a href="#news" data-i18n="nav.news">Новости</a>
-          <a href="#page/news-archive" data-i18n="nav.newsArchive">Архив новостей</a>
+          <div class="nav-dropdown">
+            <a href="#news" class="nav-dropdown-trigger" data-i18n="nav.news">Новости</a>
+            <div class="dropdown-menu">
+              <a href="#page/news-archive" data-i18n="nav.newsArchive">Архив новостей</a>
+            </div>
+          </div>
         </nav>
         <a class="btn btn-primary header-question" href="#page/ask" data-i18n="nav.ask">Задать вопрос</a>
       </div>
@@ -123,7 +132,7 @@
             <div class="stat-item"><span class="stat-value" data-i18n="stat.rights">Защита</span><span class="stat-label" data-i18n="stat.rightsSub">прав и интересов</span></div>
             <div class="stat-item"><span class="stat-value" data-i18n="stat.support">Поддержка</span><span class="stat-label" data-i18n="stat.supportSub">работников образования</span></div>
             <div class="stat-item"><span class="stat-value" data-i18n="stat.learning">Обучение</span><span class="stat-label" data-i18n="stat.learningSub">профессиональный рост</span></div>
-            <div class="stat-item"><span class="stat-value" data-i18n="stat.dialogue">Диалог</span><span class="stat-label" data-i18n="stat.dialogueSub">социальное партнерство</span></div>
+            <div class="stat-item"><span class="stat-value" data-i18n="stat.dialogue">Переговоры</span><span class="stat-label" data-i18n="stat.dialogueSub">социальное партнерство</span></div>
           </div>
         </section>
 
@@ -202,6 +211,7 @@
         <div class="assistant-messages" id="assistant-messages" role="log" aria-live="polite" aria-relevant="additions text">
           <p class="assistant-message assistant-reply" data-i18n="assistant.welcome">Здравствуйте, вас приветствует ИИ Профсоюз. Чем вам помочь?</p>
         </div>
+        <nav class="assistant-options" id="assistant-options" aria-label="Категории вопросов"></nav>
         <form class="assistant-form" id="assistant-form">
           <label class="sr-only" for="assistant-input" data-i18n="assistant.inputLabel">Ваш вопрос</label>
           <input id="assistant-input" name="question" autocomplete="off" maxlength="1200" required data-i18n-placeholder="assistant.placeholder" placeholder="Напишите свой вопрос..." />
@@ -222,6 +232,7 @@
       </div>
       <iframe id="document-viewer" title="" src="about:blank"></iframe>
       <div id="protected-pdf-viewer" class="protected-pdf-viewer" hidden aria-label="Просмотр соглашения"></div>
+      <div id="docx-viewer" class="docx-viewer" hidden></div>
     </dialog>
 
     <dialog class="document-dialog news-dialog" id="news-dialog" aria-labelledby="news-dialog-title">
@@ -233,6 +244,6 @@
     </dialog>
 
     <footer class="site-footer"><div class="container footer-inner"><p>© <span id="year"></span> <span data-i18n="footer">Профсоюз работников образования города Астаны. Все права защищены.</span></p></div></footer>
-    <script src="script.js?v=20261115-news-archive"></script>
+    <script src="script.js?v=20261117-pdf"></script>
   </body>
 </html>
